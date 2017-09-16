@@ -1,0 +1,309 @@
+Ext.define('Gestionale.view.corso.InserimentoController', {
+    extend: 'Gestionale.componenti.MyController',
+    alias: 'controller.inserimentoCorso',
+
+    gestioneForm: function() {
+    	
+    	let myForm = this.lookupReference('MyForm');
+    	myForm.store = Ext.create('Gestionale.store.Iscritti_Corso');
+    	myForm.controller = this;
+    	this.lookupReference('CntBoxBottoni').insert(0, Ext.create('Gestionale.componenti.standardButton', {
+    		hidBtnAnnulla: this.extraParams.fromDashboardCorsi ? false : true,
+			hideBtnNuovo: this.extraParams.fromDashboardCorsi || false,
+    		extraParams: {
+    			callBackFnSalva: () => this.salvaForm(),
+    			callBackFnVerificaCampi: () => this.verificaCampiForm(),
+    			callBackFnRipristina: () => {
+    				this.aggiornaStore(this.idRecordSel);
+				},
+    			callBackFnNuovo: () => {
+    				StdGenerali.clearForm(myForm)
+    				StdGenerali.sporcaForm(myForm)
+				},
+				callBackFnAnnulla: () => {
+					let id = myForm.getForm().findField('id').getValue();
+					if (StdGenerali.isValidId(id)) {
+						StdGenerali.eliminaRecord(myForm.store, id, () => this.aggiornaStore());
+					} else { 
+						StdGenerali.messaggio('Attenzione', 'Nessun record selezionato', false, false, false, 'QUESTION', 'OK')
+					}
+				}
+    		}
+    	}));
+    	myForm.on('dirtychange', (th, isDirty) => {
+    		StdGenerali.isolaCmp(myForm, isDirty);
+    		StdGenerali.abilitaBottoni(myForm, isDirty);
+    		let id = myForm.getForm().findField('id').getValue();
+    		if (isDirty && !StdGenerali.isValidId(id))
+    			this.lookupReference('PnlCompilatore').setNuovoRecord();
+    	});
+    	
+    },
+    
+    onSelectionChangeGrid: function(th, selection) {
+    	if (selection.length > 0) {
+    		let btnAnnullaDisabled = Ext.isEmpty(selection[0].get('id')) || !Ext.isEmpty(selection[0].get('deletedData')) ;
+    		this.lookupReference('BtnRimuovi').setDisabled( btnAnnullaDisabled );
+    	}
+    },
+    
+    verificaCampiForm: function() {
+    	
+    	let messaggi = [],
+    		form = this.lookupReference('MyForm'),
+    		record = form.getForm().getFieldValues(),
+    		errorContainer = this.lookupReference('ErrorContainer');
+    	
+    	if (Ext.isEmpty(record.tipologia)) {
+    		StdGenerali.msgAddError(messaggi, 'Tipologia obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.numeroLezioni)) {
+    		StdGenerali.msgAddError(messaggi, 'Numero lezioni obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.minutiLezioni)) {
+    		StdGenerali.msgAddError(messaggi, 'Minuti lezioni obbligatorio');
+    	}
+    	if (Ext.Object.isEmpty(this.lookupReference('CheckGiorni').getValue())) {
+    		StdGenerali.msgAddError(messaggi, 'Giorni settimana obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.dal)) {
+    		StdGenerali.msgAddError(messaggi, 'Data dal obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.al)) {
+    		StdGenerali.msgAddError(messaggi, 'Data al obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.oraDal)) {
+    		StdGenerali.msgAddError(messaggi, 'Ora dal obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.oraAl)) {
+    		StdGenerali.msgAddError(messaggi, 'Ora al obbligatorio');
+    	}
+    	if (Ext.isEmpty(record.idIstruttore)) {
+    		StdGenerali.msgAddError(messaggi, 'Istruttore obbligatorio');
+    	}
+    	errorContainer.showErrorMsg(messaggi);
+    	return !(messaggi.length > 0);
+    },
+    
+   
+    onClickBtnConvalida: function() {
+    	let id = this.lookupReference('MyForm').getForm().findField('id').getValue();
+    	if (StdGenerali.isValidId(id)) {
+	    	Ext.Ajax.request({
+	    		method: 'GET',
+	    		url: '/gspRiva/ws/corso/convalida',
+	    		params: {
+	    			id: id
+	    		},
+	    		success: (response, opts) => {
+	    			let risposta = JSON.parse(response.responseText);
+	    			if (risposta.success) {
+	    				 StdGenerali.showToastMessage('Attenzione', risposta.message[0]);
+	    				 this.aggiornaStore( id );
+	    				
+	    			} else {
+	    				this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
+	    			}
+	    		}
+	    	});
+    	}
+    },
+    
+    salvaForm: function() { 
+    	
+    	let form = this.lookupReference('MyForm'),
+    		record = form.getForm().getFieldValues(),
+    		corso = {},
+    		idCorso,
+    		params = {};
+    	
+    	let array_partecipanti = this.lookupReference('Grid').getStore().getData().items,
+    		partecipanti = [];
+    	
+    	record.convalidato = this.extraParams.convalidato ? 'T' : 'F';
+    	delete record.cmpDirty;
+    	
+    	array_partecipanti.forEach(rec => {
+				delete rec.data.nominativo;
+				delete rec.data.acconto;
+				delete rec.data.fakeId;
+				let newRec = StdGenerali.convertiBool(rec.data);
+				partecipanti.push(newRec);
+			});
+    	
+    	Object.assign(record, {
+    		idOperatore: localStorage.getItem('idOperatoreLog'),
+    	});
+    	
+    	Object.assign(corso, record);
+    	Object.assign(params, {partecipanti});
+    	Object.assign(params, {corso});
+    	
+    
+    	Ext.Ajax.request({
+    		method: 'POST',
+    		url: '/gspRiva/ws/corso/registra',
+    		jsonData: params,
+    		success: (response, opts) => {
+    			let risposta = JSON.parse(response.responseText);
+    			if (risposta.success) {
+    				 StdGenerali.showToastMessage('Attenzione', risposta.message[0]);
+    				 let newId = risposta.data.corso.id;
+    				this.aggiornaStore(newId);
+    				
+    			} else {
+    				this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
+    			}
+    		}
+    	});
+    },
+    
+    onClickBtnInserisci: function() {
+    	StdGenerali.creaWin(path = 'Gestionale.view.iscritti.List', {
+    		controllerCorso: this,
+    		records: this.lookupReference('Grid').getStore().getData().items,
+    	}, title = 'Iscritti', width = 1024, height = 768).show();
+    },
+    
+    rimuoviRecord: function(id, remove) {
+    	Ext.Ajax.request({
+    		method: 'GET',
+    		url: '/gspRiva/ws/corso/partecipanti/delete',
+    		params: {
+    			id: id
+    		},
+    		success: (response, opts) => {
+    			let risposta = JSON.parse(response.responseText);
+    			if (risposta.success) {
+    				let grid = this.lookupReference('Grid'),
+    					recSel = grid.getSelectionModel().getSelection()[0];
+    				if ( remove ) {
+    					grid.getStore().remove( recSel );
+    				} else {
+    					grid.getStore().remove( recSel );
+    					
+    					grid.getStore().loadData( [risposta.data], true );
+    				}
+    			} else {
+    				this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
+    			}
+    		}
+    	});
+    },
+    
+    onClickBtnRimuovi: function() {
+    	
+    	let grid = this.lookupReference('Grid'),
+    		recSel = grid.getSelectionModel().getSelection()[0];
+    		
+    	if (!recSel) {
+    		StdGenerali.messaggio('Attenzione', 'Nessun record selezionato', false, false, false, 'QUESTION', 'OK'); 
+    		return false;
+    	} else if ( this.extraParams.convalidato ) {
+    		StdGenerali.messaggio('Attenzione', 'Corso <b>convalidato</b> annullare il record selezionato?',  
+    				() => this.rimuoviRecord(recSel.get('id')), false, false, 'QUESTION', 'YESNO');
+    	} else {
+    		StdGenerali.messaggio('Attenzione', 'Eliminare il record selezionato?', 
+    				() => this.rimuoviRecord(recSel.get('id'), true), false, false, 'QUESTION', 'YESNO');
+    	}
+    },
+    
+    sporcaForm: function(sporca) {
+    	if ( sporca ) {
+			this.lookupReference('MyForm').getForm().findField('cmpDirty').setValue(-9999);
+	    } else {
+    		this.lookupReference('MyForm').getForm().findField('cmpDirty').setValue(null);
+    	}
+    },
+    
+    onEditGrid: function(editor, context) {
+		let store = this.lookupReference('Grid').getStore(),
+    		isModifiedRec = false;
+    	
+    	store.getModifiedRecords().forEach(rec => {
+    		let obj = rec.data;
+			for (let key in obj) {
+				if (rec.isModified(key)) {
+					isModifiedRec = true;
+					return;
+				}
+			}
+		});
+		this.sporcaForm( isModifiedRec );
+    	
+    },
+    
+    onBeforeEdit: function(editor, context) {debugger;
+    	let isAnnullato = !Ext.isEmpty(context.record.data.deletedData);
+    	if (isAnnullato) {
+    		return false;
+    	}
+    },
+    
+    aggiornaStore: function(id) {
+    	let myForm = this.lookupReference('MyForm');
+    	let form = myForm.getForm();
+    	let store = myForm.store = Ext.create('Gestionale.store.Iscritti_Corso');
+		StdGenerali.clearForm(myForm);
+		if (!Ext.isEmpty(id) || this.extraParams.record.id) {
+			myForm.store.load({
+	    		params: {
+	    			idCorso: id ? id : this.extraParams.record.id
+	    		},
+	    		callback: (records, operation, success) => {
+	    			if (success) {
+	    				
+	    				this.lookupReference('BtnRimuovi').setDisabled(false);
+	    				if (records.length > 0) {
+		    				let rec = records[0];
+		    				rec.data.corso.dal = new Date(rec.data.corso.dal);
+		    				rec.data.corso.al = new Date(rec.data.corso.al);
+		    				rec.data.corso.oraDal = StdGenerali.convertHours(rec.data.corso.oraDal);
+		    				rec.data.corso.oraAl = StdGenerali.convertHours(rec.data.corso.oraAl);
+		    				form.setValues(rec.data.corso);
+		    				this.lookupReference('Grid').getStore().removeAll();
+		    				if (rec.data.partecipanti.length > 0) {
+		    					this.lookupReference('Grid').getStore().loadData( rec.data.partecipanti );
+		    				}
+		    				this.lookupReference('LblConvalida').update('');
+		    				this.lookupReference('BtnConvalida').setHidden(Ext.isString(rec.data.corso.convalidato) && rec.data.corso.convalidato.includes('T'));
+		    				this.extraParams.convalidato = Ext.isString(rec.data.corso.convalidato) && rec.data.corso.convalidato.includes('T')
+		    				if (this.extraParams.convalidato) {
+		    					this.lookupReference('LblConvalida').update('<span class="green-label"><b>Corso convalidato</b><span>')
+		    				}
+		    				this.lookupReference('BtnRimuovi').setText( this.extraParams.convalidato ? 'Annulla Partecipante' : 'Elimina partecipante' );
+		    				this.lookupReference('PnlCompilatore').setCompilatore( rec.data.corso.operatoreNominativo );
+		    				StdGenerali.setRecordAnnullato(this, rec.data.corso);
+		    				StdGenerali.bloccaForm(myForm, !Ext.isEmpty(rec.data.corso.deletedData))
+		    				
+	    				} else {
+	    					this.lookupReference('BtnRimuovi').setText( 'Elimina partecipante' );
+	    				}
+	    			} else {
+						this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
+					}
+	    		}
+	    	});
+		} else {
+			this.lookupReference('Grid').getStore().removeAll();
+		}
+    },
+    
+    launch: function() { 
+    	let myForm = this.lookupReference('MyForm'), 
+    		form = myForm.getForm();
+    	
+    	myForm.store = Ext.create('Gestionale.store.Iscritti_Corso');
+    	this.gestioneForm();
+    	this.lookupReference('CboxIstruttori').getStore().load();
+    	if (this.extraParams.record) {
+    		this.aggiornaStore();
+    	} else {
+    		this.lookupReference('BtnRimuovi').setText( 'Elimina Partecipante' );
+    	}
+    },
+    destroy: function() {
+    	this.callParent();
+    }
+
+});
