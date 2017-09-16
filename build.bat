@@ -1,1 +1,1 @@
-c:\Users\Administrator\bin\Sencha\Cmd\sencha.exe app build
+sencha app build
