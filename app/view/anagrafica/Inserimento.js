@@ -48,7 +48,13 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    		},
     	    		flex: 1,
     	    		items: [
-    	    			
+    	    			{
+    	    				xtype: 'label',
+    	    				margin: '0 0 0 10',
+    	    				width: 80,
+    	    				height: 80,
+    	    				cls: 'icon-registration'
+    	    			},
     	    			{
     	    				xtype: 'container',
     	    				layout: {
@@ -119,6 +125,12 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						fieldLabel: 'Città',
     	    						name: 'citta',
     	    						allowBlank: false
+    	    					},
+    	    					{
+    	    						xtype: 'textfield',
+    	    						fieldLabel: 'Comune di residenza',
+    	    						name: 'comuneResidenza',
+    	    						allowBlank: false
     	    					}
     	    				]
     	    			},
@@ -148,6 +160,13 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						fieldLabel: 'Nome genitore se < 18',
     	    						hidden: true,
     	    						name: 'nomeGenitore'
+    	    					},
+    	    					{
+    	    						xtype: 'textfield',
+    	    						reference: 'TxtCodifceFiscaleGenitore',
+    	    						fieldLabel: 'Codice fiscale genitore',
+    	    						hidden: true,
+    	    						name: 'codiceFiscaleGenitore'
     	    					}
     	    				]
     	    			},

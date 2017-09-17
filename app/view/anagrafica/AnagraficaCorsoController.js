@@ -99,14 +99,14 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
     },
     
     onChangeTipologia: function(th, newValue, oldValue) {
-    	this.lookupReference('CntCheckGiorni').setHidden(newValue === 2)
-    	this.lookupReference('CboxNrCorsi').setHidden(newValue === 2)
-    	this.lookupReference('CboxMinCorsi').setHidden(newValue === 2)
-    	if (newValue === 2) {
-    		this.lookupReference('CboxNrCorsi').setValue(null)
-        	this.lookupReference('CboxMinCorsi').setValue(null)
-    		this.lookupReference('CheckGiorni').getBoxes().forEach(check => check.setValue(false));
-    	}
+    	let gg = ['lunedi','mercoledi', 'venerdi', 'domenica', 'personalizzato'];
+    	this.lookupReference('CheckGiorni').getBoxes().forEach(check => {
+			check.setHidden(false);
+			check.setValue(false);
+			if (newValue === 2) {
+				check.setHidden(gg.includes(check.name));
+			}
+		});
     },
     
     aggiornaStore: function(id) {

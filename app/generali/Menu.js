@@ -15,6 +15,7 @@ class Menu {
 				subMenu: [
 					['Bacheca', 'Gestionale.view.corso.DashBoardCorso'],
 					['Crea corso', 'Gestionale.view.corso.Inserimento'],
+					['Planning', 'Gestionale.view.corso.Plannig'],
 				]
 			},
 			{

@@ -8,7 +8,7 @@ Ext.define('Gestionale.store.MinutiLezioni', {
     ],
 
     data: [
-    	[45, 45],
-    	[50, 50]
+    	[30, 30],
+    	[45, 45]
     ]
 });

@@ -198,7 +198,6 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     	Ext.resumeLayouts(true);
     	
     },
-    
     onCerca: function() {
     	let form = this.lookupReference('MyForm');
     	record = form.getForm().getFieldValues();
@@ -224,6 +223,8 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     			if (risposta.success) {
     				if (risposta.data.length > 0) {
     					this.generaPanel(risposta.data);
+    					let oggi = new Date()
+    					this.lookupReference('Calendar').generaCalendario(Ext.Date.subtract(new Date(), 'mo',  -5));
     				} else {
     					cntMain.removeAll(true);
     				}
@@ -234,6 +235,7 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     
     launch: function() {
     	this.onCerca();
+    	
     }
 
 });

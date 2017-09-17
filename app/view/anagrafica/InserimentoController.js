@@ -15,7 +15,12 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     			callBackFnSalva: () => this.salvaForm(),
     			callBackFnVerificaCampi: () => this.verificaCampiForm(),
     			callBackFnRipristina: () => {
-    				this.aggiornaStore(this.idRecordSel)
+    				if (!Ext.isEmpty(this.idRecordSel)) {
+    					this.aggiornaStore(this.idRecordSel)
+    				} else {
+    					StdGenerali.clearForm(myForm);
+    				}
+    				
 				},
     			callBackFnNuovo: () => {
     				StdGenerali.clearForm(myForm)
@@ -71,6 +76,10 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	if (Ext.isEmpty(valForm.telefono)) {
     		StdGenerali.msgAddError(messaggi, 'telefono obbligatorio');
     	}
+    	if (Ext.isEmpty(valForm.comuneResidenza)) {
+    		StdGenerali.msgAddError(messaggi, 'comune residenza obbligatorio');
+    	}
+    	
     	
     	if(this.maggiorenne) {
     		if (Ext.isEmpty(valForm.codiceFiscale))
@@ -78,6 +87,9 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	} else {
     		if (Ext.isEmpty(valForm.nomeGenitore))
     			StdGenerali.msgAddError(messaggi, 'nomeGenitore obbligatorio');
+    		if (Ext.isEmpty(valForm.codiceFiscaleGenitore)) {
+    			StdGenerali.msgAddError(messaggi, 'codice fiscale genitore obbligatorio');
+    		}
     	}
     	
     	errorContainer.showErrorMsg(messaggi);
@@ -103,6 +115,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     		this.maggiorenne = maggiorenne = difDate > 18;
 			this.lookupReference('TxtCodiceFiscale').setHidden(!this.maggiorenne);
     		this.lookupReference('TxtNomeGenitore').setHidden(this.maggiorenne);
+    		this.lookupReference('TxtCodifceFiscaleGenitore').setHidden(this.maggiorenne);
     	}
     },
     

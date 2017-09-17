@@ -3,6 +3,7 @@ Ext.define('Gestionale.view.corso.DashBoardCorso',{
 
     requires: [
         'Gestionale.view.corso.DashBoardCorsoController',
+        'Gestionale.componenti.calendar',
     ],
     controller: 'dashBoardCorsoController',
     layout: {
@@ -12,12 +13,16 @@ Ext.define('Gestionale.view.corso.DashBoardCorso',{
     flex: 1,
     items: [
     	{
+			xtype: 'calendar',
+		},
+    	{
     		xtype: 'container',
     		layout: {
 				type: 'hbox',
 				align: 'stretch'
 			},
     		items: [
+    			
     			{
     				xtype: 'form',
     				reference: 'MyForm',
@@ -114,12 +119,6 @@ Ext.define('Gestionale.view.corso.DashBoardCorso',{
     				items: [
     					{
     						xtype: 'button',
-    						width: 110,
-    						height: 36,
-    						text: 'Impostazioni'
-    					},
-    					{
-    						xtype: 'button',
     						margin: '4 0 0 0',
     						width: 110,
     						height: 36,
@@ -139,7 +138,7 @@ Ext.define('Gestionale.view.corso.DashBoardCorso',{
     		reference: 'CntMainDashboard',
     		width: '100%',
     		items: []
-    	}
+    	},
     ],
    
 });
