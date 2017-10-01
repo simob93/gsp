@@ -20,7 +20,7 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     			cls: 'portletCorso ',
     			style: 'float: left;',
     			height: 180,
-    			border: 1,
+    			border: false,
     			width: 200,
     			layout: {
     				type: 'vbox',
@@ -37,7 +37,7 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     					
     					head.insert( 0,  {
     						xtype: 'label',
-    						cls: 'labelWhite grassetto',
+    						cls: 'grassetto',
     						text: `${rec.descrTipologia}`
     					});
     					head.insert(1 , Ext.create('Ext.toolbar.Fill') );
@@ -75,7 +75,9 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     						let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento', 
 								{
 									record: th.extraParams.record, 
-									fromDashboardCorsi: true
+									hideBtnNuovo: true,
+									corsoSingolo: th.extraParams.record.tipologia === 1,
+									hideBtnInserisciPartecipanti: th.extraParams.record.tipologia === 1
 								},
 								"Gestione corso", 1024, 768, 'win-corso');
     						
@@ -134,15 +136,15 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     	    						{
     	    	    					xtype: 'label',
     	    	    					labelInfo: true,
-    	    	    					style: 'font-size: 12px;',
-    	    	    					html: ` Dal: ${StdGenerali.formattaData(dal, 'd/m/Y')} `
+    	    	    					style: 'font-size: 11px;',
+    	    	    					html: `Data: ${StdGenerali.formattaData(dal, 'd/m/Y')} `
     	    	    				},
     	    	    				{
     	    	    					xtype: 'label',
     	    	    					margin: '0 0 0 3',
     	    	    					labelInfo: true,
-    	    	    					style: 'font-size: 12px;',
-    	    	    					html: ` Al: ${StdGenerali.formattaData(al, 'd/m/Y')} `
+    	    	    					style: 'font-size: 11px;',
+    	    	    					html: ` - ${StdGenerali.formattaData(al, 'd/m/Y')} `
     	    	    				}
     	    					]
     	    				},
@@ -155,23 +157,23 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     	    						{
     	    	    					xtype: 'label',
     	    	    					labelInfo: true,
-    	    	    					style: 'font-size: 12px;',
-    	    	    					html: ` Dalle: ${oraDal} `
+    	    	    					style: 'font-size: 11px;',
+    	    	    					html: `Ore: ${oraDal} `
     	    	    				},
     	    	    				{
     	    	    					xtype: 'label',
     	    	    					labelInfo: true,
     	    	    					margin: '0 0 0 3',
-    	    	    					style: 'font-size: 12px;',
-    	    	    					html: ` Alle: ${oraAl} `
+    	    	    					style: 'font-size: 11px;',
+    	    	    					html: ` -  ${oraAl} `
     	    	    				}
     	    					]
     	    				},
     	    				{
     	    					xtype: 'label',
     	    					labelInfo: true,
-    	    					style: 'font-size: 12px;',
-    	    					html: ` Nr partecipanti: ${rec.anagraficaCorso.length} `
+    	    					style: 'font-size: 11px;',
+    	    					html: ` Nr: ${rec.anagraficaCorso.length} `
     	    				},
     	    				{
     	    					xtype: 'container',
@@ -182,7 +184,7 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     	    						{
     	    	    					xtype: 'label',
     	    	    					labelInfo: true,
-    	    	    					style: 'font-size: 12px;',
+    	    	    					style: 'font-size: 11px;',
     	    	    					html: ` Istruttore: ${rec.istruttoreNominativo} `
     	    	    				}
     	    					]
@@ -223,8 +225,6 @@ Ext.define('Gestionale.view.corso.DashBoardCorsoController', {
     			if (risposta.success) {
     				if (risposta.data.length > 0) {
     					this.generaPanel(risposta.data);
-    					let oggi = new Date()
-    					this.lookupReference('Calendar').generaCalendario(Ext.Date.subtract(new Date(), 'mo',  -5));
     				} else {
     					cntMain.removeAll(true);
     				}

@@ -227,6 +227,10 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 									hidden: true
 								},
 								{
+									dataIndex: 'tipologia',
+									hidden: true
+								},
+								{
 									text: 'Nominativo',
 									flex: 1,
 									align: 'left',
@@ -306,13 +310,15 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 												{
 													xtype: 'button',
 													margin: '0 5 0 0',
-													text: 'Allega Partecipanti',
+													reference: 'BtnInserisciPartecipanti',
+													text: 'Inserisci Partecipanti',
 													listeners: {
 														click: 'onClickBtnInserisci'
 													}
 												},
 												{
 													xtype: 'button',
+													text: 'Rimuovi',
 													reference: 'BtnRimuovi',
 													listeners: {
 														click: 'onClickBtnRimuovi'

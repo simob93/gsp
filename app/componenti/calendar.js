@@ -21,16 +21,28 @@ Ext.define('Gestionale.componenti.calendar', {
 			items: []
 		});
 	},
-	generaLabel: function(text = '', width = 180, height = 100) {
-		return Ext.create('Ext.form.Label', {
+	
+	generaLabelTitoliSett: function(text = '') {
+		return Ext.create('Ext.container.Container', {
+			 width: 150,
+			 height: 30,
+			 html: '<b>' + text + '</b>',
+			 margin: '3 3 0 3',
+		}); 
+		
+	},
+	
+	generaLabel: function(text = '', width = 150, height = 100, descr = '') {
+		return Ext.create('Ext.container.Container', {
 			 width: width,
 			 height: height,
-			 html: text,
+			 html: '<div>' + text + '</div><br><span>' + descr  + '</span>',
 			 margin: '3 3 3 3',
 			 cls: 'label-calendar'
 		}); 
 	},
-	generaCalendario: function(data = new Date()) { debugger;
+	
+	generaCalendario: function(data = new Date(), records) { 
 		let mesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 		let ggSett = ["Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato", "Domenica"]
 		let firstDay = Ext.Date.getFirstDayOfMonth(data); //calcolo il primo giorno del mese;
@@ -42,7 +54,7 @@ Ext.define('Gestionale.componenti.calendar', {
 		let dayName = this.generaPnlWeekes();
 		mainPanel.add(dayName);
 		for (let i = 0; i< ggSett.length; i++) {
-			dayName.add(this.generaLabel(ggSett[i], 180, 30));
+			dayName.add(this.generaLabelTitoliSett(ggSett[i]));
 		}
 		//genero spazi bianchi
 		let panel = this.generaPnlWeekes();
@@ -60,8 +72,19 @@ Ext.define('Gestionale.componenti.calendar', {
 				
 			} 
 			let p = panel || newRow;
-			p.add(this.generaLabel(i + 1));
+			let descr = this.trovaRecord(records, ( i + 1 ));
+			p.add(this.generaLabel((i + 1), 150, 100, descr));
 			week++;
 		}
 	},
+	
+	trovaRecord: function(records, day) {
+		let tmpString = "";
+		records.forEach(rec => {
+			if (rec.data.data.getDate() === day) {
+				tmpString += '<center><span style ="color: #5fa2dd">' + rec.data.descrizione + '</span></center>';
+			}
+		}); 
+		return tmpString;
+	}
 });

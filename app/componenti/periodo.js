@@ -2,16 +2,10 @@ Ext.define('Gestionale.componenti.periodo', {
 	extend: 'Ext.form.FieldSet',
 	alias: 'widget.periodo',
 	itemId: 'FieldPeriodo', reference: 'FieldPeriodo',
-	maxWidth: 400,
 	title: 'Periodo',
-	padding: 8,
-	fieldDefaults: {
-		labelWidth: 50,
-		margin: '0 0 0 4',
-		labelAlign: 'right'
-	},
 	initComponent: function() {
 		
+		this.fieldDefaults = this.extraParams.fieldDefaults || {};
 		let storeMesi = Ext.create('Ext.data.ArrayStore', {
 			fields: ['codice', 'valore'],
 			data: [
@@ -66,27 +60,27 @@ Ext.define('Gestionale.componenti.periodo', {
 			{
 				xtype: 'container',
 				itemId: 'CntMeseAnno', reference: 'CntMeseAnno',
-				layout: {
-					type: 'hbox'
-				},
+				layout: this.layout,
 				items: [
 					{
 						xtype: 'combobox',
-						width: 160,
+						width: 190,
 						reference: 'Mese',
 						store: storeMesi,
 						displayField: 'valore',
 						valueField: 'codice',
-						fieldLabel: 'Mese'
+						fieldLabel: 'Mese',
+						name: 'mese'
 					},
 					{
 						xtype: 'combobox',
 						store: storeAnni,
-						width: 160,
+						width: 190,
 						displayField: 'valore',
 						valueField: 'codice',
 						fieldLabel: 'Anno',
 						reference: 'Anno',
+						name: 'anno'
 					}
 				]
 			},
@@ -94,21 +88,23 @@ Ext.define('Gestionale.componenti.periodo', {
 				xtype: 'container',
 				hidden: true,
 				itemId: 'CntDalAl', reference: 'CntDalAl',
-				layout: {
-					type: 'hbox'
-				},
+				layout: this.layout,
 				items: [
 					{
 						xtype: 'datefield',
-						width: 160,
+						format: 'd/m/Y',
+						width: 190,
 						reference: 'Dal',
-						fieldLabel: 'Dal'
+						fieldLabel: 'Dal',
+						name: 'dal'
 					},
 					{
 						xtype: 'datefield',
-						width: 160,
+						width: 190,
+						format: 'd/m/Y',
 						reference: 'Al',
-						fieldLabel: 'Al'
+						fieldLabel: 'Al',
+						name: 'al'
 					}
 				]
 			}
@@ -120,8 +116,9 @@ Ext.define('Gestionale.componenti.periodo', {
 			let legend = th.legend;
 			legend.add({
 				xtype: 'slider',
-				itemId: 'Slider', reference: 'Slider',
+				itemId: 'SliderPeriodo', reference: 'SliderPeriodo',
 				width: 30,
+				isFormField: false,
 				increment:1,
 				maxValue: 1,
 				minValue: 0,

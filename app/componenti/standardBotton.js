@@ -67,6 +67,22 @@ Ext.define('Gestionale.componenti.standardButton', {
 						this.extraParams.callBackFnRipristina()
 					}
 				}
+			},
+			{
+				xtype: 'splitbutton',
+				nonDisabilitare: true,
+				hidden: true,
+				margin: '0 4 0 0',
+				itemId: 'BtnStampa', reference: 'BtnStampa',
+				text: 'Stampa',
+				disabled: false,
+				menu: [ 
+					{
+						text: 'Stampa pdf',
+						handler: Ext.emptyFn
+					}
+					
+				]
 			}
 		]
 		

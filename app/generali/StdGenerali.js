@@ -92,7 +92,11 @@ class StdGenerali {
 		}
 	}
 	
-	static eliminaRecord(store, id = null, callBakFnAfterDelete = null) { debugger;
+	static renderShortCut() {
+		return `<div id="shortcut_${Ext.id()}" class="shortcutMenu" style="width:16px; height:16px; "></div>`;
+	}
+	
+	static eliminaRecord(store, id = null, callBakFnAfterDelete = null) {
 		
 		if (!store)
 			throw "nessuno store passato al componente";
@@ -161,6 +165,7 @@ class StdGenerali {
 			let errorContainer = form.controller.lookupReference('ErrorContainer');
 			if (errorContainer) form.controller.lookupReference('ErrorContainer').setHidden(true);
 		}
+		form.getForm().setValues(form.getForm().getValues());
 	}
 	
 	static sporcaForm(form) {
@@ -180,10 +185,11 @@ class StdGenerali {
 		return store.findRecord(key, value);
 	}
 	
-	static creaWin(path = null, params = {}, title = 'Ricerca avanzata', width = 500, height = 400, ui = 'default') {
+	static creaWin(path = null, params = {}, title = 'Ricerca avanzata', width = 500, height = 400, ui = 'default', closable = true) {
 		let win = Ext.create('Gestionale.componenti.stdWin', {
 			name: path,
 			id: Ext.id(),
+			closable: closable,
 			title: title,
 			layout: 'fit',
 			width: width,
@@ -232,7 +238,7 @@ class StdGenerali {
 							btnFiltro.extraParams.attivo = newValue === 1;
 							if (newValue === 1) {
 								if (!controller.winFiltriAvanzate) {
-									controller.winFiltriAvanzate = this.creaWin('Gestionale.view.ricercaAvanzata.RicercaAvanzata', {personFiltri, controller});
+									controller.winFiltriAvanzate = this.creaWin('Gestionale.view.ricercaAvanzata.RicercaAvanzata', {personFiltri, controller}, 'Ricerca avanzata', 500, 400, 'default',  false);
 								}
 								let fieldset = th.up('fieldset');
 								Ext.defer(() => {
@@ -319,12 +325,12 @@ class StdGenerali {
 	}
 	
 	static isolaCmp(cmp, isola = true) {
-		
+		let body = cmp.up('window') ? cmp.up('window') :  Ext.getBody();
 		if (isola) {
-			Ext.getBody().mask();
+			body.mask();
 			cmp.setZIndex('10000');
 		} else {
-			Ext.getBody().unmask();
+			body.unmask();
 			cmp.setZIndex('auto');
 		}
 	}

@@ -13,9 +13,10 @@ class Menu {
 				ordine: 2,
 				titolo: 'Gestione corsi',
 				subMenu: [
-					['Bacheca', 'Gestionale.view.corso.DashBoardCorso'],
-					['Crea corso', 'Gestionale.view.corso.Inserimento'],
-					['Planning', 'Gestionale.view.corso.Plannig'],
+					['Bacheca corsi', 'Gestionale.view.corso.DashBoardCorso'],
+					['Nuovo corso di gruppo', 'Gestionale.view.corso.Inserimento'],
+					['Visualizza iscritti', 'Gestionale.view.iscritti.List'],
+					//['Planning', 'Gestionale.view.corso.Planning'],
 				]
 			},
 			{

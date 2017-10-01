@@ -29,7 +29,9 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
 				callBackFnAnnulla: () => {
 					let id = myForm.getForm().findField('id').getValue();
 					if (StdGenerali.isValidId(id)) {
-						StdGenerali.eliminaRecord(myForm.store, id, () => this.aggiornaStore());
+						StdGenerali.eliminaRecord(myForm.store, id, () => {
+							this.aggiornaStore()
+						});
 					} else { 
 						StdGenerali.messaggio('Attenzione', 'Nessun record selezionato', false, false, false, 'QUESTION', 'OK')
 					}
@@ -124,20 +126,25 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	let myForm = this.lookupReference('MyForm');
     	let form = myForm.getForm();
     	let store = myForm.store;
-		StdGenerali.clearForm(myForm);
-    	store.load({
-    		params: {id},
-    		callback: (records, operation, success) => {
-    			if (success) {
-    				if (records.length > 0) {
-	    				let rec = records[0];
-	    				form.loadRecord(rec);
-	    				this.idRecordSel = id;
-	    				this.extraParams.controllerMain.extraParams.idAnagrafica = id;
-    				}
-    			}
-    		}
-    	});
+		
+		if (!Ext.isEmpty(id)) {
+			StdGenerali.clearForm(myForm);
+	    	store.load({
+	    		params: {id},
+	    		callback: (records, operation, success) => {
+	    			if (success) {
+	    				if (records.length > 0) {
+		    				let rec = records[0];
+		    				form.loadRecord(rec);
+		    				this.idRecordSel = id;
+		    				this.extraParams.controllerMain.extraParams.idAnagrafica = id;
+	    				}
+	    			}
+	    		}
+	    	});
+		} else {
+			StdGenerali.clearForm(myForm);
+		}
     },
     
     launch: function() {

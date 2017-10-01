@@ -131,11 +131,34 @@ $colors:(
 }
 
 .portletCorso .x-panel-header {
-	border-top-right-radius: 10px;
+	color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.portletCorso {
+	padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
 }
 
 .corso_convalidato {
 	background-image: url("images/filled-circle.svg");
+}
+
+.shortcutMenu {
+	background-image: url("images/menu.svg");
+	display:none;
+}
+
+.cntShortcut:hover .shortcutMenu {
+	display: inline-block;
 }
 
 .corso_non_convalidato {
@@ -201,6 +224,25 @@ $colors:(
 	background-image: url("images/registration_user.svg");
 	background-repeat: no-repeat;
 }
+
+.icon-prev,
+.icon-next,
+.icon-32 {
+	width: 32px;
+	height: 32px;
+}
+
+.icon-next  {
+	background-image: url("images/next.svg");
+	background-repeat: no-repeat;
+}
+
+
+.icon-prev {
+	background-image: url("images/prev.svg");
+	background-repeat: no-repeat;
+}
+
 
 .label-calendar {
     padding: 4px;

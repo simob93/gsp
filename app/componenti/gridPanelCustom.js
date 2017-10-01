@@ -33,7 +33,14 @@ Ext.define('Gestionale.componenti.gridPanelCustom', {
 					}
 				});
 			break;
-		}
+		} 
 		this.updateLayout();
+		this.on('cellclick', this.cellclick)
+	},
+	cellclick: function( th, td, cellIndex, record, tr, rowIndex, e) {
+		if (e.target.id.indexOf('shortcut') === 0) {
+			this.extraParams.menuShort.showAt(e.clientX, e.clientY + 5);
+		}
 	}
+	
 });

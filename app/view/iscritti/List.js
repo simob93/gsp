@@ -23,12 +23,11 @@ Ext.define('Gestionale.view.iscritti.List',{
     			align: 'stretch',
     			pack: 'center'
     		},
-    		cls: 'azure',
-    		height: 85,
+    		height: 95,
     		items: [
     			{
-    				xtype: 'container',
-    				itemId: 'CntFiltri', reference: 'CntFiltri',
+    				xtype: 'form',
+    				itemId: 'MyForm', reference: 'MyForm',
     				layout: {
     					type: 'hbox',
     					align: 'stretch',
@@ -39,18 +38,30 @@ Ext.define('Gestionale.view.iscritti.List',{
     						xtype: 'container',
     						layout: {
     							type: 'hbox',
-    							align: 'middle'
+    							align: 'stretch'
     						},
     						flex: 1,
     						items: [
     							{
-    			    				xtype: 'periodo'
+    			    				xtype: 'periodo',
+    			    				margin: '0 0 0 4',
+    			    				width: 300,
+    			    				layout: {
+    			    					type: 'vbox'
+    			    				},
+    			    				extraParams:  {
+    			    					fieldDefaults: {
+    			    						labelWidth: 60,
+        			    					margin: '3 0 0 4',
+        			    					labelAlign: 'left'
+    			    					}
+    			    				}
     			    			},
     			    			{
     			    				xtype: 'fieldset',
     			    				margin: '0 0 0 4',
     			    				title: 'Corso',
-    			    				padding: 8,
+    			    				padding: 6,
     			    				items: [
     			    					{
     			    						xtype: 'combobox',
@@ -63,6 +74,39 @@ Ext.define('Gestionale.view.iscritti.List',{
     			    						displayField: 'valore',
     			    						valueField: 'codice',
     			    						name: 'tipologia'
+    			    					}
+    			    				]
+    			    			},
+    			    			{
+    			    				xtype: 'fieldset',
+    			    				padding: 6,
+    			    				margin: '0 0 0 4',
+    			    				title: 'Opzioni corso',
+    			    				layout: {
+    			    					type: 'vbox'
+    			    				},
+    			    				items: [
+    			    					{
+    			    						xtype: 'combobox',
+    			    						allowBlank: false,
+    			    						reference: 'CboxNrCorsi',
+    			    						maxWidth: 200,
+    			    						fieldLabel: 'Nr. lezioni',
+    			    						store: Ext.create('Gestionale.store.NumLezioni'),
+    			    						displayField: 'valore',
+    			    						valueField: 'codice',
+    			    						name: 'numLezioni'
+    			    					},
+    			    					{
+    			    						xtype: 'combobox',
+    			    						allowBlank: false,
+    			    						reference: 'CboxMinCorsi',
+    			    						maxWidth: 200,
+    			    						fieldLabel: 'Min. lezioni',
+    			    						store: Ext.create('Gestionale.store.MinutiLezioni'),
+    			    						displayField: 'valore',
+    			    						valueField: 'codice',
+    			    						name: 'minLezioni'
     			    					}
     			    				]
     			    			}
@@ -88,6 +132,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     			align: 'stretch'
     		},
     		items: [
+    			
     			{
     				xtype: 'container',
     				flex: 1,
@@ -106,6 +151,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     					},
     					{
     						xtype: 'button',
+    						hidden: true,
     						reference: 'BtnInserisci',
     						margin: '5 5 5 5',
     						text: 'Inserisci',
@@ -155,12 +201,17 @@ Ext.define('Gestionale.view.iscritti.List',{
     						align: 'left',
     						dataIndex: 'nominativo',
     						flex: 1,
+    						renderer: function(value, metaData, record) {
+    							if (record.data.tipologia === 1)
+    								return '<div  class="cntShortcut">' + value + " " + StdGenerali.renderShortCut() + '</div>';
+    							else return value;
+    						}
     					},
     					{
     						xtype: 'datecolumn',
     						sortable: false,
     						align: 'center',
-    						width: 113,
+    						width: 75,
     						format: 'd/m/Y',
     						text: 'Anno',
     						dataIndex: 'dataNascita',
@@ -180,6 +231,72 @@ Ext.define('Gestionale.view.iscritti.List',{
     						format: 'd/m/Y',
     						text: 'Data iscrizione',
     						dataIndex: 'dataIscrizione'
+    					},
+    					{
+    						text: 'Lun',
+    						sortable: false,
+    						align: 'left',
+    						dataIndex: 'lunedi',
+    						width: 50,
+    						renderer: function(value, metaData, record) {
+    							if (value && value.includes('T'))
+    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    						} 
+    					},
+    					{
+    						text: 'Mar',
+    						sortable: false,
+    						align: 'left',
+    						dataIndex: 'martedi',
+    						width: 50,
+    						renderer: function(value, metaData, record) {
+    							if (value && value.includes('T'))
+    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    						} 
+    					},
+    					{
+    						text: 'Mer',
+    						sortable: false,
+    						align: 'left',
+    						dataIndex: 'mercoledi',
+    						width: 50,
+    						renderer: function(value, metaData, record) {
+    							if (value && value.includes('T'))
+    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    						} 
+    					},
+    					{
+    						text: 'Gio',
+    						sortable: false,
+    						align: 'left',
+    						dataIndex: 'giovedi',
+    						width: 50,
+    						renderer: function(value, metaData, record) {
+    							if (value && value.includes('T'))
+    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    						} 
+    					},
+    					{
+    						text: 'Ven',
+    						sortable: false,
+    						align: 'left',
+    						dataIndex: 'venerdi',
+    						width: 50,
+    						renderer: function(value, metaData, record) {
+    							if (value && value.includes('T'))
+    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    						} 
+    					},
+    					{
+    						text: 'Sab',
+    						sortable: false,
+    						align: 'left',
+    						dataIndex: 'sabato',
+    						width: 50,
+    						renderer: function(value, metaData, record) {
+    							if (value && value.includes('T'))
+    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    						} 
     					},
     					{
     						text: 'Acconto',
@@ -229,6 +346,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						return 'gridAlta30'
     					} 
     				}
+    				
     			}
     		]
     	}

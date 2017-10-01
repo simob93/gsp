@@ -26,7 +26,7 @@ Ext.define('Gestionale.view.anagrafica.ListController', {
     		}
     	})
     },
-    
+     
     onCerca: function() {
     	
     	let objParametri = {},

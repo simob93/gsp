@@ -3,7 +3,6 @@ Ext.define('Gestionale.view.corso.DashBoardCorso',{
 
     requires: [
         'Gestionale.view.corso.DashBoardCorsoController',
-        'Gestionale.componenti.calendar',
     ],
     controller: 'dashBoardCorsoController',
     layout: {
@@ -12,9 +11,6 @@ Ext.define('Gestionale.view.corso.DashBoardCorso',{
     },
     flex: 1,
     items: [
-    	{
-			xtype: 'calendar',
-		},
     	{
     		xtype: 'container',
     		layout: {
