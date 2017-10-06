@@ -4,6 +4,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     requires: [
         'Gestionale.view.anagrafica.InserimentoController',
         'Gestionale.componenti.errorContainer',
+        'Gestionale.store.Comuni',
         'Gestionale.componenti.standardButton'
     ],
 
@@ -36,7 +37,6 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
 
     	    		xtype: 'fieldset',
     	    		padding: 4,
-    	    		title: 'Registrazione',
     	    		layout: {
     	    			type: 'vbox',
     	    			align: 'stretch'
@@ -50,13 +50,19 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    		items: [
     	    			{
     	    				xtype: 'label',
-    	    				margin: '0 0 0 10',
+    	    				margin: '0 0 4 10',
     	    				width: 80,
     	    				height: 80,
     	    				cls: 'icon-registration'
     	    			},
     	    			{
     	    				xtype: 'container',
+    	    				style: 'border-bottom:2px solid #5fa2dd',
+    	    			},
+    	    			{
+    	    				xtype: 'fieldset',
+    	    				padding: 5,
+    	    				margin: '4 0 0 0',
     	    				layout: {
     	    					type: 'vbox'
     	    				},
@@ -73,14 +79,6 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						name: 'cognome',
     	    						allowBlank: false
     	    					},
-    	    				]
-    	    			},
-    	    			{
-    	    				xtype: 'container',
-    	    				layout: {
-    	    					type: 'vbox'
-    	    				},
-    	    				items: [
     	    					{
     	    						xtype: 'datefield',
     	    						fieldLabel: 'Data di nascita',
@@ -97,11 +95,19 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						name: 'luogoNascita',
     	    						allowBlank: false
     	    					},
-    	    					
+    	    					{
+    	    						xtype: 'textfield',
+    	    						reference: 'TxtCodiceFiscale',
+    	    						fieldLabel: 'C.F',
+    	    						hidden: true,
+    	    						name: 'codiceFiscale'
+    	    					}
     	    				]
     	    			},
     	    			{
-    	    				xtype: 'container',
+    	    				xtype: 'fieldset',
+    	    				padding: 5,
+    	    				margin: '4 0 0 0',
     	    				layout: {
     	    					type: 'vbox'
     	    				},
@@ -124,18 +130,28 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						xtype: 'textfield',
     	    						fieldLabel: 'Città',
     	    						name: 'citta',
+    	    						hidden: true,
     	    						allowBlank: false
     	    					},
     	    					{
-    	    						xtype: 'textfield',
+    	    						xtype: 'combobox',
+    	    						reference: 'CboxComuni',
+    	    						store: {
+    	    							type: 'comuni'
+    	    						},
     	    						fieldLabel: 'Comune di residenza',
-    	    						name: 'comuneResidenza',
-    	    						allowBlank: false
+    	    						displayField: 'nome',
+    	    						valueField: 'id',
+    	    						name: 'idComune',
+    	    						allowBlank: false,
+    	    						queryMode: 'local'
     	    					}
     	    				]
     	    			},
     	    			{
-    	    				xtype: 'container',
+    	    				xtype: 'fieldset',
+    	    				padding: 5,
+    	    				margin: '4 0 0 0',
     	    				layout: {
     	    					type: 'vbox'
     	    				},
@@ -145,15 +161,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						fieldLabel: 'Telefono',
     	    						name: 'telefono',
     	    						allowBlank: false
-    	    					}
-    	    				]
-    	    			},
-    	    			{
-    	    				xtype: 'container',
-    	    				layout: {
-    	    					type: 'vbox'
-    	    				},
-    	    				items: [
+    	    					},
     	    					{
     	    						xtype: 'textfield',
     	    						reference: 'TxtNomeGenitore',
@@ -169,23 +177,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						name: 'codiceFiscaleGenitore'
     	    					}
     	    				]
-    	    			},
-    	    			{
-    	    				xtype: 'container',
-    	    				layout: {
-    	    					type: 'vbox'
-    	    				},
-    	    				items: [
-    	    					{
-    	    						xtype: 'textfield',
-    	    						reference: 'TxtCodiceFiscale',
-    	    						fieldLabel: 'C.F',
-    	    						hidden: true,
-    	    						name: 'codiceFiscale'
-    	    					}
-    	    				]
-    	    			},
-    	    			
+    	    			}
     	    		]
     	    	
     			}

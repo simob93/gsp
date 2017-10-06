@@ -3,7 +3,6 @@ Ext.define('Gestionale.view.menu.MenuController', {
 
     alias: 'controller.menu',
     
-    
     creaTab: function(btn, path) {
     	let tabPanel = this.lookupReference('TabPanelMenu');
     	

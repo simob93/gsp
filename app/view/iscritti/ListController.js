@@ -100,7 +100,6 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     	let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento', { 
 			hideBtnNuovo: true,
 			hideBtnAnnulla: true,
-			hideBtnInserisciPartecipanti: true,
 			corsoSingolo: true
 		},
 		"Gestione corso", 1024, 768, 'win-corso');

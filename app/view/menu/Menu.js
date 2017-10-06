@@ -9,6 +9,12 @@ Ext.define('Gestionale.view.menu.Menu', {
     extend: 'Ext.container.Container',
     requires: [
         'Gestionale.view.menu.MenuController',
+        'Gestionale.view.anagrafica.Main',
+    	'Gestionale.view.anagrafica.List',
+    	'Gestionale.view.corso.DashBoardCorso',
+    	'Gestionale.view.corso.Inserimento',
+    	'Gestionale.view.iscritti.List',
+    	'Gestionale.view.istruttori.List'
     ],
     layout: {
     	type: 'hbox',
@@ -74,6 +80,23 @@ Ext.define('Gestionale.view.menu.Menu', {
     		},
     		flex: 1,
     		items: [
+    			{
+    				xtype: 'container',
+    				//flex: 1,
+    				layout: {
+    					type: 'vbox',
+    					align: 'middle',
+    					pack: 'center'
+    				},
+    				items: [
+    					{
+    	    				xtype: 'image',
+    	    				width: 300,
+    	    				margin: '0 0 4 0',
+    	    				src: 'resources/images/logo.jpg'
+    	    			}
+    				]
+    			},
     			{
     				xtype: 'tabpanel',
     				layout: {

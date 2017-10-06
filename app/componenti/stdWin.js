@@ -10,11 +10,14 @@ Ext.define('Gestionale.componenti.stdWin', {
 		let params = this.extraParams || {};
 		
 		let view = null;
-		if (name) {
+		if (name && Ext.isString(name)) {
 			view = Ext.create(this.name, {
 				extraParams: params
 			});
+		} else {
+			view = name; 
 		}
+		
 		this.items = [
 			{
 				xtype: 'panel',
@@ -23,7 +26,7 @@ Ext.define('Gestionale.componenti.stdWin', {
 					align: 'stretch'
 				},
 				flex: 1,
-				items: [view]
+				items: view
 			}
 		]
 		

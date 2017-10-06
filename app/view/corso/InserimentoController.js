@@ -36,7 +36,30 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
 				}
     		}
     	}));
-    	this.lookupReference('CntBoxBottoni').down('#BtnStampa').show();
+    	this.lookupReference('CntBoxBottoni').insert(this.lookupReference('CntBoxBottoni').items.length, 
+    		{
+				xtype: 'splitbutton',
+				nonDisabilitare: true,
+				margin: '0 4 0 0',
+				itemId: 'BtnStampa', reference: 'BtnStampa',
+				text: 'Stampa',
+				disabled: false,
+				menu: [ 
+					{
+						text: 'Stampa corso',
+						handler: () => {
+							this.doPrint('/gspRiva/ws/corso/report/dettaglioCorso')
+						}
+					},
+					{
+						text: 'Stampa presenze',
+						handler: () => {
+							this.doPrint('/gspRiva/ws/corso/report/presenzeCorsi')
+						}
+					}
+					
+				]
+			});
     	
     	myForm.on('dirtychange', (th, isDirty) => {
     		StdGenerali.isolaCmp(myForm, isDirty);
@@ -46,6 +69,44 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     			this.lookupReference('PnlCompilatore').setNuovoRecord();
     	});
     	
+    },
+    
+    doPrint: function(url) {
+    	let id = this.lookupReference('MyForm').getForm().findField('id').getValue();
+    	Ext.Ajax.request({
+    		method: 'GET',
+    		params: {
+    			idCorso: id
+    		},
+    		url: url,
+    		success: (response, opts) => {
+    			let risposta = JSON.parse(response.responseText);
+    			debugger;
+    			if (risposta.success) {
+    				this.winStampa(risposta);
+    			} else { 
+    				this.showErrorMessage(risposta.message);
+    			}
+    		}
+    	});
+    	
+    },
+    
+    winStampa: function(risposta) {
+    	let win = Ext.create('Gestionale.componenti.stdWin', {
+    		width: 1024,
+    		height: 768,
+    		layout: 'fit',
+    		flex: 1,
+    		name: [
+    			{
+    				xtype: 'panel',
+    				flex: 1,
+    				html: `<iframe width="100%" height="100%" src="http://localhost:8080/${risposta.data.pathFile}"></iframe>`
+    			}
+    		]
+    	});
+    	win.show();
     },
     
     onSelectionChangeGrid: function(th, selection) {
@@ -186,15 +247,9 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     		success: (response, opts) => {
     			let risposta = JSON.parse(response.responseText);
     			if (risposta.success) {
-    				let grid = this.lookupReference('Grid'),
-    					recSel = grid.getSelectionModel().getSelection()[0];
-    				if ( remove ) {
-    					grid.getStore().remove( recSel );
-    				} else {
-    					grid.getStore().remove( recSel );
-    					
-    					grid.getStore().loadData( [risposta.data], true );
-    				}
+    				
+    				this.aggiornaStore(this.lookupReference('MyForm').getForm().findField('id').getValue());
+    				
     			} else {
     				this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
     			}
@@ -248,7 +303,7 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     	
     },
     
-    onBeforeEdit: function(editor, context) {debugger;
+    onBeforeEdit: function(editor, context) {
     	let isAnnullato = !Ext.isEmpty(context.record.data.deletedData);
     	if (isAnnullato) {
     		return false;
@@ -311,10 +366,16 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     	myForm.store = Ext.create('Gestionale.store.Iscritti_Corso');
     	this.gestioneForm();
     	this.lookupReference('CboxIstruttori').getStore().load();
-    	this.lookupReference('BtnInserisciPartecipanti').setHidden(this.extraParams.hideBtnInserisciPartecipanti);
-    	if (this.extraParams.corsoSingolo)
+    	
+    	if (this.extraParams.corsoSingolo) {
     		this.lookupReference('CboxTipologia').getStore().filterBy(rec => rec.data.codice === 1)
-    		else this.lookupReference('CboxTipologia').getStore().filterBy(rec => rec.data.codice !== 1)
+    		this.lookupReference('BtnRimuovi').hide();
+    		this.lookupReference('BtnInserisciPartecipanti').hide();
+    	} else {
+    		this.lookupReference('CboxTipologia').getStore().filterBy(rec => rec.data.codice !== 1)
+    		this.lookupReference('BtnRimuovi').show();
+    		this.lookupReference('BtnInserisciPartecipanti').show();
+    	}
     	if (this.extraParams.record) {
     		this.aggiornaStore();
     	} 

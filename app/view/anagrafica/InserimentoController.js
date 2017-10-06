@@ -78,7 +78,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	if (Ext.isEmpty(valForm.telefono)) {
     		StdGenerali.msgAddError(messaggi, 'telefono obbligatorio');
     	}
-    	if (Ext.isEmpty(valForm.comuneResidenza)) {
+    	if (Ext.isEmpty(valForm.idComune)) {
     		StdGenerali.msgAddError(messaggi, 'comune residenza obbligatorio');
     	}
     	
@@ -104,8 +104,10 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	let record = form.getForm().getFieldValues();
     	Object.assign(record, {
     		idOperatore: localStorage.getItem('idOperatoreLog'),
-    		insertData: new Date()
+    		insertData: new Date(),
+    		comune: this.lookupReference('CboxComuni').getSelection().data
     	});
+    	delete record.idComune;
     	StdGenerali.salvaRecord(form, record);
     },
     
@@ -149,6 +151,8 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     
     launch: function() {
     	this.gestioneForm();
+    	this.lookupReference('CboxComuni').getStore().load();
+    	
     	let id = this.extraParams.controllerMain.extraParams.idAnagrafica;
     	if (id) {
     		this.aggiornaStore(this.extraParams.controllerMain.extraParams.idAnagrafica);

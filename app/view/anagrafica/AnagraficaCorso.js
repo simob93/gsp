@@ -10,7 +10,8 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
         'Gestionale.componenti.standardButton',
         'Gestionale.componenti.errorContainer',
         'Gestionale.componenti.gridPanelCustom',
-        'Gestionale.componenti.checkboxgroupGiorni'
+        'Gestionale.componenti.checkboxgroupGiorni',
+        
     ],
 
     controller: 'anagraficaCorsoController',
