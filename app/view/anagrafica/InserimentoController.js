@@ -72,9 +72,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	if (Ext.isEmpty(valForm.cap)) {
     		StdGenerali.msgAddError(messaggi, 'cap obbligatorio');
     	}
-    	if (Ext.isEmpty(valForm.citta)) {
-    		StdGenerali.msgAddError(messaggi, 'citta obbligatorio');
-    	}
+    	
     	if (Ext.isEmpty(valForm.telefono)) {
     		StdGenerali.msgAddError(messaggi, 'telefono obbligatorio');
     	}
