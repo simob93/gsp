@@ -50,6 +50,7 @@ Ext.define('Gestionale.view.istruttori.List',{
     			{
     				xtype: 'gridpanel',
     				reference: 'Grid',
+    				title: 'Lista Istruttori',
     				store: {
     					type: 'istruttori'
     				},

@@ -36,8 +36,7 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
 				}
     		}
     	}));
-    	this.lookupReference('CntBoxBottoni').insert(this.lookupReference('CntBoxBottoni').items.length, 
-    		{
+    	this.lookupReference('CntBoxBottoni').down('#StandardButton').add({
 				xtype: 'splitbutton',
 				nonDisabilitare: true,
 				margin: '0 4 0 0',

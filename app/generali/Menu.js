@@ -32,6 +32,7 @@ class Menu {
 				visibleAdmin: true,
 				titolo: 'Impostazioni',
 				subMenu: [
+					['Operatori', 'Gestionale.view.operatori.List']
 				]
 			}
 		];

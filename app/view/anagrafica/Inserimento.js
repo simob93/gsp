@@ -46,6 +46,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    			margin: '3 0 0 4',
     	    			labelAlign: 'right'
     	    		},
+    	    		
     	    		flex: 1,
     	    		items: [
     	    			{
@@ -56,17 +57,15 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    				cls: 'icon-registration'
     	    			},
     	    			{
-    	    				xtype: 'container',
-    	    				style: 'border-bottom:2px solid #5fa2dd',
-    	    			},
-    	    			{
     	    				xtype: 'fieldset',
+    	    				title: 'Nominativo',
     	    				padding: 5,
     	    				margin: '4 0 0 0',
     	    				layout: {
     	    					type: 'vbox'
     	    				},
     	    				items: [
+    	    					
     	    					{
     	    						xtype: 'textfield',
     	    						fieldLabel: 'Nome',
@@ -107,6 +106,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    			{
     	    				xtype: 'fieldset',
     	    				padding: 5,
+    	    				title: 'Residenza',
     	    				margin: '4 0 0 0',
     	    				layout: {
     	    					type: 'vbox'
@@ -116,14 +116,6 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						xtype: 'textfield',
     	    						fieldLabel: 'Indirizzo',
     	    						name: 'indirizzo',
-    	    						allowBlank: false
-    	    					},
-    	    					{
-    	    						xtype: 'numberfield',
-    	    						width: 250,
-    	    						hideTrigger: true,
-    	    						fieldLabel: 'CAP',
-    	    						name: 'cap',
     	    						allowBlank: false
     	    					},
     	    					{
@@ -145,11 +137,21 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						name: 'idComune',
     	    						allowBlank: false,
     	    						queryMode: 'local'
-    	    					}
+    	    					},
+    	    					{
+    	    						xtype: 'numberfield',
+    	    						width: 250,
+    	    						hideTrigger: true,
+    	    						fieldLabel: 'CAP',
+    	    						name: 'cap',
+    	    						allowBlank: false
+    	    					},
+    	    					
     	    				]
     	    			},
     	    			{
     	    				xtype: 'fieldset',
+    	    				title: 'Altro',
     	    				padding: 5,
     	    				margin: '4 0 0 0',
     	    				layout: {
@@ -175,6 +177,13 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						fieldLabel: 'Codice fiscale genitore',
     	    						hidden: true,
     	    						name: 'codiceFiscaleGenitore'
+    	    					},
+    	    					{
+    	    						xtype: 'textfield',
+    	    						width: 600,
+    	    						reference: 'TxtEmail',
+    	    						fieldLabel: 'Email',
+    	    						name: 'email'
     	    					}
     	    				]
     	    			}

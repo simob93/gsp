@@ -44,10 +44,10 @@ Ext.define('Gestionale.view.menu.MenuController', {
     generaMenu: function() {
     	let menuItem = new Menu().getMenu();
     	let cntMenu = this.lookupReference('Menu');
-    	for (let menu of menuItem) {
+    	for (let menu of menuItem) { debugger;
     		let {titolo, subMenu, ordine, visibleAdmin} = menu;
     		
-    		if (!visibleAdmin && localStorage.getItem('amministratore') === 'F') {
+    		if (visibleAdmin && localStorage.getItem('amministratore') === 'F') {
     			break;
     		}
     		

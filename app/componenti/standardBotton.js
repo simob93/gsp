@@ -1,7 +1,7 @@
 Ext.define('Gestionale.componenti.standardButton', {
 	extend: 'Ext.container.Container',
 	alias: 'widget.standardButton',
-	reference: 'StandardButton',
+	itemId: 'StandardButton', reference: 'StandardButton',
 	layout: {
 		type: 'hbox',
 		align: 'stretch',
