@@ -72,9 +72,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	if (Ext.isEmpty(valForm.cap)) {
     		StdGenerali.msgAddError(messaggi, 'cap obbligatorio');
     	}
-    	if (Ext.isEmpty(valForm.citta)) {
-    		StdGenerali.msgAddError(messaggi, 'citta obbligatorio');
-    	}
+    	
     	if (Ext.isEmpty(valForm.telefono)) {
     		StdGenerali.msgAddError(messaggi, 'telefono obbligatorio');
     	}
@@ -84,18 +82,36 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	
     	
     	if(this.maggiorenne) {
-    		if (Ext.isEmpty(valForm.codiceFiscale))
+    		if (Ext.isEmpty(valForm.codiceFiscale)) {
     			StdGenerali.msgAddError(messaggi, 'codice fiscale obbligatorio');
+    		} else {
+    			this.controllaCF(messaggi, valForm.codiceFiscale)
+    		}
     	} else {
     		if (Ext.isEmpty(valForm.nomeGenitore))
-    			StdGenerali.msgAddError(messaggi, 'nomeGenitore obbligatorio');
+    			StdGenerali.msgAddError(messaggi, 'nome genitore obbligatorio');
     		if (Ext.isEmpty(valForm.codiceFiscaleGenitore)) {
     			StdGenerali.msgAddError(messaggi, 'codice fiscale genitore obbligatorio');
+    		} else {
+    			this.controllaCF(messaggi, valForm.codiceFiscaleGenitore)
     		}
+    	}
+    	
+    	
+    	if (!Ext.isEmpty(valForm.email) && !this.lookupReference('TxtEmail').isValid()) {
+    		StdGenerali.msgAddError(messaggi, 'campi invalidi/obbligatori');
     	}
     	
     	errorContainer.showErrorMsg(messaggi);
     	return !(messaggi.length > 0);
+    },
+    
+    controllaCF: function(messaggi, cf) {
+    		
+    	  var pattern = /^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$/;
+    	  if (cf.search(pattern) == -1) {
+    		  messaggi.push('codice fiscale invalido');
+    	  }
     },
     
     salvaForm: function() {

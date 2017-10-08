@@ -218,6 +218,13 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				renderer: function(value, merdaData, record) {
     					return `${value ? value: 0} €`
     				}
+    			},
+    			{
+    				xtype: 'gridcolumn',
+    				align: 'left',
+    				text: 'Compilatore corso',
+    				dataIndex: 'operatoreNominativo',
+    				flex: 1,
     			}
     		],
     		listeners: {

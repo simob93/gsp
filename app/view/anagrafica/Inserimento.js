@@ -180,7 +180,9 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    					},
     	    					{
     	    						xtype: 'textfield',
+    	    						reference: 'TxtEmail',
     	    						width: 600,
+    	    						vtype: 'email',
     	    						reference: 'TxtEmail',
     	    						fieldLabel: 'Email',
     	    						name: 'email'

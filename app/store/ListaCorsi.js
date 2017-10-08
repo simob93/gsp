@@ -18,6 +18,7 @@ Ext.define('Gestionale.store.ListaCorsi', {
     	{name: 'partecipanti'},
     	{name: 'tariffaTot'},
     	{name: 'descrTipologia'},
+    	{name: 'operatoreNominativo'},
     	
     ],
     proxy: {
