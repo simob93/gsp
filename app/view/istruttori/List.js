@@ -55,9 +55,10 @@ Ext.define('Gestionale.view.istruttori.List',{
     					type: 'istruttori'
     				},
     				plugins: [
-						Ext.create('Ext.grid.plugin.RowEditing', {
-							clickToEdit:2
-						})
+    					{
+    						ptype: 'rowediting',
+    						clickToEdit:2
+    					}
     				],
     				reference: 'Grid',
     				flex: 1,

@@ -11,6 +11,8 @@ Ext.define('Gestionale.view.main.Main', {
 
     requires: [
         'Gestionale.view.main.MainController',
+        'Gestionale.view.menu.Menu',
+    	'Gestionale.view.login.Login'
     ],
     layout: {
     	type: 'vbox',

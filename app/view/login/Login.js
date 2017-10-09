@@ -9,7 +9,8 @@ Ext.define('Gestionale.view.login.Login', {
     extend: 'Ext.container.Container',
     requires: [
         'Gestionale.view.login.LoginController',
-        'Gestionale.componenti.errorContainer'
+        'Gestionale.componenti.errorContainer',
+        'Gestionale.view.menu.Menu'
     ],
     layout: {
     	type: 'vbox',

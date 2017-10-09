@@ -1,7 +1,9 @@
 Ext.define('Gestionale.view.corso.InserimentoController', {
     extend: 'Gestionale.componenti.MyController',
     alias: 'controller.inserimentoCorso',
-
+    requires: [
+    	'Gestionale.componenti.stdWin'
+    ],
     gestioneForm: function() {
     	
     	let myForm = this.lookupReference('MyForm');

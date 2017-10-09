@@ -8,5 +8,8 @@ Ext.define('Gestionale.componenti.MyController', {
 			this.extraParams = {};
 		}
 		this.launch();
+	},
+	initComponent: function() {
+		this.callParent();
 	}
 });

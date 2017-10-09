@@ -8,6 +8,7 @@ Ext.define('Gestionale.view.main.MainController', {
     extend: 'Gestionale.componenti.MyController',
 
     alias: 'controller.main',
+   
     launch: function() {
     	let cntMain = this.lookupReference('CntMain');
     	if (localStorage.getItem('logIn') === 'F') {

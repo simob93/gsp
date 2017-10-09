@@ -207,19 +207,16 @@
             "path": "${framework.dir}/build/ext-all-rtl-debug.js"
         },
         {
-            "path": "app/generali/StdGenerali.js",
-            "includeInBundle": true
+            "path": "app/generali/StdGenerali.js"
+        },
+        {
+            "path": "app/generali/Menu.js"
         },
         {
         
             "path": "app.js",
             "bundle": true
-        },
-        {
-            "path": "app/generali/Menu.js"
-            
         }
-        
        
     ],
 

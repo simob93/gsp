@@ -14,7 +14,8 @@ Ext.define('Gestionale.view.menu.Menu', {
     	'Gestionale.view.corso.DashBoardCorso',
     	'Gestionale.view.corso.Inserimento',
     	'Gestionale.view.iscritti.List',
-    	'Gestionale.view.istruttori.List'
+    	'Gestionale.view.istruttori.List',
+    	'Gestionale.view.corso.ListaCorsi'
     ],
     layout: {
     	type: 'hbox',

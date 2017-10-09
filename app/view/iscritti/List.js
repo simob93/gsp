@@ -7,7 +7,9 @@ Ext.define('Gestionale.view.iscritti.List',{
         'Gestionale.componenti.periodo',
         'Gestionale.store.Iscritti',
         'Gestionale.componenti.gridPanelCustom',
-        'Gestionale.componenti.checkboxgroupGiorni'
+        'Gestionale.componenti.checkboxgroupGiorni',
+        'Gestionale.store.NumLezioni',
+        'Gestionale.store.MinutiLezioni'
     ],
     controller: 'iscrittiController',
     layout: {

@@ -13,8 +13,6 @@ Ext.define('Ext.overrides.Base', {
 	}
 })
 
-
-
 Ext.Loader.setConfig({enabled: true});
 Ext.application({
     name: 'Gestionale',
@@ -23,7 +21,9 @@ Ext.application({
 
     requires: [
         'Gestionale.view.main.Main',
-        'Ext.overrides.Base'
+        'Ext.overrides.Base',
+        'Gestionale.componenti.stdWin',
+        'Ext.plugin.Viewport'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class
