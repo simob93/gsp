@@ -23,7 +23,9 @@ Ext.application({
         'Gestionale.view.main.Main',
         'Ext.overrides.Base',
         'Gestionale.componenti.stdWin',
-        'Ext.plugin.Viewport'
+        'Ext.plugin.Viewport',
+        'Ext.form.TimeField',
+        'Ext.window.Toast'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class

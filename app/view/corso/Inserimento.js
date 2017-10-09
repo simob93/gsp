@@ -13,7 +13,7 @@ Ext.define('Gestionale.view.corso.Inserimento',{
         'Gestionale.componenti.checkboxgroupGiorni',
         'Gestionale.componenti.standardButton',
     	'Gestionale.view.iscritti.IscrittiModel',
-    	'Gestionale.componenti.pnlCompilatore'
+    	'Gestionale.componenti.pnlCompilatore',
     ],
     controller: 'inserimentoCorso',
     layout: {

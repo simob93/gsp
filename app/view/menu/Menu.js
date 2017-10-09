@@ -15,7 +15,8 @@ Ext.define('Gestionale.view.menu.Menu', {
     	'Gestionale.view.corso.Inserimento',
     	'Gestionale.view.iscritti.List',
     	'Gestionale.view.istruttori.List',
-    	'Gestionale.view.corso.ListaCorsi'
+    	'Gestionale.view.corso.ListaCorsi',
+    	'Gestionale.view.operatori.List'
     ],
     layout: {
     	type: 'hbox',
@@ -47,7 +48,7 @@ Ext.define('Gestionale.view.menu.Menu', {
     						xtype: 'image',
     						height: 64,
     						width: 64,
-    						src: 'app/images/profile.svg',
+    						src: 'resources/images/profile.svg',
     					},
     					{
     						xtype: 'label',
@@ -93,6 +94,7 @@ Ext.define('Gestionale.view.menu.Menu', {
     					{
     	    				xtype: 'image',
     	    				width: 300,
+    	    				height: 99,
     	    				margin: '0 0 4 0',
     	    				src: 'resources/images/logo.jpg'
     	    			}

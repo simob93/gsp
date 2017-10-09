@@ -10,7 +10,7 @@ Ext.define('Gestionale.view.istruttori.ListController', {
     	StdGenerali.salvaRecord(grid, record);
     },
     
-    onBeforeEditGrid: function(editor) { debugger;
+    onBeforeEditGrid: function(editor) { 
     	//StdGenerali.isolaCmp(this.lookupReference('Grid'));
     },
     
@@ -34,7 +34,7 @@ Ext.define('Gestionale.view.istruttori.ListController', {
     	grid.editingPlugin.startEdit(0, 0);
     },
     
-    onClickBtnElimina: function() {  debugger;
+    onClickBtnElimina: function() { 
     	
     	let grid = this.lookupReference('Grid'),
     		recSel = grid.getSelectionModel().getSelection();

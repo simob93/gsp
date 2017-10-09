@@ -82,7 +82,7 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     		url: url,
     		success: (response, opts) => {
     			let risposta = JSON.parse(response.responseText);
-    			debugger;
+    		
     			if (risposta.success) {
     				this.winStampa(risposta);
     			} else { 

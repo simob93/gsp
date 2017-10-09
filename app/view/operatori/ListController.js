@@ -2,7 +2,7 @@ Ext.define('Gestionale.view.operatori.ListController', {
     extend: 'Gestionale.componenti.MyController',
     alias: 'controller.listOperatori',
     
-    onEditGrid: function(editor, context) { debugger
+    onEditGrid: function(editor, context) { 
     	let grid = this.lookupReference('Grid'),
     		record = context.record.data;
     	
@@ -10,7 +10,7 @@ Ext.define('Gestionale.view.operatori.ListController', {
     	StdGenerali.salvaRecord(grid, record);
     },
     
-    onValidateEditGrid: function() { debugger
+    onValidateEditGrid: function() { 
     	return true
     },
     
