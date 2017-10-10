@@ -44,6 +44,7 @@ Ext.define('Gestionale.view.corso.Inserimento',{
     	    			labelAlign: 'right'
     	    		},
     	    		flex: 1,
+    	    		scrollable: true,
     				items: [
     					{
     						xtype: 'pnlCompilatore'
@@ -196,11 +197,11 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 						},
 						{
 							xtype: 'gridPanelCustom',
+							height: 200,
 							ui: 'pnl-corso',
 							border: 1,
 							margin: '8 0 0 0',
 							title: 'Partecipanti',
-							flex: 1,
 							store: {
 								type: 'iscrittiCorso'
 							},
