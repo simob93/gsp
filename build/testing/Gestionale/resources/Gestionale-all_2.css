@@ -7460,25 +7460,28 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:155 */
 .corso_convalidato {
     background-image: url("images/filled-circle.svg");
+    background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:159 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:160 */
 .shortcutMenu {
     background-image: url("images/menu.svg");
+    background-repeat: no-repeat;
     display: none;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:164 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:166 */
 .cntShortcut:hover .shortcutMenu {
     display: inline-block;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:168 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:170 */
 .corso_non_convalidato {
     background-image: url("images/filled-circle-gray.svg");
+    background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:172 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:175 */
 .labelWhite {
     color: white;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:176 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:179 */
 .alert-danger {
     background: #fcc;
     color: #900;
@@ -7487,72 +7490,72 @@
     border-style: solid;
     border-width: 1px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:185 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:188 */
 .green-label {
     color: green;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:189 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:192 */
 .azure {
     background: azure;
     border-bottom: 2px solid #5fa2dd;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:194 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:197 */
 .gridAlta30 {
     height: 30px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:198 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:201 */
 .recAnnullato {
     text-decoration: line-through;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:202 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:205 */
 .grassetto {
     font-weight: bold;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:206 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:209 */
 .cntProfile {
     border: 1px solid #5fa2dd;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:210 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:213 */
 .icon-annulla {
     background-image: url("images/deleted.svg");
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:214 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:217 */
 .x-fieldset {
     border-radius: 5px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:218 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:221 */
 .x-fieldset-header-default > .x-fieldset-header-text {
     font-size: 16px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:222 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:225 */
 .calendar td {
     width: 100px;
     height: 90px;
     border: 1px solid #bbb;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:227 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:230 */
 .icon-registration {
     background-image: url("images/registration_user.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:232 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:235 */
 .icon-prev,
 .icon-next,
 .icon-32 {
     width: 32px;
     height: 32px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:239 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:242 */
 .icon-next {
     background-image: url("images/next.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:245 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:248 */
 .icon-prev {
     background-image: url("images/prev.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:251 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:254 */
 .label-calendar {
     padding: 4px;
     margin-bottom: 20px;

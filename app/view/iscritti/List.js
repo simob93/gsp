@@ -251,7 +251,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     						} 
     					},
     					{
@@ -262,7 +262,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     						} 
     					},
     					{
@@ -273,7 +273,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     						} 
     					},
     					{
@@ -284,7 +284,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     						} 
     					},
     					{
@@ -295,7 +295,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     						} 
     					},
     					{
@@ -306,7 +306,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return `<div style="background: green; height: 16px; width: 16px; border-radius: 50%;"></div>`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     						} 
     					},
     					{
@@ -318,7 +318,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
     							}
     							return str;
     						}
@@ -332,7 +332,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />";
     							}
     							return str;
     						}
@@ -346,7 +346,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />";
     							}
     							return str;
     						}

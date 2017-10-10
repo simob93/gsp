@@ -1,3 +1,184 @@
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-focus.x-tab-active .x-tab-default-right-ml,
+.x-tab-focus.x-tab-active .x-tab-default-right-mr {
+    background-image: url(images/tab/tab-default-right-focus-active-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-focus.x-tab-active .x-tab-default-right-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-right-focus-active-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab.x-tab-disabled .x-tab-default-right-tl,
+.x-tab.x-tab-disabled .x-tab-default-right-bl,
+.x-tab.x-tab-disabled .x-tab-default-right-tr,
+.x-tab.x-tab-disabled .x-tab-default-right-br,
+.x-tab.x-tab-disabled .x-tab-default-right-tc,
+.x-tab.x-tab-disabled .x-tab-default-right-bc {
+    background-image: url(images/tab/tab-default-right-disabled-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab.x-tab-disabled .x-tab-default-right-ml,
+.x-tab.x-tab-disabled .x-tab-default-right-mr {
+    background-image: url(images/tab/tab-default-right-disabled-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab.x-tab-disabled .x-tab-default-right-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-right-disabled-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab-over .x-tab-default-bottom-tl,
+.x-tab-over .x-tab-default-bottom-bl,
+.x-tab-over .x-tab-default-bottom-tr,
+.x-tab-over .x-tab-default-bottom-br,
+.x-tab-over .x-tab-default-bottom-tc,
+.x-tab-over .x-tab-default-bottom-bc {
+    background-image: url(images/tab/tab-default-bottom-over-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-over .x-tab-default-bottom-ml,
+.x-tab-over .x-tab-default-bottom-mr {
+    background-image: url(images/tab/tab-default-bottom-over-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-over .x-tab-default-bottom-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-bottom-over-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab-focus .x-tab-default-bottom-tl,
+.x-tab-focus .x-tab-default-bottom-bl,
+.x-tab-focus .x-tab-default-bottom-tr,
+.x-tab-focus .x-tab-default-bottom-br,
+.x-tab-focus .x-tab-default-bottom-tc,
+.x-tab-focus .x-tab-default-bottom-bc {
+    background-image: url(images/tab/tab-default-bottom-focus-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-focus .x-tab-default-bottom-ml,
+.x-tab-focus .x-tab-default-bottom-mr {
+    background-image: url(images/tab/tab-default-bottom-focus-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-focus .x-tab-default-bottom-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-bottom-focus-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab-focus.x-tab-over .x-tab-default-bottom-tl,
+.x-tab-focus.x-tab-over .x-tab-default-bottom-bl,
+.x-tab-focus.x-tab-over .x-tab-default-bottom-tr,
+.x-tab-focus.x-tab-over .x-tab-default-bottom-br,
+.x-tab-focus.x-tab-over .x-tab-default-bottom-tc,
+.x-tab-focus.x-tab-over .x-tab-default-bottom-bc {
+    background-image: url(images/tab/tab-default-bottom-focus-over-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-focus.x-tab-over .x-tab-default-bottom-ml,
+.x-tab-focus.x-tab-over .x-tab-default-bottom-mr {
+    background-image: url(images/tab/tab-default-bottom-focus-over-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-focus.x-tab-over .x-tab-default-bottom-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-bottom-focus-over-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab.x-tab-active .x-tab-default-bottom-tl,
+.x-tab.x-tab-active .x-tab-default-bottom-bl,
+.x-tab.x-tab-active .x-tab-default-bottom-tr,
+.x-tab.x-tab-active .x-tab-default-bottom-br,
+.x-tab.x-tab-active .x-tab-default-bottom-tc,
+.x-tab.x-tab-active .x-tab-default-bottom-bc {
+    background-image: url(images/tab/tab-default-bottom-active-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab.x-tab-active .x-tab-default-bottom-ml,
+.x-tab.x-tab-active .x-tab-default-bottom-mr {
+    background-image: url(images/tab/tab-default-bottom-active-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab.x-tab-active .x-tab-default-bottom-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-bottom-active-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab-focus.x-tab-active .x-tab-default-bottom-tl,
+.x-tab-focus.x-tab-active .x-tab-default-bottom-bl,
+.x-tab-focus.x-tab-active .x-tab-default-bottom-tr,
+.x-tab-focus.x-tab-active .x-tab-default-bottom-br,
+.x-tab-focus.x-tab-active .x-tab-default-bottom-tc,
+.x-tab-focus.x-tab-active .x-tab-default-bottom-bc {
+    background-image: url(images/tab/tab-default-bottom-focus-active-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-focus.x-tab-active .x-tab-default-bottom-ml,
+.x-tab-focus.x-tab-active .x-tab-default-bottom-mr {
+    background-image: url(images/tab/tab-default-bottom-focus-active-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-focus.x-tab-active .x-tab-default-bottom-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-bottom-focus-active-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab.x-tab-disabled .x-tab-default-bottom-tl,
+.x-tab.x-tab-disabled .x-tab-default-bottom-bl,
+.x-tab.x-tab-disabled .x-tab-default-bottom-tr,
+.x-tab.x-tab-disabled .x-tab-default-bottom-br,
+.x-tab.x-tab-disabled .x-tab-default-bottom-tc,
+.x-tab.x-tab-disabled .x-tab-default-bottom-bc {
+    background-image: url(images/tab/tab-default-bottom-disabled-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab.x-tab-disabled .x-tab-default-bottom-ml,
+.x-tab.x-tab-disabled .x-tab-default-bottom-mr {
+    background-image: url(images/tab/tab-default-bottom-disabled-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab.x-tab-disabled .x-tab-default-bottom-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-bottom-disabled-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab-over .x-tab-default-left-tl,
+.x-tab-over .x-tab-default-left-bl,
+.x-tab-over .x-tab-default-left-tr,
+.x-tab-over .x-tab-default-left-br,
+.x-tab-over .x-tab-default-left-tc,
+.x-tab-over .x-tab-default-left-bc {
+    background-image: url(images/tab/tab-default-left-over-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-over .x-tab-default-left-ml,
+.x-tab-over .x-tab-default-left-mr {
+    background-image: url(images/tab/tab-default-left-over-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-over .x-tab-default-left-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-left-over-fbg.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
+.x-tab-focus .x-tab-default-left-tl,
+.x-tab-focus .x-tab-default-left-bl,
+.x-tab-focus .x-tab-default-left-tr,
+.x-tab-focus .x-tab-default-left-br,
+.x-tab-focus .x-tab-default-left-tc,
+.x-tab-focus .x-tab-default-left-bc {
+    background-image: url(images/tab/tab-default-left-focus-corners.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2966 */
+.x-tab-focus .x-tab-default-left-ml,
+.x-tab-focus .x-tab-default-left-mr {
+    background-image: url(images/tab/tab-default-left-focus-sides.gif);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2971 */
+.x-tab-focus .x-tab-default-left-mc {
+    background-repeat: repeat-x;
+    background-image: url(images/tab/tab-default-left-focus-fbg.gif);
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:2957 */
 .x-tab-focus.x-tab-over .x-tab-default-left-tl,
 .x-tab-focus.x-tab-over .x-tab-default-left-bl,
@@ -128,6 +309,150 @@
 .x-rtl.x-tab-closable.x-tab-default .x-tab-button {
     padding-right: 0px;
     padding-left: 15px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-focus-corners.gif), sides:url(images/tab/tab-default-top-focus-sides.gif), frame-bg:url(images/tab/tab-default-top-focus-fbg.gif), frame:3px 3px 3px 3px, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-focus-corners.gif), sides:url(images/tab/tab-default-right-focus-sides.gif), frame-bg:url(images/tab/tab-default-right-focus-fbg.gif), frame:3px 3px 3px 3px, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-focus-corners.gif), sides:url(images/tab/tab-default-bottom-focus-sides.gif), frame-bg:url(images/tab/tab-default-bottom-focus-fbg.gif), frame:3px 3px 3px 3px, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-focus-corners.gif), sides:url(images/tab/tab-default-left-focus-sides.gif), frame-bg:url(images/tab/tab-default-left-focus-fbg.gif), frame:3px 3px 3px 3px, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-over-corners.gif), sides:url(images/tab/tab-default-top-over-sides.gif), frame-bg:url(images/tab/tab-default-top-over-fbg.gif), frame:3px 3px 3px 3px, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-over-corners.gif), sides:url(images/tab/tab-default-right-over-sides.gif), frame-bg:url(images/tab/tab-default-right-over-fbg.gif), frame:3px 3px 3px 3px, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-over-corners.gif), sides:url(images/tab/tab-default-bottom-over-sides.gif), frame-bg:url(images/tab/tab-default-bottom-over-fbg.gif), frame:3px 3px 3px 3px, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-over-corners.gif), sides:url(images/tab/tab-default-left-over-sides.gif), frame-bg:url(images/tab/tab-default-left-over-fbg.gif), frame:3px 3px 3px 3px, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-active-corners.gif), sides:url(images/tab/tab-default-top-active-sides.gif), frame-bg:url(images/tab/tab-default-top-active-fbg.gif), frame:3px 3px 3px 3px, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-active-corners.gif), sides:url(images/tab/tab-default-right-active-sides.gif), frame-bg:url(images/tab/tab-default-right-active-fbg.gif), frame:3px 3px 3px 3px, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-active-corners.gif), sides:url(images/tab/tab-default-bottom-active-sides.gif), frame-bg:url(images/tab/tab-default-bottom-active-fbg.gif), frame:3px 3px 3px 3px, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-active-corners.gif), sides:url(images/tab/tab-default-left-active-sides.gif), frame-bg:url(images/tab/tab-default-left-active-fbg.gif), frame:3px 3px 3px 3px, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-focus-over-corners.gif), sides:url(images/tab/tab-default-top-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-top-focus-over-fbg.gif), frame:3px 3px 3px 3px, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-focus-over-corners.gif), sides:url(images/tab/tab-default-right-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-right-focus-over-fbg.gif), frame:3px 3px 3px 3px, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-focus-over-corners.gif), sides:url(images/tab/tab-default-bottom-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-bottom-focus-over-fbg.gif), frame:3px 3px 3px 3px, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-focus-over-corners.gif), sides:url(images/tab/tab-default-left-focus-over-sides.gif), frame-bg:url(images/tab/tab-default-left-focus-over-fbg.gif), frame:3px 3px 3px 3px, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-focus-active-corners.gif), sides:url(images/tab/tab-default-top-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-top-focus-active-fbg.gif), frame:3px 3px 3px 3px, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-focus-active-corners.gif), sides:url(images/tab/tab-default-right-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-right-focus-active-fbg.gif), frame:3px 3px 3px 3px, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-focus-active-corners.gif), sides:url(images/tab/tab-default-bottom-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-bottom-focus-active-fbg.gif), frame:3px 3px 3px 3px, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-focus-active-corners.gif), sides:url(images/tab/tab-default-left-focus-active-sides.gif), frame-bg:url(images/tab/tab-default-left-focus-active-fbg.gif), frame:3px 3px 3px 3px, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-top-disabled-corners.gif), sides:url(images/tab/tab-default-top-disabled-sides.gif), frame-bg:url(images/tab/tab-default-top-disabled-fbg.gif), frame:3px 3px 3px 3px, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-right-disabled-corners.gif), sides:url(images/tab/tab-default-right-disabled-sides.gif), frame-bg:url(images/tab/tab-default-right-disabled-fbg.gif), frame:3px 3px 3px 3px, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-bottom-disabled-corners.gif), sides:url(images/tab/tab-default-bottom-disabled-sides.gif), frame-bg:url(images/tab/tab-default-bottom-disabled-fbg.gif), frame:3px 3px 3px 3px, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-default-left-disabled-corners.gif), sides:url(images/tab/tab-default-left-disabled-sides.gif), frame-bg:url(images/tab/tab-default-left-disabled-fbg.gif), frame:3px 3px 3px 3px, stretch:right" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Bar.scss:168 */
 .x-tab-bar-default {
@@ -410,6 +735,30 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Bar.scss:616 */
 .x-box-scroller-plain.x-box-scroller-tab-bar-default.x-box-scroller-bottom {
     background-image: url(images/tab-bar/default-plain-scroll-bottom.png);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-default-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/toolbar/Breadcrumb.scss:162 */
 .x-breadcrumb-btn-default {
@@ -941,6 +1290,30 @@
 .x-panel .x-panel-header-light-collapsed-border-left {
     border-right-width: 1px !important;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:786 */
 .x-panel-header-light-horizontal .x-tool-after-title {
     margin: 0 0 0 6px;
@@ -1360,6 +1733,12 @@
 .x-panel-light-framed-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-light-framed:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel/panel-light-framed-corners.gif), sides:url(images/panel/panel-light-framed-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-top {
     -moz-border-radius-topleft: 4px;
@@ -1471,6 +1850,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-top-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 0 5px, corners:url(images/panel-header/panel-header-light-framed-top-corners.gif), sides:url(images/panel-header/panel-header-light-framed-top-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-right {
@@ -1598,6 +1983,12 @@
 .x-panel-header-light-framed-right-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 0, corners:url(images/panel-header/panel-header-light-framed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-right-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-bottom {
     -moz-border-radius-topleft: 0;
@@ -1709,6 +2100,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-bottom-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 5px 5px 5px, corners:url(images/panel-header/panel-header-light-framed-bottom-corners.gif), sides:url(images/panel-header/panel-header-light-framed-bottom-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-left {
@@ -1836,6 +2233,12 @@
 .x-panel-header-light-framed-left-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 0 5px 5px, corners:url(images/panel-header/panel-header-light-framed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-left-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-top {
     -moz-border-radius-topleft: 4px;
@@ -1947,6 +2350,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-collapsed-top-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-light-framed-collapsed-top-corners.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-top-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-right {
@@ -2074,6 +2483,12 @@
 .x-panel-header-light-framed-collapsed-right-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-light-framed-collapsed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-collapsed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-right-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-bottom {
     -moz-border-radius-topleft: 4px;
@@ -2185,6 +2600,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-collapsed-bottom-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-light-framed-collapsed-bottom-corners.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-bottom-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-light-framed-collapsed-left {
@@ -2311,6 +2732,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-light-framed-collapsed-left-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-light-framed-collapsed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-light-framed-collapsed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-light-framed-collapsed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-light-framed-collapsed-left-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:638 */
 .x-panel .x-panel-header-light-framed-top {
@@ -2677,6 +3104,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-plain-toolbar-small-mc {
     padding: 1px 1px 1px 1px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, frame-bg:url(images/btn/btn-plain-toolbar-small-fbg.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:445 */
 .x-btn-plain-toolbar-small {
@@ -3114,6 +3547,42 @@
     border-width: 1px;
     border-color: #4297d4;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-small-focus-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-focus-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-small-focus-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-small-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-over-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-small-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-small-focus-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-focus-over-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-small-focus-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-small-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-pressed-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-small-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-small-focus-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-focus-pressed-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-small-focus-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-plain-toolbar-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-small-disabled-corners.gif), sides:url(images/btn/btn-plain-toolbar-small-disabled-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-small-disabled-fbg.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-plain-toolbar-small-cell > .x-grid-cell-inner {
     padding-top: 0px;
@@ -3214,6 +3683,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-plain-toolbar-medium-mc {
     padding: 1px 1px 1px 1px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, frame-bg:url(images/btn/btn-plain-toolbar-medium-fbg.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:445 */
 .x-btn-plain-toolbar-medium {
@@ -3651,6 +4126,42 @@
     border-width: 1px;
     border-color: #4297d4;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-medium-focus-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-focus-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-medium-focus-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-medium-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-over-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-medium-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-medium-focus-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-focus-over-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-medium-focus-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-medium-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-pressed-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-medium-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-medium-focus-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-focus-pressed-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-medium-focus-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-plain-toolbar-medium:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-medium-disabled-corners.gif), sides:url(images/btn/btn-plain-toolbar-medium-disabled-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-medium-disabled-fbg.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-plain-toolbar-medium-cell > .x-grid-cell-inner {
     padding-top: 0;
@@ -3751,6 +4262,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-plain-toolbar-large-mc {
     padding: 1px 1px 1px 1px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, frame-bg:url(images/btn/btn-plain-toolbar-large-fbg.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:445 */
 .x-btn-plain-toolbar-large {
@@ -4187,6 +4704,42 @@
 .x-nbr .x-segmented-button-item.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large:after {
     border-width: 1px;
     border-color: #4297d4;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-large-focus-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-focus-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-large-focus-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-large-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-over-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-large-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-large-focus-over-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-focus-over-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-large-focus-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-large-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-pressed-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-large-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-large-focus-pressed-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-focus-pressed-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-large-focus-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-plain-toolbar-large:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-plain-toolbar-large-disabled-corners.gif), sides:url(images/btn/btn-plain-toolbar-large-disabled-sides.gif), frame-bg:url(images/btn/btn-plain-toolbar-large-disabled-fbg.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-plain-toolbar-large-cell > .x-grid-cell-inner {
@@ -7022,6 +7575,12 @@
 .x-tab-navigation-top-mc {
     padding: 24px 24px 24px 24px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tab-navigation-bottom {
     -moz-border-radius-topleft: 0;
@@ -7116,6 +7675,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-tab-navigation-bottom-mc {
     padding: 24px 24px 24px 24px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tab-navigation-left {
@@ -7212,6 +7777,12 @@
 .x-tab-navigation-left-mc {
     padding: 24px 24px 24px 24px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tab-navigation-right {
     -moz-border-radius-topleft: 0;
@@ -7306,6 +7877,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-tab-navigation-right-mc {
     padding: 24px 24px 24px 24px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 0 0 0" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Tab.scss:1597 */
 .x-tab-navigation {
@@ -8093,6 +8670,150 @@
     padding-right: 0px;
     padding-left: 15px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-top-focus-corners.gif), sides:url(images/tab/tab-navigation-top-focus-sides.gif), frame-bg:url(images/tab/tab-navigation-top-focus-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-right-focus-corners.gif), sides:url(images/tab/tab-navigation-right-focus-sides.gif), frame-bg:url(images/tab/tab-navigation-right-focus-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-bottom-focus-corners.gif), sides:url(images/tab/tab-navigation-bottom-focus-sides.gif), frame-bg:url(images/tab/tab-navigation-bottom-focus-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-left-focus-corners.gif), sides:url(images/tab/tab-navigation-left-focus-sides.gif), frame-bg:url(images/tab/tab-navigation-left-focus-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-top-over-corners.gif), sides:url(images/tab/tab-navigation-top-over-sides.gif), frame-bg:url(images/tab/tab-navigation-top-over-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-right-over-corners.gif), sides:url(images/tab/tab-navigation-right-over-sides.gif), frame-bg:url(images/tab/tab-navigation-right-over-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-bottom-over-corners.gif), sides:url(images/tab/tab-navigation-bottom-over-sides.gif), frame-bg:url(images/tab/tab-navigation-bottom-over-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-over.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-left-over-corners.gif), sides:url(images/tab/tab-navigation-left-over-sides.gif), frame-bg:url(images/tab/tab-navigation-left-over-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-top-active-corners.gif), sides:url(images/tab/tab-navigation-top-active-sides.gif), frame-bg:url(images/tab/tab-navigation-top-active-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-right-active-corners.gif), sides:url(images/tab/tab-navigation-right-active-sides.gif), frame-bg:url(images/tab/tab-navigation-right-active-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-bottom-active-corners.gif), sides:url(images/tab/tab-navigation-bottom-active-sides.gif), frame-bg:url(images/tab/tab-navigation-bottom-active-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-active.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-left-active-corners.gif), sides:url(images/tab/tab-navigation-left-active-sides.gif), frame-bg:url(images/tab/tab-navigation-left-active-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-top-focus-over-corners.gif), sides:url(images/tab/tab-navigation-top-focus-over-sides.gif), frame-bg:url(images/tab/tab-navigation-top-focus-over-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-right-focus-over-corners.gif), sides:url(images/tab/tab-navigation-right-focus-over-sides.gif), frame-bg:url(images/tab/tab-navigation-right-focus-over-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-bottom-focus-over-corners.gif), sides:url(images/tab/tab-navigation-bottom-focus-over-sides.gif), frame-bg:url(images/tab/tab-navigation-bottom-focus-over-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-over.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-left-focus-over-corners.gif), sides:url(images/tab/tab-navigation-left-focus-over-sides.gif), frame-bg:url(images/tab/tab-navigation-left-focus-over-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-top-focus-active-corners.gif), sides:url(images/tab/tab-navigation-top-focus-active-sides.gif), frame-bg:url(images/tab/tab-navigation-top-focus-active-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-right-focus-active-corners.gif), sides:url(images/tab/tab-navigation-right-focus-active-sides.gif), frame-bg:url(images/tab/tab-navigation-right-focus-active-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-bottom-focus-active-corners.gif), sides:url(images/tab/tab-navigation-bottom-focus-active-sides.gif), frame-bg:url(images/tab/tab-navigation-bottom-focus-active-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-focus.x-tab-active.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-left-focus-active-corners.gif), sides:url(images/tab/tab-navigation-left-focus-active-sides.gif), frame-bg:url(images/tab/tab-navigation-left-focus-active-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-top-disabled-corners.gif), sides:url(images/tab/tab-navigation-top-disabled-sides.gif), frame-bg:url(images/tab/tab-navigation-top-disabled-fbg.gif), frame:0 0 0 0, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-right-disabled-corners.gif), sides:url(images/tab/tab-navigation-right-disabled-sides.gif), frame-bg:url(images/tab/tab-navigation-right-disabled-fbg.gif), frame:0 0 0 0, stretch:left" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-bottom-disabled-corners.gif), sides:url(images/tab/tab-navigation-bottom-disabled-sides.gif), frame-bg:url(images/tab/tab-navigation-bottom-disabled-fbg.gif), frame:0 0 0 0, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-disabled.x-tab-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, corners:url(images/tab/tab-navigation-left-disabled-corners.gif), sides:url(images/tab/tab-navigation-left-disabled-sides.gif), frame-bg:url(images/tab/tab-navigation-left-disabled-fbg.gif), frame:0 0 0 0, stretch:right" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/tab/Bar.scss:168 */
 .x-tab-bar-navigation {
     background-color: #404040;
@@ -8291,6 +9012,30 @@
 .x-box-scroller-plain.x-box-scroller-tab-bar-navigation.x-box-scroller-bottom {
     background-image: url(images/tab-bar/navigation-plain-scroll-bottom.png);
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-tab-bar-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-btn-convalida-small {
     -webkit-border-radius: 3px;
@@ -8404,6 +9149,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-btn-convalida-small-mc {
     padding: 1px 1px 1px 1px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, frame-bg:url(images/btn/btn-convalida-small-fbg.gif), corners:url(images/btn/btn-convalida-small-corners.gif), sides:url(images/btn/btn-convalida-small-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:445 */
 .x-btn-convalida-small {
@@ -8853,6 +9604,42 @@
     border-width: 1px;
     border-color: #d4e2ec;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-convalida-small-focus-corners.gif), sides:url(images/btn/btn-convalida-small-focus-sides.gif), frame-bg:url(images/btn/btn-convalida-small-focus-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-over.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-convalida-small-over-corners.gif), sides:url(images/btn/btn-convalida-small-over-sides.gif), frame-bg:url(images/btn/btn-convalida-small-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-over.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-convalida-small-focus-over-corners.gif), sides:url(images/btn/btn-convalida-small-focus-over-sides.gif), frame-bg:url(images/btn/btn-convalida-small-focus-over-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-pressed.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-convalida-small-pressed-corners.gif), sides:url(images/btn/btn-convalida-small-pressed-sides.gif), frame-bg:url(images/btn/btn-convalida-small-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-focus.x-btn-pressed.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-convalida-small-focus-pressed-corners.gif), sides:url(images/btn/btn-convalida-small-focus-pressed-sides.gif), frame-bg:url(images/btn/btn-convalida-small-focus-pressed-fbg.gif)" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-btn-disabled.x-btn-convalida-small:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom, frame:3px 3px 3px 3px, corners:url(images/btn/btn-convalida-small-disabled-corners.gif), sides:url(images/btn/btn-convalida-small-disabled-sides.gif), frame-bg:url(images/btn/btn-convalida-small-disabled-fbg.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/button/Button.scss:1246 */
 .x-button-convalida-small-cell > .x-grid-cell-inner {
     padding-top: 0px;
@@ -9000,6 +9787,30 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:750 */
 .x-panel .x-panel-header-navigation-collapsed-border-left {
     border-right-width: 1px !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-navigation-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-navigation-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-navigation-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-navigation-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:786 */
 .x-panel-header-navigation-horizontal .x-tool-after-title {
@@ -9312,6 +10123,12 @@
 .x-window-win-corso-mc {
     padding: 0px 0px 0px 0px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-win-corso:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window/window-win-corso-corners.gif), sides:url(images/window/window-win-corso-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/window/Window.scss:250 */
 .x-window-body-win-corso {
     border-color: #3892d4;
@@ -9519,6 +10336,12 @@
 .x-window-header-win-corso-top-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-top-corners.gif), sides:url(images/window-header/window-header-win-corso-top-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-right {
     -moz-border-radius-topleft: 0;
@@ -9640,6 +10463,12 @@
 .x-window-header-win-corso-right-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-right-corners.gif), corners-rtl:url(images/window-header/window-header-win-corso-right-corners-rtl.gif), sides:url(images/window-header/window-header-win-corso-right-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-bottom {
     -moz-border-radius-topleft: 0;
@@ -9751,6 +10580,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-window-header-win-corso-bottom-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-bottom-corners.gif), sides:url(images/window-header/window-header-win-corso-bottom-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-left {
@@ -9873,6 +10708,12 @@
 .x-window-header-win-corso-left-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-left-corners.gif), corners-rtl:url(images/window-header/window-header-win-corso-left-corners-rtl.gif), sides:url(images/window-header/window-header-win-corso-left-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-collapsed-top {
     -webkit-border-radius: 4px;
@@ -9977,6 +10818,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-window-header-win-corso-collapsed-top-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-collapsed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-collapsed-top-corners.gif), sides:url(images/window-header/window-header-win-corso-collapsed-top-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-collapsed-right {
@@ -10092,6 +10939,12 @@
 .x-window-header-win-corso-collapsed-right-mc {
     padding: 5px 5px 5px 5px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-collapsed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-collapsed-right-corners.gif), corners-rtl:url(images/window-header/window-header-win-corso-collapsed-right-corners-rtl.gif), sides:url(images/window-header/window-header-win-corso-collapsed-right-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-collapsed-bottom {
     -webkit-border-radius: 4px;
@@ -10196,6 +11049,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-window-header-win-corso-collapsed-bottom-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-collapsed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-collapsed-bottom-corners.gif), sides:url(images/window-header/window-header-win-corso-collapsed-bottom-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-window-header-win-corso-collapsed-left {
@@ -10310,6 +11169,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-window-header-win-corso-collapsed-left-mc {
     padding: 5px 5px 5px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-window-header-win-corso-collapsed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/window-header/window-header-win-corso-collapsed-left-corners.gif), corners-rtl:url(images/window-header/window-header-win-corso-collapsed-left-corners-rtl.gif), sides:url(images/window-header/window-header-win-corso-collapsed-left-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/window/Window.scss:540 */
 .x-window-header-win-corso .x-window-header-icon {
@@ -10706,6 +11571,30 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:750 */
 .x-panel .x-panel-header-pnl-corso-collapsed-border-left {
     border-right-width: 1px !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnl-corso-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:bottom" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnl-corso-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:top" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnl-corso-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:right" !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnl-corso-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, stretch:left" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:786 */
 .x-panel-header-pnl-corso-horizontal .x-tool-after-title {
@@ -11121,6 +12010,12 @@
 .x-panel-pnlCompilatore-mc {
     padding: 0 0 0 0;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-pnlCompilatore:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel/panel-pnlCompilatore-corners.gif), sides:url(images/panel/panel-pnlCompilatore-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-top {
     -moz-border-radius-topleft: 5px;
@@ -11232,6 +12127,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-pnlCompilatore-top-mc {
     padding: 5px 5px 10px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 0 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-top-corners.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-top-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-right {
@@ -11359,6 +12260,12 @@
 .x-panel-header-pnlCompilatore-right-mc {
     padding: 5px 5px 5px 10px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 0, corners:url(images/panel-header/panel-header-pnlCompilatore-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-pnlCompilatore-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-right-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-bottom {
     -moz-border-radius-topleft: 0;
@@ -11470,6 +12377,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-pnlCompilatore-bottom-mc {
     padding: 9px 5px 6px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:0 5px 5px 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-bottom-corners.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-bottom-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-left {
@@ -11597,6 +12510,12 @@
 .x-panel-header-pnlCompilatore-left-mc {
     padding: 5px 9px 5px 6px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 0 5px 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-pnlCompilatore-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-left-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-collapsed-top {
     -moz-border-radius-topleft: 5px;
@@ -11708,6 +12627,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-pnlCompilatore-collapsed-top-mc {
     padding: 5px 5px 6px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-collapsed-top:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-collapsed-top-corners.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-collapsed-top-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-collapsed-right {
@@ -11835,6 +12760,12 @@
 .x-panel-header-pnlCompilatore-collapsed-right-mc {
     padding: 5px 5px 5px 6px;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-collapsed-right:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-collapsed-right-corners.gif), corners-rtl:url(images/panel-header/panel-header-pnlCompilatore-collapsed-right-corners-rtl.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-collapsed-right-sides.gif)" !important;
+}
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-collapsed-bottom {
     -moz-border-radius-topleft: 5px;
@@ -11946,6 +12877,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-pnlCompilatore-collapsed-bottom-mc {
     padding: 5px 5px 6px 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-collapsed-bottom:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-collapsed-bottom-corners.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-collapsed-bottom-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-panel-header-pnlCompilatore-collapsed-left {
@@ -12072,6 +13009,12 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/frame.scss:464 */
 .x-panel-header-pnlCompilatore-collapsed-left-mc {
     padding: 5px 5px 5px 6px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-base/sass/etc/mixins/slicer.scss:83 */
+.x-cmd-slicer.x-panel-header-pnlCompilatore-collapsed-left:before {
+    /*<if slicer>*/
+    display: none;
+    content: "x-slicer:, frame:5px 5px 5px 5px, corners:url(images/panel-header/panel-header-pnlCompilatore-collapsed-left-corners.gif), corners-rtl:url(images/panel-header/panel-header-pnlCompilatore-collapsed-left-corners-rtl.gif), sides:url(images/panel-header/panel-header-pnlCompilatore-collapsed-left-sides.gif)" !important;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/ext/classic/theme-neutral/sass/src/panel/Panel.scss:638 */
 .x-panel .x-panel-header-pnlCompilatore-top {
@@ -12308,25 +13251,28 @@
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:155 */
 .corso_convalidato {
     background-image: url("images/filled-circle.svg");
+    background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:159 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:160 */
 .shortcutMenu {
     background-image: url("images/menu.svg");
+    background-repeat: no-repeat;
     display: none;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:164 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:166 */
 .cntShortcut:hover .shortcutMenu {
     display: inline-block;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:168 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:170 */
 .corso_non_convalidato {
     background-image: url("images/filled-circle-gray.svg");
+    background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:172 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:175 */
 .labelWhite {
     color: white;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:176 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:179 */
 .alert-danger {
     background: #fcc;
     color: #900;
@@ -12335,72 +13281,72 @@
     border-style: solid;
     border-width: 1px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:185 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:188 */
 .green-label {
     color: green;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:189 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:192 */
 .azure {
     background: azure;
     border-bottom: 2px solid #5fa2dd;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:194 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:197 */
 .gridAlta30 {
     height: 30px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:198 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:201 */
 .recAnnullato {
     text-decoration: line-through;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:202 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:205 */
 .grassetto {
     font-weight: bold;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:206 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:209 */
 .cntProfile {
     border: 1px solid #5fa2dd;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:210 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:213 */
 .icon-annulla {
     background-image: url("images/deleted.svg");
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:214 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:217 */
 .x-fieldset {
     border-radius: 5px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:218 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:221 */
 .x-fieldset-header-default > .x-fieldset-header-text {
     font-size: 16px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:222 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:225 */
 .calendar td {
     width: 100px;
     height: 90px;
     border: 1px solid #bbb;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:227 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:230 */
 .icon-registration {
     background-image: url("images/registration_user.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:232 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:235 */
 .icon-prev,
 .icon-next,
 .icon-32 {
     width: 32px;
     height: 32px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:239 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:242 */
 .icon-next {
     background-image: url("images/next.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:245 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:248 */
 .icon-prev {
     background-image: url("images/prev.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:251 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:254 */
 .label-calendar {
     padding: 4px;
     margin-bottom: 20px;

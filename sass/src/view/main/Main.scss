@@ -154,10 +154,12 @@ $colors:(
 
 .corso_convalidato {
 	background-image: url("images/filled-circle.svg");
+	background-repeat: no-repeat;
 }
 
 .shortcutMenu {
 	background-image: url("images/menu.svg");
+	background-repeat: no-repeat;
 	display:none;
 }
 
@@ -167,6 +169,7 @@ $colors:(
 
 .corso_non_convalidato {
 	background-image: url("images/filled-circle-gray.svg");
+	background-repeat: no-repeat;
 }
 
 .labelWhite {

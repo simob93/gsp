@@ -16,11 +16,11 @@ Ext.define('Gestionale.componenti.gridPanelCustom', {
 					xtype: 'gridcolumn',
 					width: 40,
 					renderer: (value, metaData, rec) => {
-						let {deletedData} = rec.data;
+						let {deletedData} = rec.data; 
 						if (deletedData)
 							metaData.tdAttr = `data-qtip="dato annullato in data: <b>${StdGenerali.formattaData(deletedData, 'd/m/Y H:m')}</b>"`;
 						
-						return deletedData ? `<img src="resources/images/deleted.svg" width="20px" height="20px" alt="" />` : '';
+						return deletedData ? "<img src='resources/images/deleted.svg' width='20' height='20' alt='' />" : '';
 					}
 				});
 				break;
@@ -29,7 +29,7 @@ Ext.define('Gestionale.componenti.gridPanelCustom', {
 					xtype: 'gridcolumn',
 					width: 40,
 					renderer: function(value, metaData, record) {
-						return `<img src="resources/images/user.svg" width="20px" height="20px" alt="" />`;
+						return "<img src='resources/images/user.svg' width='20' height='20' alt='' />";
 					}
 				});
 			break;
