@@ -131,14 +131,17 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     		columns: [
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				dataIndex: 'convalidato',
     				width: 40,
-    				renderer: function(value, merdaData, record) { 
+    				renderer: function(value, metdaData, record) { 
+    					metdaData.tdAttr = `data-qtip="${value === 'T' ? 'Convalidato' : 'In attesa di convalida'}"`;
     					return `<div style="width: 16px; height:16px;" class="${value === 'T'? 'corso_convalidato': 'corso_non_convalidato'}">`    		
     				}
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Istruttore',
     				align: 'center',
     				dataIndex: 'istruttoreNominativo',
@@ -146,6 +149,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Tipo',
     				align: 'center',
     				dataIndex: 'descrTipologia',
@@ -153,6 +157,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'N.lezioni',
     				align: 'center',
     				dataIndex: 'numeroLezioni',
@@ -160,6 +165,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Durata',
     				align: 'center',
     				dataIndex: 'minutiLezioni',
@@ -167,6 +173,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Orario',
     				align: 'center',
     				width: 103,
@@ -179,6 +186,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Giorni',
     				align: 'center',
     				width: 205,
@@ -197,6 +205,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Periodo',
     				width: 170,
     				renderer: function(value, merdaData, record) {
@@ -205,6 +214,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Partecipanti',
     				dataIndex: 'partecipanti',
     				align: 'center',
@@ -212,6 +222,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Tariffa tot.',
     				dataIndex: 'totaleTariffa',
     				width: 120,
@@ -221,6 +232,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			},
     			{
     				xtype: 'gridcolumn',
+    				sortable: false,
     				align: 'left',
     				text: 'Compilatore corso',
     				dataIndex: 'operatoreNominativo',

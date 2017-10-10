@@ -24,6 +24,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    	align: 'stretch'
     	    },
     	    flex: 1,
+    	  // scrollable: true,
     		items: [
     			{
     				xtype: 'errorContainer'
@@ -36,11 +37,13 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     			{
 
     	    		xtype: 'fieldset',
+    	    		scrollable: true,
     	    		padding: 4,
     	    		layout: {
     	    			type: 'vbox',
     	    			align: 'stretch'
     	    		},
+    	    		flex: 1,
     	    		fieldDefaults: {
     	    			labelWidth: 160,
     	    			margin: '3 0 0 4',
@@ -89,10 +92,14 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    						}
     	    					},
     	    					{
-    	    						xtype: 'textfield',
+    	    						xtype: 'combobox',
+    	    						reference: 'CboxLuogoNascita',
     	    						fieldLabel: 'Luogo di nascita',
+    	    						allowBlank: false,
+    	    						displayField: 'nome',
+    	    						valueField: 'nome',
     	    						name: 'luogoNascita',
-    	    						allowBlank: false
+    	    						queryMode: 'local'
     	    					},
     	    					{
     	    						xtype: 'textfield',

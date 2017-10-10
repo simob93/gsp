@@ -168,6 +168,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     launch: function() {
     	this.gestioneForm();
     	this.lookupReference('CboxComuni').getStore().load();
+    	this.lookupReference('CboxLuogoNascita').bindStore(this.lookupReference('CboxComuni').getStore());
     	
     	let id = this.extraParams.controllerMain.extraParams.idAnagrafica;
     	if (id) {
