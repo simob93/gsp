@@ -244,7 +244,7 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 									renderer: function(value, metaData, record) {
 										let str = '';
 		    							if (value.includes('T')) {
-		    								str = `<img src="app/images/check.svg" alt="check" width="16px" height = "16px" />`
+		    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
 		    							}
 		    							return str;
 									}
@@ -264,7 +264,7 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 									renderer: function(value, metaData, record) {
 										let str = '';
 		    							if ( (value && !Ext.isString(value) ) || ( Ext.isString(value) && value.includes('T') )) {
-		    								str = `<img src="app/images/check.svg" alt="check" width="16px" height = "16px" />`
+		    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
 		    							}
 		    							return str;
 									}

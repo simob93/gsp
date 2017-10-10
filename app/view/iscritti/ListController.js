@@ -112,23 +112,24 @@ Ext.define('Gestionale.view.iscritti.ListController', {
  
     creaCorso: function(corsoSingolo = true) {
     	let grid = this.lookupReference('Grid'),
-    		recSel = grid.getSelectionModel().getSelection();
-    	
-    	let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento', { 
-			hideBtnNuovo: true,
-			hideBtnAnnulla: true,
-			corsoSingolo: this.extraParams.tipologiaCorso === 1,
-			tipologiaCorso: this.extraParams.tipologiaCorso
-		}, "Gestione corso", 1024, 768, 'win-corso');
+    		recSel = grid.getSelectionModel().getSelection(),
+    		win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento', { 
+				hideBtnNuovo: true,
+				hideBtnAnnulla: true,
+				corsoSingolo: this.extraParams.tipologiaCorso === 1,
+				tipologiaCorso: this.extraParams.tipologiaCorso
+			}, "Gestione corso", 1024, 768, 'win-corso');
 			
 		win.show();
-		win.on('close', () => this.onCerca());
 		
 		let data = this.aggiungiRecord(recSel);
+		if (data.length > 0) {
+			win.down('gridpanel').getStore().loadData(data, true);
+			win.down('form').getForm().loadRecord(recSel[0]);
+			win.down('form').getForm().findField('cmpDirty').setValue(1);
+		}
 		
-		win.down('gridpanel').getStore().loadData(data, true);
-		win.down('form').getForm().loadRecord(recSel[0]);
-		win.down('form').getForm().findField('cmpDirty').setValue(1);
+		win.on('close', () => this.onCerca());
 		
     },
     
