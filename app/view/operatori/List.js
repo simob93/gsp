@@ -128,7 +128,7 @@ Ext.define('Gestionale.view.operatori.List',{
     						renderer: function(value, metaData, record) {
     							let str = "";
     							if (record.data.amministratore &&  record.get('amministratore').includes('T')) {
-    								str = `<img src="app/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />";
     							}
     							return str;
     						}
