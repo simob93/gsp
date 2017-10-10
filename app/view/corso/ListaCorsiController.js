@@ -28,7 +28,8 @@ Ext.define('Gestionale.view.corso.ListaCorsiController', {
     	let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento', {
     		record: record,
     		hideBtnNuovo: true,
-    		corsoSingolo: record.get('tipologia') !== 2
+    		corsoSingolo: record.get('tipologia') === 1 || record.get('tipologia') === 3 || record.get('tipologia') === 4,
+    		tipologiaCorso: record.get('tipologia') === 1 || record.get('tipologia') === 3 || record.get('tipologia') === 4 ? 1 : record.get('tipologia')
     	},"Gestione corso", 1024, 768, 'win-corso')
     	win.show();
     },

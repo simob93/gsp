@@ -134,7 +134,16 @@ Ext.define('Gestionale.view.iscritti.List',{
     			align: 'stretch'
     		},
     		items: [
-    			
+    			{
+					xtype: 'button',
+					hidden: true,
+					disabled: true,
+					reference: 'BtnCreaCorsoRiservato',
+					margin: '5 5 5 5',
+					text: 'Crea Corso',
+					//hidden: true,
+					handler: 'onCreaCorsoRiservato'
+				},
     			{
     				xtype: 'container',
     				flex: 1,
@@ -159,7 +168,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						text: 'Inserisci',
     						//hidden: true,
     						handler: 'onInserisci'
-    					}
+    					},
     				]
     			},
     		]
@@ -309,7 +318,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = `<img src="app/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
     							}
     							return str;
     						}
@@ -323,7 +332,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = `<img src="app/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
     							}
     							return str;
     						}
@@ -337,7 +346,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = `<img src="app/images/check.svg" alt="check" width="16px" height = "16px" />`
+    								str = `<img src="resources/images/check.svg" alt="check" width="16px" height = "16px" />`
     							}
     							return str;
     						}
@@ -347,6 +356,9 @@ Ext.define('Gestionale.view.iscritti.List',{
     					getRowClass: rec => {
     						return 'gridAlta30'
     					} 
+    				},
+    				listeners: {
+    					selectionchange: 'onGridSelectionChange'
     				}
     				
     			}

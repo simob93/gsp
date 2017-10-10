@@ -15,8 +15,8 @@ class Menu {
 				subMenu: [
 					['Bacheca corsi', 'Gestionale.view.corso.ListaCorsi'],
 					['Nuovo corso di gruppo', 'Gestionale.view.corso.Inserimento'],
-					['Visualizza iscritti', 'Gestionale.view.iscritti.List'],
-					['Planning', 'Gestionale.view.corso.Planning'],
+					['Corso individuale', 'Gestionale.view.iscritti.List', {tipologiaCorso: 1}],
+					['Corso riservato', 'Gestionale.view.iscritti.List', {tipologiaCorso: 5}],
 				]
 			},
 			{

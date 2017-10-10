@@ -11,6 +11,7 @@ Ext.define('Gestionale.store.TipologiaCorsi', {
     	[1, 'Individuale'],
     	[2, 'Gruppo'],
     	[3, 'Disabili'],
-    	[4, 'APSS']
+    	[4, 'APSS'],
+    	[5, 'Riservato']
     ]
 });

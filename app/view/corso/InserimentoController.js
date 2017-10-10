@@ -232,9 +232,11 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     },
     
     onClickBtnInserisci: function() {
+    	let grid = this.lookupReference('Grid');
     	StdGenerali.creaWin(path = 'Gestionale.view.iscritti.List', {
     		controllerCorso: this,
-    		records: this.lookupReference('Grid').getStore().getData().items,
+    		tipologiaCorso: this.extraParams.tipologiaCorso,
+    		records: grid.getStore().getData().items,
     	}, title = 'Iscritti', width = 1024, height = 768).show();
     },
     
@@ -252,7 +254,7 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     				this.aggiornaStore(this.lookupReference('MyForm').getForm().findField('id').getValue());
     				
     			} else {
-    				this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
+    				StdGenerali.showErrorMessage(risposta.message);
     			}
     		}
     	});
@@ -312,11 +314,13 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     },
     
     aggiornaStore: function(id) {
-    	let myForm = this.lookupReference('MyForm');
-    	let form = myForm.getForm();
-    	let store = myForm.store = Ext.create('Gestionale.store.Iscritti_Corso');
-		StdGenerali.clearForm(myForm);
-		this.lookupReference('Grid').getStore().removeAll();
+    	let myForm = this.lookupReference('MyForm'),
+    		form = myForm.getForm(),
+    		store = myForm.store = Ext.create('Gestionale.store.Iscritti_Corso'),
+    		grid = this.lookupReference('Grid');
+		
+    	StdGenerali.clearForm(myForm);
+		grid.getStore().removeAll();
 		
 		myForm.store.load({
     		params: {
@@ -327,7 +331,12 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     				
     				this.lookupReference('BtnRimuovi').setDisabled(false);
     				if (records.length > 0) {
-	    				let rec = records[0];
+	    				let rec = records[0],
+	    					labelConvalida = this.lookupReference('LblConvalida'),
+	    					pnlCompilatore = this.lookupReference('PnlCompilatore'),
+	    					btnConvalida = this.lookupReference('BtnConvalida');
+	    				
+	    				
 	    				rec.data.corso.dal = new Date(rec.data.corso.dal);
 	    				rec.data.corso.al = new Date(rec.data.corso.al);
 	    				rec.data.corso.oraDal = StdGenerali.convertHours(rec.data.corso.oraDal);
@@ -339,22 +348,23 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
 	    					this.lookupReference('Grid').getStore().loadData( rec.data.partecipanti );
 	    				}
 	    				
-	    				this.lookupReference('LblConvalida').update('');
-	    				this.lookupReference('BtnConvalida').setHidden(Ext.isString(rec.data.corso.convalidato) && rec.data.corso.convalidato.includes('T'));
+	    				labelConvalida.update('');
+	    				btnConvalida.setHidden(Ext.isString(rec.data.corso.convalidato) && rec.data.corso.convalidato.includes('T'));
 	    				
 	    				this.extraParams.convalidato = Ext.isString(rec.data.corso.convalidato) && rec.data.corso.convalidato.includes('T')
 	    				
 	    				if (this.extraParams.convalidato) {
-	    					this.lookupReference('LblConvalida').update('<span class="green-label"><b>Corso convalidato</b><span>')
+	    					labelConvalida.update('<span class="green-label"><b>Corso convalidato</b><span>')
 	    				}
 	    				
-	    				this.lookupReference('PnlCompilatore').setCompilatore( rec.data.corso.operatoreNominativo );
+	    				pnlCompilatore.setCompilatore( rec.data.corso.operatoreNominativo );
+	    				
 	    				StdGenerali.setRecordAnnullato(this, rec.data.corso);
 	    				StdGenerali.bloccaForm(myForm, !Ext.isEmpty(rec.data.corso.deletedData))
 	    				
     				}
     			} else {
-					this.lookupReference('ErrorContainer').showErrorMsg(risposta.message);
+					StdGenerali.showErrorMessage(risposta.message);
 				}
     		}
     	});
@@ -362,21 +372,34 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     
     launch: function() { 
     	let myForm = this.lookupReference('MyForm'), 
-    		form = myForm.getForm();
+    		btnRimuovi = this.lookupReference('BtnRimuovi'),
+    		cboxTipologia = this.lookupReference('CboxTipologia'),
+    		cboxIstruttori = this.lookupReference('CboxIstruttori'),
+    		btnInserisciPartecipanti = this.lookupReference('BtnInserisciPartecipanti')
     	
     	myForm.store = Ext.create('Gestionale.store.Iscritti_Corso');
     	this.gestioneForm();
-    	this.lookupReference('CboxIstruttori').getStore().load();
     	
-    	if (this.extraParams.corsoSingolo) {
-    		this.lookupReference('CboxTipologia').getStore().filterBy(rec => rec.data.codice === 1)
-    		this.lookupReference('BtnRimuovi').hide();
-    		this.lookupReference('BtnInserisciPartecipanti').hide();
-    	} else {
-    		this.lookupReference('CboxTipologia').getStore().filterBy(rec => rec.data.codice !== 1)
-    		this.lookupReference('BtnRimuovi').show();
-    		this.lookupReference('BtnInserisciPartecipanti').show();
+    	cboxIstruttori.getStore().load();
+    	
+    	cboxTipologia.setValue(this.extraParams.tipologiaCorso);
+    	
+    	
+    	if (this.extraParams.tipologiaCorso === 1) {
+    		btnRimuovi.hide();
+    		btnInserisciPartecipanti.hide();
+    		cboxTipologia.getStore().filterBy(rec => rec.get('codice') === 1 || rec.get('codice') === 3 || rec.get('codice') === 4);
+    		
+    	} else if (this.extraParams.tipologiaCorso === 5) {
+    		cboxTipologia.getStore().filterBy(rec => rec.get('codice') === 5);
+    		btnRimuovi.show();
+    		btnInserisciPartecipanti.show();
+    	} else { 
+    		cboxTipologia.getStore().filterBy(rec => rec.get('codice') === 2);
+    		btnRimuovi.show();
+    		btnInserisciPartecipanti.show();
     	}
+    	
     	if (this.extraParams.record) {
     		this.aggiornaStore();
     	} 

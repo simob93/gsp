@@ -7459,11 +7459,11 @@
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:155 */
 .corso_convalidato {
-    background-image: url("resources/images/filled-circle.svg");
+    background-image: url("images/filled-circle.svg");
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:159 */
 .shortcutMenu {
-    background-image: url("resources/images/menu.svg");
+    background-image: url("images/menu.svg");
     display: none;
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:164 */
@@ -7472,7 +7472,7 @@
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:168 */
 .corso_non_convalidato {
-    background-image: url("resources/images/filled-circle-gray.svg");
+    background-image: url("images/filled-circle-gray.svg");
 }
 /* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:172 */
 .labelWhite {

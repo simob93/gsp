@@ -3,14 +3,16 @@ Ext.define('Gestionale.view.menu.MenuController', {
 
     alias: 'controller.menu',
     
-    creaTab: function(btn, path) {
+    creaTab: function(btn, path, extraParams) {
     	let tabPanel = this.lookupReference('TabPanelMenu');
     	
     	tabPanel.removeAll(true);
     	
     	if (tabPanel.isHidden()) tabPanel.setHidden(false);
     	
-    	let view = Ext.create(path);
+    	let view = Ext.create(path, {
+    		extraParams: extraParams
+    	});
     	
     	tabPanel.insert(0, {
     		margin: '4 0 0 0',
@@ -26,15 +28,15 @@ Ext.define('Gestionale.view.menu.MenuController', {
     
     generaSubMenu: function(pnlRif, arraySubMenu) {
     	if (arraySubMenu.length > 0) {
-    		arraySubMenu.forEach(sub => {
-    			let [titolo, path] = sub;
+    		arraySubMenu.forEach(sub => { 
+    			let [titolo, path, extraParams] = sub;
     			pnlRif.add({
     				xtype: 'button',
     				margin: '2 0 0 0',
     				height: 30,
     				text: titolo,
     				handler: th => {
-    					this.creaTab(th, path);
+    					this.creaTab(th, path, extraParams);
     				}
     			});
     		});
