@@ -13220,23 +13220,23 @@
     border-color: #5e318b !important;
     border-width: 1px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:127 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:128 */
 .labelCompilatore {
     color: #5e318b;
     font-weight: bold;
     font-size: 14px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:133 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:134 */
 .portletCorso .x-panel-header {
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:139 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:140 */
 .x-grid-cell-inner {
     white-space: normal;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:143 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:144 */
 .portletCorso {
     padding: 4px;
     margin-bottom: 20px;
@@ -13248,31 +13248,31 @@
     -o-transition: border 0.2s ease-in-out;
     transition: border 0.2s ease-in-out;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:155 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:156 */
 .corso_convalidato {
     background-image: url("images/filled-circle.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:160 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:161 */
 .shortcutMenu {
     background-image: url("images/menu.svg");
     background-repeat: no-repeat;
     display: none;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:166 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:167 */
 .cntShortcut:hover .shortcutMenu {
     display: inline-block;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:170 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:171 */
 .corso_non_convalidato {
     background-image: url("images/filled-circle-gray.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:175 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:176 */
 .labelWhite {
     color: white;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:179 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:180 */
 .alert-danger {
     background: #fcc;
     color: #900;
@@ -13281,72 +13281,90 @@
     border-style: solid;
     border-width: 1px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:188 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:189 */
 .green-label {
     color: green;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:192 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:193 */
 .azure {
     background: azure;
     border-bottom: 2px solid #5fa2dd;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:197 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:198 */
 .gridAlta30 {
     height: 30px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:201 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:202 */
 .recAnnullato {
     text-decoration: line-through;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:205 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:206 */
 .grassetto {
     font-weight: bold;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:209 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:210 */
 .cntProfile {
     border: 1px solid #5fa2dd;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:213 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:214 */
+.icon-acconto {
+    background-image: url("images/acconto.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:219 */
+.icon-avatar {
+    background: #b5383c;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 4px;
+    color: #fff;
+    font-size: 11px;
+    vertical-align: middle;
+    line-height: 2.2;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:233 */
 .icon-annulla {
     background-image: url("images/deleted.svg");
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:217 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:237 */
 .x-fieldset {
     border-radius: 5px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:221 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:241 */
 .x-fieldset-header-default > .x-fieldset-header-text {
     font-size: 16px !important;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:225 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:245 */
 .calendar td {
     width: 100px;
     height: 90px;
     border: 1px solid #bbb;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:230 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:250 */
 .icon-registration {
     background-image: url("images/registration_user.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:235 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:255 */
 .icon-prev,
 .icon-next,
 .icon-32 {
     width: 32px;
     height: 32px;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:242 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:262 */
 .icon-next {
     background-image: url("images/next.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:248 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:268 */
 .icon-prev {
     background-image: url("images/prev.svg");
     background-repeat: no-repeat;
 }
-/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:254 */
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:274 */
 .label-calendar {
     padding: 4px;
     margin-bottom: 20px;

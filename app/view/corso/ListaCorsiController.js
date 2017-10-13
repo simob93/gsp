@@ -32,6 +32,8 @@ Ext.define('Gestionale.view.corso.ListaCorsiController', {
     		tipologiaCorso: record.get('tipologia') === 1 || record.get('tipologia') === 3 || record.get('tipologia') === 4 ? 1 : record.get('tipologia')
     	},"Gestione corso", 1024, 768, 'win-corso')
     	win.show();
+    	
+    	win.on('close' , () => this.aggiornaStore());
     },
     
     launch: function() {

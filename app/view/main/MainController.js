@@ -10,8 +10,8 @@ Ext.define('Gestionale.view.main.MainController', {
     alias: 'controller.main',
    
     launch: function() {
-    	let cntMain = this.lookupReference('CntMain');
-    	if (localStorage.getItem('logIn') === 'F') {
+    	let cntMain = this.lookupReference('CntMain'); 
+    	if (!localStorage.getItem('logIn') || localStorage.getItem('logIn') === 'F') {
     		cntMain.add(Ext.create('Gestionale.view.login.Login', {}));
     	} else {
     		cntMain.add(Ext.create('Gestionale.view.menu.Menu', {}));

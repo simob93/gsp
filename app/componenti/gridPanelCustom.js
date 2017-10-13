@@ -18,7 +18,7 @@ Ext.define('Gestionale.componenti.gridPanelCustom', {
 					renderer: (value, metaData, rec) => {
 						let {deletedData} = rec.data; 
 						if (deletedData)
-							metaData.tdAttr = `data-qtip="dato annullato in data: <b>${StdGenerali.formattaData(deletedData, 'd/m/Y H:m')}</b>"`;
+							metaData.tdAttr = `data-qtip="dato annullato in data: <b>${StdGenerali.formattaData(deletedData, 'd/m/Y H:i')}</b>"`;
 						
 						return deletedData ? "<img src='resources/images/deleted.svg' width='20' height='20' alt='' />" : '';
 					}

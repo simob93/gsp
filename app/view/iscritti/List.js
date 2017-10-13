@@ -184,6 +184,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     		items: [
     			{
     				xtype: 'gridPanelCustom',
+    				title: 'Iscritti',
     				extraParams: {
     					showIconUser: true
     				},
@@ -251,7 +252,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								return "<center><div style='background: #0B7CAC; height: 16px; width: 16px; border-radius: 50%;'></div></center>"
     						} 
     					},
     					{
@@ -262,7 +263,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								return "<center><div style='background: #0B7CAC; height: 16px; width: 16px; border-radius: 50%;'></div></center>"
     						} 
     					},
     					{
@@ -273,7 +274,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								return "<center><div style='background: #0B7CAC; height: 16px; width: 16px; border-radius: 50%;'></div></center>"
     						} 
     					},
     					{
@@ -284,7 +285,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								return "<center><div style='background: #0B7CAC; height: 16px; width: 16px; border-radius: 50%;'></div></center>"
     						} 
     					},
     					{
@@ -295,7 +296,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								return "<center><div style='background: #0B7CAC; height: 16px; width: 16px; border-radius: 50%;'></div></center>"
     						} 
     					},
     					{
@@ -306,7 +307,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 50,
     						renderer: function(value, metaData, record) {
     							if (value && value.includes('T'))
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								return "<center><div style='background: #0B7CAC; height: 16px; width: 16px; border-radius: 50%;'></div></center>"
     						} 
     					},
     					{
@@ -318,7 +319,8 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								return "<div style='background: green; height: 16px; width: 16px; border-radius: 50%;'></div>"
+    								metaData.tdAttr = `data-qtip="${value ? 'Acconto versato' : ''}"`;
+    								str = '<center><div style="width: 20px; height: 20px;" class="icon-acconto"></div></center>';
     							}
     							return str;
     						}
@@ -332,7 +334,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />";
+    								str = "<img src='resources/images/check.svg' alt='check' width='20' height = '20' />";
     							}
     							return str;
     						}

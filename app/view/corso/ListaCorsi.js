@@ -134,8 +134,8 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				sortable: false,
     				dataIndex: 'convalidato',
     				width: 40,
-    				renderer: function(value, metdaData, record) { 
-    					metdaData.tdAttr = `data-qtip="${value === 'T' ? 'Convalidato' : 'In attesa di convalida'}"`;
+    				renderer: function(value, metaData, record) { 
+    					metaData.tdAttr = `data-qtip="${value === 'T' ? 'Convalidato' : 'In attesa di convalida'}"`;
     					return `<div style="width: 16px; height:16px;" class="${value === 'T'? 'corso_convalidato': 'corso_non_convalidato'}">`    		
     				}
     			},
@@ -191,16 +191,30 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				align: 'center',
     				width: 205,
     				renderer: function(value, merdaData, record) {
+    					let str = '';
     					
-    					let lunedi = record.get('lunedi') === 'T' ? 'Lun - ' : '',
-    						martedi = record.get('martedi') === 'T' ? 'Mar - ' : '',
-    						mercoledi = record.get('mercoledi') === 'T' ? 'Mer - ' : '',
-    						giovedi = record.get('giovedi') === 'T' ? 'Gio - ' : '',
-    						venerdi = record.get('venerdi') === 'T' ? 'Ven - ' : '',
-    						sabato = record.get('sabato') === 'T' ? 'Sab - ' : '',
-    						personalizzato = record.get('personalizzato') === 'T' ? 'Pers' : '';
-    					
-    					return `${lunedi} ${martedi} ${mercoledi} ${giovedi} ${venerdi} ${sabato} ${personalizzato}`;
+    					if (record.get('lunedi') === 'T' ) {
+    						str += '<div class="icon-avatar">Lu</div>';
+    					}
+    					if (record.get('martedi') === 'T' ) {
+    						str += '<div class="icon-avatar">Ma</div>';
+    					}
+    					if (record.get('mercoledi') === 'T' ) {
+    						str += '<div class="icon-avatar">Mer</div>';
+    					}
+    					if (record.get('giovedi') === 'T' ) {
+    						str += '<div class="icon-avatar">Gi</div>';
+    					}
+    					if (record.get('venerdi') === 'T' ) {
+    						str += '<div class="icon-avatar">Ve</div>';
+    					}
+    					if (record.get('sabato') === 'T' ) {
+    						str += '<div class="icon-avatar">Sa</div>';
+    					}
+    					if (record.get('personalizzato') === 'T' ) {
+    						str += '<div class="icon-avatar">Per</div>';
+    					}
+    					return `${str}`;
     				}
     			},
     			{

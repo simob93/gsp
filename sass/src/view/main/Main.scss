@@ -98,7 +98,8 @@ $colors:(
   red: red,
   green: green,
   label_white: white,
-  rosa: #c4a8e0
+  rosa: #c4a8e0,
+  bordo: #b5383c
 );
 
 @include extjs-window-ui (
@@ -209,6 +210,25 @@ $colors:(
 .cntProfile {
 	border: 1px solid #5fa2dd;
 }
+
+.icon-acconto {
+	background-image: url("images/acconto.svg");
+	background-repeat: no-repeat;
+}
+
+.icon-avatar {
+	background: map-get($colors, 'bordo');
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+     display: inline-block;
+    margin-left: 4px;
+    color: #fff;
+    font-size: 11px;
+    vertical-align: middle;
+    line-height: 2.2;
+}
+
 
 .icon-annulla {
 	background-image: url("images/deleted.svg");

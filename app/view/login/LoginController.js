@@ -31,12 +31,12 @@ Ext.define('Gestionale.view.login.LoginController', {
     	}
     	
     	Ext.Ajax.request({
-    		method: 'GET',
+    		method: 'POST',
     		url: '/gspRiva/ws/operatore/auth',
     		params: {username, password},
     		success: (response, opts) => {
     			let risposta = JSON.parse(response.responseText);
-    			if (risposta.success) {
+    			if (risposta.success) { 
     				if (!Ext.isEmpty(risposta.data)) {
     					
     					localStorage.setItem('logIn', 'T');
@@ -52,7 +52,7 @@ Ext.define('Gestionale.view.login.LoginController', {
     					cntMain.add(Ext.create('Gestionale.view.menu.Menu', {}));
     				} 
     			} else {
-    				cntError.showErrorMsg(risposta.message);
+    				this.showErrorMessagge(risposta.message);
     			}
     		}
     	});
