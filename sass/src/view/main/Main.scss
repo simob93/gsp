@@ -46,6 +46,14 @@
 	$background-color: #a9e4b1
 );
 
+@include extjs-button-small-ui(
+	$ui: 'warning',
+	$color: rgba(7,53,144,1.00),
+    $background-color: rgba(241,201,51,1.00),
+    $border-color: rgba(241,201,51,1.00)
+);
+
+
 
  
 @include extjs-panel-ui(

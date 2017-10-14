@@ -238,8 +238,9 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				xtype: 'gridcolumn',
     				sortable: false,
     				text: 'Tariffa tot.',
+    				align: 'center',
     				dataIndex: 'totaleTariffa',
-    				width: 120,
+    				width: 110,
     				renderer: function(value, merdaData, record) {
     					return `${value ? value: 0} €`
     				}

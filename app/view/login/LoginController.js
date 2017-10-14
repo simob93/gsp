@@ -52,7 +52,7 @@ Ext.define('Gestionale.view.login.LoginController', {
     					cntMain.add(Ext.create('Gestionale.view.menu.Menu', {}));
     				} 
     			} else {
-    				this.showErrorMessagge(risposta.message);
+    				StdGenerali.showErrorMessage(risposta.message);
     			}
     		}
     	});

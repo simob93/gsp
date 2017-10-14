@@ -34,6 +34,7 @@ Ext.define('Gestionale.view.menu.MenuController', {
     				xtype: 'button',
     				margin: '2 0 0 0',
     				height: 30,
+    				ui: 'warning',
     				text: titolo,
     				handler: th => {
     					this.creaTab(th, path, extraParams);
