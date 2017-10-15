@@ -196,7 +196,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				xtype: 'gridcolumn',
     				sortable: false,
     				text: 'Giorni',
-    				align: 'center',
+    				align: 'left',
     				width: 205,
     				renderer: function(value, merdaData, record) {
     					let str = '';
