@@ -42,6 +42,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	
     	
     	myForm.on('dirtychange', (th, isDirty) => {
+    		StdGenerali.isolaCmp(myForm, isDirty);
     		StdGenerali.abilitaBottoni(myForm, isDirty);
     	});
     	
