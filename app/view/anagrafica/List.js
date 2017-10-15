@@ -134,10 +134,10 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						dataIndex: 'cap'
     					},
     					{
-    						text: 'Citta',
+    						text: 'Comune Resi',
     						sortable: false,
     						align: 'left',
-    						dataIndex: 'citta'
+    						dataIndex: 'comuneDescrizione'
     					},
     					{
     						text: 'Telefono',

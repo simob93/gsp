@@ -343,12 +343,12 @@ Ext.define('Gestionale.view.iscritti.List',{
     						text: 'Assic.',
     						sortable: false,
     						align: 'center',
-    						dataIndex: 'asscurazione',
+    						dataIndex: 'assicurazione',
     						width: 72,
     						renderer: function(value, metaData, rec) {
     							let str = '';
     							if (value) {
-    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />";
+    								str = "<img src='resources/images/check.svg' alt='check' width='20' height = '20' />";
     							}
     							return str;
     						}

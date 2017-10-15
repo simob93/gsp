@@ -242,13 +242,14 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 									width: 80,
 									align: 'center',
 									dataIndex: 'acconto',
-									renderer: function(value, metaData, record) {
-										let str = '';
-		    							if (value.includes('T')) {
-		    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />"
+									renderer: function(value, metaData, rec) {
+		    							let str = '';
+		    							if (value && value.includes('T')) {
+		    								metaData.tdAttr = `data-qtip="${value ? 'Acconto versato' : ''}"`;
+		    								str = '<center><div style="width: 20px; height: 20px;" class="icon-acconto"></div></center>';
 		    							}
 		    							return str;
-									}
+		    						}
 								},
 								{
 									xtype: 'gridcolumn',
@@ -265,7 +266,7 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 									renderer: function(value, metaData, record) {
 										let str = '';
 		    							if ( (value && !Ext.isString(value) ) || ( Ext.isString(value) && value.includes('T') )) {
-		    								str = "<img src='resources/images/check.svg' alt='check' width='16' height = '16' />"
+		    								str = "<img src='resources/images/check.svg' alt='check' width='20' height = '20' />"
 		    							}
 		    							return str;
 									}

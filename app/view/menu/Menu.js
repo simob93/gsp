@@ -27,6 +27,10 @@ Ext.define('Gestionale.view.menu.Menu', {
     items: [
     	{
     		xtype: 'panel',
+    		title: 'Menu',
+    		collapsible: true,
+    		collapseMode: 'header',
+    		collapseDirection: 'left',
     		layout: {
     			type: 'vbox',
     			align: 'stretch'

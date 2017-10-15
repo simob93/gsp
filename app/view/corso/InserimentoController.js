@@ -40,11 +40,11 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     	}));
     	this.lookupReference('CntBoxBottoni').down('#StandardButton').add({
 				xtype: 'splitbutton',
+				disabled: false,
 				nonDisabilitare: true,
 				margin: '0 4 0 0',
 				itemId: 'BtnStampa', reference: 'BtnStampa',
 				text: 'Stampa',
-				disabled: false,
 				menu: [ 
 					{
 						text: 'Stampa corso',
@@ -65,6 +65,7 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     	myForm.on('dirtychange', (th, isDirty) => {
     		StdGenerali.isolaCmp(myForm, isDirty);
     		StdGenerali.abilitaBottoni(myForm, isDirty);
+    		this.lookupReference('StandardButton').queryById('BtnStampa').setDisabled(isDirty);
     		let id = myForm.getForm().findField('id').getValue();
     		if (isDirty && !StdGenerali.isValidId(id))
     			this.lookupReference('PnlCompilatore').setNuovoRecord();
@@ -74,23 +75,29 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     
     doPrint: function(url) {
     	let id = this.lookupReference('MyForm').getForm().findField('id').getValue();
-    	Ext.Ajax.request({
-    		method: 'GET',
-    		params: {
-    			idCorso: id
-    		},
-    		url: url,
-    		success: (response, opts) => {
-    			let risposta = JSON.parse(response.responseText);
-    		
-    			if (risposta.success) {
-    				this.winStampa(risposta);
-    			} else { 
-    				this.showErrorMessage(risposta.message);
-    			}
-    		}
-    	});
     	
+    	if (StdGenerali.isValidId(id)) {
+    	
+	    	Ext.Ajax.request({
+	    		method: 'GET',
+	    		params: {
+	    			idCorso: id
+	    		},
+	    		url: url,
+	    		success: (response, opts) => {
+	    			let risposta = JSON.parse(response.responseText);
+	    		
+	    			if (risposta.success) {
+	    				this.winStampa(risposta);
+	    			} else { 
+	    				this.showErrorMessage(risposta.message);
+	    			}
+	    		}
+	    	});
+	    	
+    	}  else {
+    		StdGenerali.messaggio('Attenzione', 'Nessun record presente', false, false, false, 'QUESTION', 'OK'); 
+    	}
     },
     
     winStampa: function(risposta) {
@@ -269,13 +276,10 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     		
     	if (!recSel) {
     		StdGenerali.messaggio('Attenzione', 'Nessun record selezionato', false, false, false, 'QUESTION', 'OK'); 
-    		return false;
     	} else if ( this.extraParams.convalidato  && !Ext.isEmpty(recSel.get('id'))) {
-    		StdGenerali.messaggio('Attenzione', 'Corso <b>convalidato</b> annullare il record selezionato?',  
-    				() => this.rimuoviRecord(recSel.get('id')), false, false, 'QUESTION', 'YESNO');
+    		StdGenerali.messaggio('Attenzione', 'Corso <b>convalidato</b> annullare il record selezionato?',  () => this.rimuoviRecord(recSel.get('id')), false, false, 'QUESTION', 'YESNO');
     	} else if (!Ext.isEmpty(recSel.get('id'))) {
-    		StdGenerali.messaggio('Attenzione', 'Eliminare il record selezionato?', 
-    				() => this.rimuoviRecord(recSel.get('id'), true), false, false, 'QUESTION', 'YESNO');
+    		StdGenerali.messaggio('Attenzione', 'Eliminare il record selezionato?', () => this.rimuoviRecord(recSel.get('id'), true), false, false, 'QUESTION', 'YESNO');
     	} else {
     		grid.getStore().remove(recSel);
     	}

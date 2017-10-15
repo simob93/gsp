@@ -20,7 +20,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
 				type: 'hbox',
 				align: 'stretch'
 			},
-			height: 120,
+			height: 90,
 			items: [
 				{
 					xtype: 'fieldset',
@@ -142,6 +142,14 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			{
     				xtype: 'gridcolumn',
     				sortable: false,
+    				text: 'Progr',
+    				align: 'center',
+    				dataIndex: 'progrCorso',
+    				width: 90
+    			},
+    			{
+    				xtype: 'gridcolumn',
+    				sortable: false,
     				text: 'Istruttore',
     				align: 'center',
     				dataIndex: 'istruttoreNominativo',
@@ -153,15 +161,15 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				text: 'Tipo',
     				align: 'center',
     				dataIndex: 'descrTipologia',
-    				width: 100
+    				width: 90
     			},
     			{
     				xtype: 'gridcolumn',
     				sortable: false,
-    				text: 'N.lezioni',
+    				text: 'lezioni',
     				align: 'center',
     				dataIndex: 'numeroLezioni',
-    				width: 80
+    				width: 76
     			},
     			{
     				xtype: 'gridcolumn',
@@ -243,6 +251,33 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				width: 110,
     				renderer: function(value, merdaData, record) {
     					return `${value ? value: 0} €`
+    				}
+    			},
+    			{
+    				xtype: 'gridcolumn',
+    				sortable: false,
+    				text: 'Completato',
+    				align: 'center',
+    				dataIndex: 'percentualeCompletamento',
+    				width: 110,
+    				renderer: function(value, merdaData, record) {
+    					/*let id = Ext.id();
+		                Ext.defer(() =>  {
+		                         Ext.widget('progressbar', {
+		                             renderTo: id,
+		                             value: value / 100,
+		                             width: 100
+		                         });
+		                 }, 50);
+		                return Ext.String.format('<div id="{0}"></div>', id);*/
+    					let cnt = 
+    						`<div class="containerProgress">
+	    						<div class="progress">
+	    							<div style="text-align:center; width: 100%;position:absolute; color:#0a3f65;font-weight: bold; line-height: 1.4">${value}%</div>
+	    							<div class="bar" style="width: ${value}%"></div>
+								</div>
+    						</div>`
+						return cnt;
     				}
     			},
     			{

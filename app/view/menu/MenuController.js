@@ -28,12 +28,14 @@ Ext.define('Gestionale.view.menu.MenuController', {
     
     generaSubMenu: function(pnlRif, arraySubMenu) {
     	if (arraySubMenu.length > 0) {
-    		arraySubMenu.forEach(sub => { 
-    			let [titolo, path, extraParams] = sub;
+    		arraySubMenu.forEach(sub => {
+    			let [titolo, path, extraParams, iconCls] = sub;
     			pnlRif.add({
     				xtype: 'button',
+    				textAlign: 'left',
     				margin: '2 0 0 0',
     				height: 30,
+    				iconCls: iconCls,
     				ui: 'warning',
     				text: titolo,
     				handler: th => {
@@ -58,7 +60,7 @@ Ext.define('Gestionale.view.menu.MenuController', {
     			title: titolo, 
     			layout: {
     				type: 'vbox',
-    				align: 'stretch'
+    				align: 'stretch',
     			},
     			itemId: `Pnl_${ordine}`, reference: `Pnl_${ordine}`
     		});
