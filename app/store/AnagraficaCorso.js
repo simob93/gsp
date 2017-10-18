@@ -17,6 +17,7 @@ Ext.define('Gestionale.store.AnagraficaCorso', {
     	{ name: 'personalizzato'},
     	{ name: 'assicurazione'},
     	{ name: 'certificatoMedico'},
+    	{ name: 'scadenzaCertificato', type: 'date'},
     	{ name: 'acconto'},
     	{ name: 'deletedData', type: 'date'},
     	

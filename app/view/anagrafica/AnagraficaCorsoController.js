@@ -13,7 +13,6 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
     			callBackFnSalva: () => this.salvaForm(),
     			callBackFnVerificaCampi: () => this.verificaCampiForm(),
     			callBackFnRipristina: () => {
-    				
     				let id  = null;
     				if (this.lookupReference('Grid').getSelectionModel().getSelection().length > 0) {
     					id = this.lookupReference('Grid').getSelectionModel().getSelection()[0].get('id');
@@ -22,8 +21,11 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
 				},
     			callBackFnNuovo: () => {
     				StdGenerali.clearForm(myForm)
-    				StdGenerali.sporcaForm(myForm)
+    				StdGenerali.sporcaForm(myForm);
     				StdGenerali.bloccaForm(myForm, false);
+    				let cmpDataScadenzaCert = this.lookupReference('DataScadenzaCertificato');
+    				cmpDataScadenzaCert.setValue(this.dataScadenza);
+    				
 				},
 				callBackFnAnnulla: () => {
 					let id  = null;
@@ -38,6 +40,7 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
     	myForm.boxBottoni = this.lookupReference('StandardButton');
     	
     	myForm.on('dirtychange', (th, isDirty) => {
+    		StdGenerali.isolaCmp(myForm, isDirty);
     		StdGenerali.abilitaBottoni(myForm, isDirty);
     	});
     	
@@ -87,12 +90,53 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
     	StdGenerali.salvaRecord(grid, record);
     },
     
+    checkCertificatoMedico: function() {
+    	
+    	let cntInfo = this.lookupReference('CntInfoScadenza');
+    	this.dataScadenza  = null;
+    	Ext.Ajax.request({
+    		method: 'GET',
+    		url: '/gspRiva/ws/anagraficaCorso/checkCertificatoMedico',
+    		params: { 
+    			idAnagrafica: this.extraParams.controllerMain.extraParams.idAnagrafica
+			},
+    		success: (response, opts) => {
+    			let risposta = JSON.parse(response.responseText);
+    			if (risposta.success) {
+    				
+    				let scaduto = risposta.data.scaduto,
+    					dataScadenza = risposta.data.dataScadenza;
+    				
+    				this.dataScadenza = risposta.data.dataScadenza;
+    				
+    				if (!scaduto && !dataScadenza) {
+    					cntInfo.show();
+    					cntInfo.setHtml('<b>Attenzione</b>  certificato medico non ancora registrato');
+    				} else if (scaduto) {
+						this.dataScadenza = null;
+						cntInfo.show();
+						if (dataScadenza) {
+							cntInfo.setHtml(`<b>Attenzione</b> il certificato medico risulta scaduto in data:<b> ${StdGenerali.formattaData(dataScadenza, 'd/m/Y')} </b>`);
+						} 
+    				} else {
+    					cntInfo.hide();
+    				}
+    				
+    			} else {
+    				this.showErrorMessage(risposta.message);
+    			}
+    		}
+    	});
+    },
+    
     onSelectionChangeGrid: function(th, selected) {
     	
     	let form = this.lookupReference('MyForm');
     	if (selected.length > 0) {
     		let [record] = selected;
     		form.getForm().loadRecord(record);
+    		
+    		
     		StdGenerali.bloccaForm(form, !Ext.isEmpty(record.data.deletedData));
     		
     	}
@@ -119,7 +163,11 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
     		},
     		callback: (records, operation, success) => {
     			if (success) {
+    				let cntInfo = this.lookupReference('CntInfoScadenza');
+    				cntInfo.setHtml('');
+    				cntInfo.hide();
     				if (!Ext.isEmpty(records)) {
+    					this.checkCertificatoMedico();
 	    				let record = null;
 	    				if (id) {
 	    					record = StdGenerali.findRecord(grid.getStore(), 'id', id);
@@ -134,6 +182,7 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorsoController', {
     
     
     launch: function() {
+    	this.dataScadenza = null;
     	this.lookupReference('Grid').controller = this;
     	this.gestioneForm();
     	this.aggiornaStore();

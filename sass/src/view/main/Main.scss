@@ -106,6 +106,7 @@ $colors:(
   red: red,
   green: green,
   label_white: white,
+  giallo: #fff3cd,
   rosa: #d85d7e,
   bordo: #b5383c
 );
@@ -194,6 +195,15 @@ $colors:(
    border-width: 1px;
 }
 
+.alert-warning {
+   background: map-get($colors, 'giallo');
+   color: darken(map-get($colors, 'giallo'), 50%);
+   border-radius: 5px;
+   border-color: darken(map-get($colors, 'giallo'), 50%);
+   border-style: solid;
+   border-width: 1px;
+}
+
 .green-label {
 	color: map-get($colors, 'green');
 }
@@ -221,6 +231,11 @@ $colors:(
 
 .icon-add {
 	background-image: url("images/add.svg");
+	background-repeat: no-repeat;
+}
+
+.icon-alert {
+	background-image: url("images/alert.svg");
 	background-repeat: no-repeat;
 }
 

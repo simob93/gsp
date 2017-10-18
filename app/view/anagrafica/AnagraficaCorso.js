@@ -49,6 +49,7 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
 						{
 							text: 'Tipologia corso',
 							dataIndex: 'tipologia',
+							align: 'center',
 							flex: 1,
 							renderer: function(value, metaData, rec) {
 								if (!this.storeTipologia) {
@@ -61,7 +62,23 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
 									return valore;
 								}
 							}
-						}
+						},
+						/*{
+							xtype: 'datecolumn',
+							hidden: true,
+							format: 'd/m/Y',
+							text: 'Scadenza Cert.Medico',
+							align: 'center',
+							dataIndex: 'scadenzaCertificato',
+							flex: 1,
+							renderer: function(value, metaData, rec) {
+								let str = '';
+								if (value && value < new Date()) {
+									str = `<div style="width: 100%"><div style="display:inline-block;">${StdGenerali.formattaData(value, 'd/m/Y')}</div><div class="icon-alert" style="width: 20px; height: 20px; display:inline-block; margin-left: 5px;"></div></div>`;
+								}
+ 								return str;
+							}
+						},*/
 					],
 					extraParams: {
 						annullabile: true
@@ -87,6 +104,14 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     						margin: '0 0 0 4',
     						flex: 1,
     						items: [
+    							{
+    					    		xtype: 'container',
+    					    		margin: '5 0 5 0',
+    					    		padding: 6,
+    					    		hidden: true,
+    					    		cls: 'alert-warning',
+    					    		reference: 'CntInfoScadenza'
+    					    	},
     							{
     								xtype: 'fieldset',
     								padding: 5,
@@ -195,9 +220,16 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     	    										name: 'acconto'
     	    									},
     	    								]
-    	    							}
+    	    							},
+    	    							{
+    										xtype: 'datefield',
+    										reference: 'DataScadenzaCertificato',
+    										fieldLabel: 'Scadenza certificato',
+    										format: 'd/m/Y',
+    										name: 'scadenzaCertificato'
+    									}
     								]
-    							}
+    							},
     						],
     						dockedItems: [
     			    			{

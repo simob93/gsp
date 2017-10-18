@@ -4,7 +4,8 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     requires: [
         'Gestionale.view.corso.ListaCorsiController',
         'Gestionale.componenti.gridPanelCustom',
-        'Gestionale.store.ListaCorsi'
+        'Gestionale.store.ListaCorsi',
+        'Gestionale.store.Istruttori'
     ],
     controller: 'listaCorsiController',
     layout: {
@@ -95,6 +96,20 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
 							valueField: 'codice',
 							name: 'tipologia'
 						},
+						{
+							xtype: 'combobox',
+							emptyText: 'Tutti gli istruttori...',
+							queryMode: 'local',
+							reference: 'CboxIstruttori',
+							maxWidth: 320,
+							fieldLabel: 'Istruttore',
+							store: {
+								type: 'istruttori'
+							},
+							displayField: 'nominativo',
+							valueField: 'id',
+							name: 'idIstruttore'
+						}
 					]
 				},
 				{

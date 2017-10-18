@@ -40,6 +40,7 @@ Ext.define('Gestionale.view.corso.ListaCorsiController', {
     	let oggi = new Date();
     	this.lookupReference('DataDal').setValue(Ext.Date.getFirstDateOfMonth(oggi));
     	this.lookupReference('DataAl').setValue(Ext.Date.subtract(Ext.Date.getFirstDateOfMonth(oggi), 'mo', -2));
+    	this.lookupReference('CboxIstruttori').getStore().load();
     	this.onCerca();
     	
     }
