@@ -126,6 +126,7 @@ Ext.define('Gestionale.view.menu.Menu', {
     	    	    				xtype: 'badgeButton',
     	    	    				reference: 'BtnNotification',
     	    	    				scale: 'medium',
+    	    	    				tooltip: 'Scadenze certificato medico',
     	    	    				height: 36,
     	    	    				width: 36,
     	    	    				ui: 'notification',

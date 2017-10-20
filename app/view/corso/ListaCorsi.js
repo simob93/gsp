@@ -301,7 +301,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     				align: 'left',
     				text: 'Compilatore corso',
     				dataIndex: 'operatoreNominativo',
-    				flex: 1,
+    				width: 200,
     			}
     		],
     		listeners: {
