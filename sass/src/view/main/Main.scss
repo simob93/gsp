@@ -46,6 +46,12 @@
 	$background-color: #a9e4b1
 );
 
+
+ @include extjs-button-medium-ui(
+	 $ui: 'notification',
+	 $background-color: transparent
+ );
+
 @include extjs-button-small-ui(
 	$ui: 'warning',
 	$color: rgba(7,53,144,1.00),
@@ -263,6 +269,13 @@ $colors:(
     line-height: 2.2;
 }
 
+
+.icon-notification {
+
+	background-image: url("images/notification.svg");
+	background-repeat: no-repeat;
+	
+}
 
 .icon-annulla {
 	background-image: url("images/deleted.svg");

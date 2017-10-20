@@ -73,6 +73,33 @@ Ext.define('Gestionale.view.menu.MenuController', {
     		
     },
     
+    checkCertificatiScaduti: function() {
+    	let btnNotification =  this.lookupReference('BtnNotification') 
+    	Ext.Ajax.request({
+    		method: 'GET',
+    		url: '/gspRiva/ws/home/certificatiScaduti/src',
+    		params: { 
+    			
+			},
+    		success: (response, opts) => {
+    			let risposta = JSON.parse(response.responseText);
+    			if (risposta.success) {
+    				/* certificati scaduti */
+    				let count = risposta.data.length;
+    				if (count > 0) { 
+    					btnNotification.setBadgeText(count, '#b5383c');
+    				}
+    				btnNotification.listaCertificatiScaduti = risposta.data;
+    				
+    			} else {
+    				this.showErrorMessage(risposta.message);
+    			}
+    		}
+    	});
+    	
+    	
+    },
+    
     onLogout: function() {
     	localStorage.setItem('logIn', 'F');
     	window.location.href ="http://localhost:8080/gsp";
@@ -85,8 +112,59 @@ Ext.define('Gestionale.view.menu.MenuController', {
     },
     
     launch: function() {
+    	let btnNotification = this.lookupReference('BtnNotification');
+    	btnNotification.onClick = () => { 
+    		if (btnNotification.listaCertificatiScaduti.length === 0) {
+    			return false;
+    		}
+    		let win = Ext.create('Ext.window.Window', {
+    			title: 'Certificati medici prossimi alla scadenza',
+    			width: 600,
+    			height: 300,
+    			items: [
+    				{
+    					xtype: 'gridpanel',
+    					flex: 1,
+    					store: Ext.create('Ext.data.Store', {
+    						fields: [
+    							{
+    								name: 'key',
+    							},
+    							{
+    								name: 'value',
+    							}
+    						],
+    						autoLoad: false
+    					}),
+    					columns: [
+    						{
+    							text: 'Nominativo',
+    							align: 'center',
+    							flex: 1,
+    							dataIndex: 'key'
+    						},
+    						{
+    							text: 'Data scadenza certificato',
+    							align: 'center',
+    							flex: 1,
+    							dataIndex: 'value'
+    						}
+    					],
+    					listeners: {
+    						afterrender: (th) => { 
+    							if (btnNotification.listaCertificatiScaduti.length > 0) {
+    								th.getStore().loadData(btnNotification.listaCertificatiScaduti)
+    							}
+    						}
+    					}
+    				}
+    			]
+    		});
+    		win.showAt(btnNotification.getX() - win.width, btnNotification.getY() + btnNotification.getHeight() );
+    	}
     	this.generaMenu();
     	this.setInfoOperatoreLog();
+    	this.checkCertificatiScaduti();
     	
     	
     }

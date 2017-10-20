@@ -16,7 +16,8 @@ Ext.define('Gestionale.view.menu.Menu', {
     	'Gestionale.view.iscritti.List',
     	'Gestionale.view.istruttori.List',
     	'Gestionale.view.corso.ListaCorsi',
-    	'Gestionale.view.operatori.List'
+    	'Gestionale.view.operatori.List',
+    	'Gestionale.componenti.badgeButton'
     ],
     layout: {
     	type: 'hbox',
@@ -90,18 +91,48 @@ Ext.define('Gestionale.view.menu.Menu', {
     				xtype: 'container',
     				//flex: 1,
     				layout: {
-    					type: 'vbox',
-    					align: 'middle',
-    					pack: 'center'
+    					type: 'hbox',
     				},
     				items: [
     					{
-    	    				xtype: 'image',
-    	    				width: 300,
-    	    				height: 99,
-    	    				margin: '0 0 4 0',
-    	    				src: 'resources/images/logo.jpg'
-    	    			}
+    						xtype: 'container',
+    						flex: 1,
+    						layout:{
+    							type: 'hbox',
+    							align: 'middle',
+    							pack: 'center'
+    						},
+    						items: [
+    							{
+    	    	    				xtype: 'image',
+    	    	    				width: 300,
+    	    	    				height: 99,
+    	    	    				margin: '0 0 4 0',
+    	    	    				src: 'resources/images/logo.jpg'
+    	    	    			}
+    						]
+    					},
+    					{
+    						xtype: 'container',
+    						height: 99,
+    						flex: 0.2,
+    						layout:{
+    							type: 'vbox',
+    							align: 'bottom',
+    							pack: 'end'
+    						},
+    						items: [
+    							{
+    	    	    				xtype: 'badgeButton',
+    	    	    				reference: 'BtnNotification',
+    	    	    				scale: 'medium',
+    	    	    				height: 36,
+    	    	    				width: 36,
+    	    	    				ui: 'notification',
+    	    	    				iconCls: 'icon-notification',
+    	    	    			}
+    						]
+    					}
     				]
     			},
     			{

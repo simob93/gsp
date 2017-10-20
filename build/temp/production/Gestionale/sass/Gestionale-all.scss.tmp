@@ -894,6 +894,7 @@ $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
 $include-gestionale-application: dynamic(true);;
 $include-gestionale-componenti-mycontroller: dynamic(true);;
+$include-gestionale-componenti-badgebutton: dynamic(true);;
 $include-gestionale-componenti-calendar: dynamic(false);;
 $include-gestionale-componenti-checkboxgroupgiorni: dynamic(true);;
 $include-gestionale-componenti-errorcontainer: dynamic(true);;
