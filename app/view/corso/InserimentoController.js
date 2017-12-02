@@ -47,13 +47,13 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
 				text: 'Stampa',
 				menu: [ 
 					{
-						text: 'Stampa corso',
+						text: 'Stampa scheda rosa',
 						handler: () => {
 							this.doPrint('/gspRiva/ws/corso/report/dettaglioCorso')
 						}
 					},
 					{
-						text: 'Stampa presenze',
+						text: 'Stampa scheda bianca',
 						handler: () => {
 							this.doPrint('/gspRiva/ws/corso/report/presenzeCorsi')
 						}
@@ -103,7 +103,7 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     winStampa: function(risposta) {
     	let win = Ext.create('Gestionale.componenti.stdWin', {
     		width: 1024,
-    		height: 768,
+    		height: 650,
     		layout: 'fit',
     		flex: 1,
     		name: [
@@ -240,11 +240,12 @@ Ext.define('Gestionale.view.corso.InserimentoController', {
     
     onClickBtnInserisci: function() {
     	let grid = this.lookupReference('Grid');
-    	StdGenerali.creaWin(path = 'Gestionale.view.iscritti.List', {
-    		controllerCorso: this,
-    		tipologiaCorso: this.extraParams.tipologiaCorso,
-    		records: grid.getStore().getData().items,
-    	}, title = 'Iscritti', width = 1024, height = 768).show();
+    	let params = {
+			controllerCorso: this,
+			tipologiaCorso: this.extraParams.tipologiaCorso,
+			records: grid.getStore().getData().items,
+    	}
+    	StdGenerali.creaWin(path = 'Gestionale.view.iscritti.List', params, 'Iscritti',1024,650).show();
     },
     
     rimuoviRecord: function(id, remove) {

@@ -21,7 +21,6 @@ Ext.define('Gestionale.view.anagrafica.List',{
     			align: 'stretch',
     			pack: 'center'
     		},
-    		cls: 'azure',
     		height: 85,
     		items: [
     			{
@@ -42,21 +41,27 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						items: [
     							{
     	    	    				xtype: 'textfield',
+    	    	    				emptyText: 'Nominativo...',
     	    	    				reference: 'TextSearch',
     	    	    				labelAlign: 'right',
     	    	    				maxWidth: 280,
     	    	    				fieldLabel: 'Ricerca'
     	    	    			},
     	    	    			{
-    	    	    				xtype: 'button',
-    	    	    				margin: '0 0 0 4',
-    	    	    				text: 'cerca',
-    	    	    				handler: 'onCerca'
-    	    	    			}
+    								xtype: 'button',
+    								margin: '0 0 0 5',
+    								//cls: 'btn-medium-size',
+    								iconCls: 'icon-find',
+    								ui: 'find',
+    								text: 'Trova',
+    								scale: 'medium',
+    								handler: 'onCerca'
+    							}
     						]
     					},
     					{
     						xtype: 'container',
+    						hidden: true,
     						reference: 'CntFilter',
     						flex: 1,
     						layout: {
@@ -88,6 +93,7 @@ Ext.define('Gestionale.view.anagrafica.List',{
     				store: {
     					type: 'anagrafica'
     				},
+    				title: 'Anagrafica',
     				reference: 'Grid',
     				flex: 1,
     				emptyText: 'Nessun dato per la ricerca impostata',
@@ -97,7 +103,7 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						sortable: false,
     						align: 'left',
     						dataIndex: 'nome',
-    						width: 200,
+    						flex: 1,
     						renderer: function(value, metaData, record) {
     							let {nome, cognome} = record.data;
     							return `${nome} ${cognome}`;
@@ -107,7 +113,7 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						xtype: 'datecolumn',
     						sortable: false,
     						align: 'center',
-    						width: 113,
+    						width: 136,
     						format: 'd/m/Y',
     						text: 'Data di nascita',
     						dataIndex: 'dataNascita'
@@ -116,6 +122,7 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						text: 'Luogo di nascita',
     						sortable: false,
     						width: 160,
+    						hidden: true,
     						align: 'left',
     						dataIndex: 'luogoNascita'
     					},
@@ -124,6 +131,7 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						sortable: false,
     						width: 150,
     						align: 'left',
+    						hidden: true,
     						dataIndex: 'indirizzo'
     					},
     					{
@@ -131,10 +139,11 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						sortable: false,
     						width: 76,
     						align: 'left',
+    						hidden: true,
     						dataIndex: 'cap'
     					},
     					{
-    						text: 'Comune Resi',
+    						text: 'Comune',
     						sortable: false,
     						align: 'left',
     						dataIndex: 'comuneDescrizione'
@@ -143,11 +152,13 @@ Ext.define('Gestionale.view.anagrafica.List',{
     						text: 'Telefono',
     						sortable: false,
     						align: 'left',
+    						hidden: true,
     						dataIndex: 'telefono'
     					},
     					{
     						text: 'Compilatore',
     						sortable: false,
+    						hidden: true,
     						width: 200,
     						align: 'left',
     						dataIndex: 'operatoreNominativo'

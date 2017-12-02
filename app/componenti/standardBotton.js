@@ -12,6 +12,7 @@ Ext.define('Gestionale.componenti.standardButton', {
 		this.items = [
 			{
 				xtype: 'button',
+				cls: 'btn-medium-size',
 				itemId: 'BtnNuovo', reference: 'BtnNuovo',
 				text: 'Nuovo',
 				margin: '0 4 0 0',
@@ -25,6 +26,7 @@ Ext.define('Gestionale.componenti.standardButton', {
 			},
 			{
 				xtype: 'button',
+				cls: 'btn-medium-size',
 				margin: '0 4 0 0',
 				itemId: 'BtnConferma' , reference: 'BtnConferma',
 				text: 'Conferma',
@@ -43,6 +45,7 @@ Ext.define('Gestionale.componenti.standardButton', {
 			},
 			{
 				xtype: 'button',
+				cls: 'btn-medium-size',
 				nonDisabilitare: true,
 				margin: '0 4 0 0',
 				itemId: 'BtnAnnulla', reference: 'BtnAnnulla',
@@ -57,6 +60,7 @@ Ext.define('Gestionale.componenti.standardButton', {
 			},
 			{
 				xtype: 'button',
+				cls: 'btn-medium-size',
 				nonDisabilitare: true,
 				margin: '0 4 0 0',
 				itemId: 'BtnRipristina', reference: 'BtnRipristina',
@@ -70,6 +74,7 @@ Ext.define('Gestionale.componenti.standardButton', {
 			},
 			{
 				xtype: 'splitbutton',
+				cls: 'btn-medium-size',
 				nonDisabilitare: true,
 				hidden: true,
 				margin: '0 4 0 0',

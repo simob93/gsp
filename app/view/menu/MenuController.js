@@ -32,10 +32,10 @@ Ext.define('Gestionale.view.menu.MenuController', {
     			let [titolo, path, extraParams, iconCls] = sub;
     			pnlRif.add({
     				xtype: 'button',
-    				textAlign: 'left',
-    				margin: '2 0 0 0',
+    				//textAlign: 'left',
+    				margin: '5 0 0 0',
     				height: 30,
-    				iconCls: iconCls,
+    				//iconCls: iconCls,
     				ui: 'warning',
     				text: titolo,
     				handler: th => {

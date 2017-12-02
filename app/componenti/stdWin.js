@@ -31,5 +31,14 @@ Ext.define('Gestionale.componenti.stdWin', {
 		]
 		
 		this.callParent(arguments);
+	},
+	listeners: {
+		afterrender: function(th) {
+			if (this.showIconEdit) {
+				let header = th.getHeader(),
+					title = header.down('title')
+				title.getEl().insertHtml('afterBegin', '<div class="icon-edit-white" style="display: table-cell;width: 16px; height: 16px;"></div>')
+			}
+		}
 	}
 });

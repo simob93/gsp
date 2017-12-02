@@ -43,7 +43,6 @@ Ext.define('Gestionale.view.menu.Menu', {
     				padding: 8,
     				margin: '5 5 5 5',
     				height: 115,
-    				cls: 'cntProfile',
     				layout: {
     					type: 'vbox',
     					align: 'middle'
@@ -67,18 +66,32 @@ Ext.define('Gestionale.view.menu.Menu', {
     	    		reference: 'Menu',
     	    		layout: 'accordion',
     	    		flex: 1,
-    	    		buttons: [
+    	    		dockedItems: [
     	    			{
-    	    				text: 'LogOut',
-    	    				handler: 'onLogout'
+    	    				xtype: 'toolbar',
+    	    				dock: 'bottom',
+    	    				items: [
+    	    					{
+    	    						xtype: 'tbfill'
+    	    					},
+    	    					{
+    	    	    				//text: 'LogOut',
+    	    	    				height: 30,
+    	    	    				width: 25,
+    	    	    				iconCls: 'icon-logout',
+    	    	    				handler: 'onLogout',
+    	    	    				tooltip: 'Esci dal programma'
+    	    	    			}
+    	    				]
     	    			}
     	    		]
+    	    		
     	    	}
     		]
     	},
     	{
     		xtype: 'panel',
-    		border: 1,
+    		border: false,
     		bodyPadding: 5,
     		margin: '0 0 0 5',
     		layout: {

@@ -123,7 +123,11 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
 					items: [
 						{
 							xtype: 'button',
-							text: 'Cerca',
+							//cls: 'btn-medium-size',
+							iconCls: 'icon-find',
+							ui: 'find',
+							text: 'Trova',
+							scale: 'medium',
 							handler: 'onCerca'
 						}
 					]
@@ -298,6 +302,7 @@ Ext.define('Gestionale.view.corso.ListaCorsi',{
     			{
     				xtype: 'gridcolumn',
     				sortable: false,
+    				hidden: true,
     				align: 'left',
     				text: 'Compilatore corso',
     				dataIndex: 'operatoreNominativo',

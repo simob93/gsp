@@ -62,142 +62,155 @@ Ext.define('Gestionale.view.corso.Inserimento',{
 		    				name: 'cmpDirty',
 		    				hidden: true
 		    			},
-    					{
-    						xtype: 'fieldset',
-    						padding: 5,
-    						title: 'Dati corso',
-    						layout: {
-    							type: 'vbox'
-    						},
-    						items: [
-    							{
-    								xtype: 'textfield',
-    								name: 'descrizione',
-    								maxLength: 20,
-    								enforceMaxLength: true,
-    								fieldLabel: 'Descrizione'
-    							},
-    							{
-    								xtype: 'container',
-    								layout: {
-    									type: 'hbox'
-    								},
-    								items: [
-    									{
-    	    								xtype: 'combobox',
-    	    								reference: 'CboxTipologia',
-    	    								width: 220,
-    	    								allowBlank: false,
-    	    								fieldLabel: 'Tipologia',
-    	    								store: {
-    	    									type: 'tipologiaCorsi'
-    	    								},
-    	    								displayField: 'valore',
-    	    								valueField: 'codice',
-    	    								name: 'tipologia'
-    	    							},
-    	    							{
-    	    								xtype: 'combobox',
-    	    								allowBlank: false,
-    	    								queryMode: 'local',
-    	    								reference: 'CboxIstruttori',
-    	    								maxWidth: 320,
-    	    								fieldLabel: 'Istruttore',
-    	    								store: {
-    	    									type: 'istruttori'
-    	    								},
-    	    								displayField: 'nominativo',
-    	    								valueField: 'id',
-    	    								name: 'idIstruttore'
-    	    							}
-    								]
-    							},
-    							{
-    								xtype: 'combobox',
-    								allowBlank: false,
-    								reference: 'CboxNrCorsi',
-    								width: 160,
-    								fieldLabel: 'Nr. lezioni',
-    								store: {
-    									type: 'numLezioni'
-    								},
-    								displayField: 'valore',
-    								valueField: 'codice',
-    								name: 'numeroLezioni'
-    							},
-    							{
-    								xtype: 'combobox',
-    								allowBlank: false,
-    								reference: 'CboxMinCorsi',
-    								width: 160,
-    								fieldLabel: 'Min. lezioni',
-    								store: {
-    									type: 'minutiLezioni'
-    								},
-    								displayField: 'valore',
-    								valueField: 'codice',
-    								name: 'minutiLezioni'
-    							},
-    							{
-    								xtype: 'container',
-    								layout: {
-    									type: 'hbox'
-    								},
-    								items: [
-    									{
-    	    								xtype: 'datefield',
-    	    								width: 220,
-    	    								allowBlank: false,
-    	    								format: 'd/m/Y',
-    	    								fieldLabel: 'Data inizio',
-    	    								name: 'dal'
-    	    							},
-    	    							{
-    	    								xtype: 'datefield',
-    	    								width: 220,
-    	    								allowBlank: false,
-    	    								format: 'd/m/Y',
-    	    								fieldLabel: 'Data fine',
-    	    								name: 'al'
-    	    							}
-    								]
-    							},
-    							{
-    								xtype: 'container',
-    								layout: {
-    									type: 'hbox'
-    								},
-    								items: [
-    									{
-    	    								xtype: 'timefield',
-    	    								width: 180,
-    	    								format: 'H:i',
-    	    								allowBlank: false,
-    	    								fieldLabel: 'Ora inizio',
-    	    								name: 'oraDal',
-    	    								increment: 5
-    	    							},
-    	    							{
-    	    								xtype: 'timefield',
-    	    								margin: '3 0 0 43',
-    	    								allowBlank: false,
-    	    								format: 'H:i',
-    	    								width: 180,
-    	    								fieldLabel: 'Ora fine',
-    	    								name: 'oraAl',
-    	    								increment: 5
-    	    							}
-    								]
-    							}
-    						]
-    					},
-    					{
-							xtype: 'checkboxgroupGiorni',
-							margin: '0 0 0 4',
-						},
+		    			{
+		    				xtype: 'fieldset',
+		    				layout: {
+		    					type: 'hbox',
+		    					//align: 'stretch'
+		    				},
+		    				margin: '10 0 0 0',
+		    				//flex:1,
+		    				items: [
+		    					{
+		    						xtype: 'container',
+		    						padding: 5,
+		    						margin: '0 0 0 5',
+		    						layout: {
+		    							type: 'vbox'
+		    						},
+		    						flex: 2,
+		    						items: [
+		    							{
+		    								xtype: 'textfield',
+		    								name: 'descrizione',
+		    								maxLength: 20,
+		    								enforceMaxLength: true,
+		    								fieldLabel: 'Descrizione'
+		    							},
+		    							{
+		    								xtype: 'container',
+		    								layout: {
+		    									type: 'hbox'
+		    								},
+		    								items: [
+		    									{
+		    	    								xtype: 'combobox',
+		    	    								reference: 'CboxTipologia',
+		    	    								width: 220,
+		    	    								allowBlank: false,
+		    	    								fieldLabel: 'Tipologia',
+		    	    								store: {
+		    	    									type: 'tipologiaCorsi'
+		    	    								},
+		    	    								displayField: 'valore',
+		    	    								valueField: 'codice',
+		    	    								name: 'tipologia'
+		    	    							},
+		    	    							{
+		    	    								xtype: 'combobox',
+		    	    								allowBlank: false,
+		    	    								queryMode: 'local',
+		    	    								reference: 'CboxIstruttori',
+		    	    								maxWidth: 320,
+		    	    								fieldLabel: 'Istruttore',
+		    	    								store: {
+		    	    									type: 'istruttori'
+		    	    								},
+		    	    								displayField: 'nominativo',
+		    	    								valueField: 'id',
+		    	    								name: 'idIstruttore'
+		    	    							}
+		    								]
+		    							},
+		    							{
+		    								xtype: 'combobox',
+		    								allowBlank: false,
+		    								reference: 'CboxNrCorsi',
+		    								width: 160,
+		    								fieldLabel: 'Nr. lezioni',
+		    								store: {
+		    									type: 'numLezioni'
+		    								},
+		    								displayField: 'valore',
+		    								valueField: 'codice',
+		    								name: 'numeroLezioni'
+		    							},
+		    							{
+		    								xtype: 'combobox',
+		    								allowBlank: false,
+		    								reference: 'CboxMinCorsi',
+		    								width: 160,
+		    								fieldLabel: 'Min. lezioni',
+		    								store: {
+		    									type: 'minutiLezioni'
+		    								},
+		    								displayField: 'valore',
+		    								valueField: 'codice',
+		    								name: 'minutiLezioni'
+		    							},
+		    							{
+		    								xtype: 'container',
+		    								layout: {
+		    									type: 'hbox'
+		    								},
+		    								items: [
+		    									{
+		    	    								xtype: 'datefield',
+		    	    								width: 220,
+		    	    								allowBlank: false,
+		    	    								format: 'd/m/Y',
+		    	    								fieldLabel: 'Data inizio',
+		    	    								name: 'dal'
+		    	    							},
+		    	    							{
+		    	    								xtype: 'datefield',
+		    	    								width: 220,
+		    	    								allowBlank: false,
+		    	    								format: 'd/m/Y',
+		    	    								fieldLabel: 'Data fine',
+		    	    								name: 'al'
+		    	    							}
+		    								]
+		    							},
+		    							{
+		    								xtype: 'container',
+		    								layout: {
+		    									type: 'hbox'
+		    								},
+		    								items: [
+		    									{
+		    	    								xtype: 'timefield',
+		    	    								width: 180,
+		    	    								format: 'H:i',
+		    	    								allowBlank: false,
+		    	    								fieldLabel: 'Ora inizio',
+		    	    								name: 'oraDal',
+		    	    								increment: 5
+		    	    							},
+		    	    							{
+		    	    								xtype: 'timefield',
+		    	    								margin: '3 0 0 43',
+		    	    								allowBlank: false,
+		    	    								format: 'H:i',
+		    	    								width: 180,
+		    	    								fieldLabel: 'Ora fine',
+		    	    								name: 'oraAl',
+		    	    								increment: 5
+		    	    							}
+		    								]
+		    							}
+		    						]
+		    					},
+		    					{
+									xtype: 'checkboxgroupGiorni',
+									flex: 1,
+									margin: '0 0 0 0',
+								},
+		    				]
+		    			},
 						{
 							xtype: 'gridPanelCustom',
-							height: 200,
+							flex: 1,
 							ui: 'pnl-corso',
 							border: 1,
 							margin: '8 0 0 0',

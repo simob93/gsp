@@ -38,6 +38,7 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
 
     	    		xtype: 'fieldset',
     	    		scrollable: true,
+    	    		border: false,
     	    		padding: 4,
     	    		layout: {
     	    			type: 'vbox',
@@ -53,15 +54,8 @@ Ext.define('Gestionale.view.anagrafica.Inserimento',{
     	    		flex: 1,
     	    		items: [
     	    			{
-    	    				xtype: 'label',
-    	    				margin: '0 0 4 10',
-    	    				width: 80,
-    	    				height: 80,
-    	    				cls: 'icon-registration'
-    	    			},
-    	    			{
     	    				xtype: 'fieldset',
-    	    				title: 'Nominativo',
+    	    				title: 'Info generali',
     	    				padding: 5,
     	    				margin: '4 0 0 0',
     	    				layout: {

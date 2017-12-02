@@ -25,12 +25,13 @@ Ext.define('Gestionale.view.corso.ListaCorsiController', {
     },
     
     onItemDblClick: function(th, record, item, index, e, eOpts ) {
-    	let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento', {
-    		record: record,
+    	let params = {
+			record: record,
     		hideBtnNuovo: true,
     		corsoSingolo: record.get('tipologia') === 1 || record.get('tipologia') === 3 || record.get('tipologia') === 4,
     		tipologiaCorso: record.get('tipologia') === 1 || record.get('tipologia') === 3 || record.get('tipologia') === 4 ? 1 : record.get('tipologia')
-    	},"Gestione corso", 1024, 768, 'win-corso')
+    	}
+    	let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento',params ,"Gestione corso", 1024, 650, 'win-corso', true, true)
     	win.show();
     	
     	win.on('close' , () => this.aggiornaStore());

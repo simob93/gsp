@@ -22,7 +22,7 @@ Ext.define('Gestionale.view.main.Main', {
     items: [
     	{
     		xtype: 'container',
-    		reference: 'CntMain',
+    		itemId: 'CntMain', reference: 'CntMain',
     		layout: {
     			type: 'vbox',
     			align: 'stretch'

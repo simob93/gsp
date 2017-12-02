@@ -7,7 +7,7 @@ Ext.define('Gestionale.view.iscritti.ListController', {
         'Gestionale.store.MinutiLezioni',
     ],
    
-    aggiornaStore: function(params = {}, callBackFn) {
+    aggiornaStore: function(params = {}, callBackFn) { debugger;
     	
     	let dal, al,
     		slider = this.lookupReference('SliderPeriodo'),
@@ -15,6 +15,7 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     		record = form.getForm().getFieldValues(),
 			mese = record.mese,
 			anno = record.anno,
+			txtNominativo = this.lookupReference('TxtNominativo'),
 			grid = this.lookupReference('Grid'),
 			btnFiltro = this.lookupReference('BtnFiltro');
     		
@@ -24,6 +25,12 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     		record.al = new Date(anno, mese + 1, 0);
     		
     	} 
+    	
+    	if (!Ext.isEmpty(txtNominativo.getValue())) {
+    		Ext.apply(record, {
+    			nominativo: txtNominativo.getValue()
+    		});
+    	}
     	
     	delete record.mese;
 		delete record.anno;

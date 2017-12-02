@@ -4,7 +4,7 @@ Ext.define('Gestionale.view.anagrafica.ListController', {
     
     onItemDblClickGrid: function(th, record, item) {
     	let {id} = record.data;
-    	let win = StdGenerali.creaWin('Gestionale.view.anagrafica.Main', {idAnagrafica: record.get('id')} ,'Anagrafica iscritti', 1024, 768);
+    	let win = StdGenerali.creaWin('Gestionale.view.anagrafica.Main', {idAnagrafica: record.get('id')} ,'Anagrafica iscritti', 1024, 650, 'default',  true, true);
     	win.show();
     },
    

@@ -112,6 +112,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     			    					}
     			    				]
     			    			}
+    			    			
     						]
     					},
     					{
@@ -154,12 +155,14 @@ Ext.define('Gestionale.view.iscritti.List',{
     				},
     				items: [
     					{
-    						xtype: 'button',
-    						reference: 'BtnCerca',
-    						margin: '5 5 5 5',
-    						text: 'Cerca',
-    						handler: 'onCerca'
-    					},
+							xtype: 'button',
+							//cls: 'btn-medium-size',
+							iconCls: 'icon-find',
+							ui: 'find',
+							text: 'Trova',
+							scale: 'medium',
+							handler: 'onCerca'
+						},
     					{
     						xtype: 'button',
     						hidden: true,
@@ -352,6 +355,19 @@ Ext.define('Gestionale.view.iscritti.List',{
     							}
     							return str;
     						}
+    					}
+    				],
+    				dockedItems: [
+    					{
+    						xtype: 'toolbar',
+    						dock: 'top',
+    						items: [
+    							{
+    	    						xtype: 'textfield',
+    	    						reference: 'TxtNominativo',
+    	    						emptyText: 'Nominativo...'
+    	    					}
+    						]
     					}
     				],
     				viewConfig: {
