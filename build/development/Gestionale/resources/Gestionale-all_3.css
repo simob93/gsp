@@ -1,0 +1,235 @@
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:186 */
+.shortcutMenu {
+    background-image: url("images/menu.svg");
+    background-repeat: no-repeat;
+    display: none;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:192 */
+.cntShortcut:hover .shortcutMenu {
+    display: inline-block;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:196 */
+.corso_non_convalidato {
+    background-image: url("images/filled-circle-gray.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:201 */
+.labelWhite {
+    color: white;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:205 */
+.alert-danger {
+    background: #fcc;
+    color: #900;
+    border-radius: 5px;
+    border-color: #900;
+    border-style: solid;
+    border-width: 1px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:214 */
+.alert-warning {
+    background: #fff3cd;
+    color: #cd9c00;
+    border-radius: 5px;
+    border-color: #cd9c00;
+    border-style: solid;
+    border-width: 1px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:223 */
+.green-label {
+    color: green;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:227 */
+.azure {
+    background: azure;
+    border-bottom: 2px solid #5fa2dd;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:232 */
+.gridAlta30 {
+    height: 30px !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:236 */
+.recAnnullato {
+    text-decoration: line-through;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:240 */
+.grassetto {
+    font-weight: bold;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:244 */
+.cntProfile {
+    border: 1px solid #5fa2dd;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:248 */
+.icon-edit-white {
+    background-image: url("images/edit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:254 */
+.icon-locked {
+    background-image: url("images/locked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:260 */
+.icon-add {
+    background-image: url("images/add.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:265 */
+.icon-alert {
+    background-image: url("images/alert.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:270 */
+.icon-search {
+    background-image: url("images/search.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:275 */
+.icon-acconto {
+    background-image: url("images/acconto.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:280 */
+.icon-logout {
+    background-image: url("images/logout.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:286 */
+.icon-logo1 {
+    background-image: url("images/ANR.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:292 */
+.icon-logo2 {
+    background-image: url("images/FIN.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:298 */
+.icon-avatar {
+    background: #b5383c;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 4px;
+    color: #fff;
+    font-size: 11px;
+    vertical-align: middle;
+    line-height: 2.2;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:313 */
+.icon-notification {
+    background-image: url("images/notification.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:320 */
+.icon-annulla {
+    background-image: url("images/deleted.svg");
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:324 */
+.icon-find {
+    background-image: url("images/find.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:329 */
+.x-fieldset {
+    border-radius: 5px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:333 */
+.x-fieldset-header-default > .x-fieldset-header-text {
+    font-size: 16px !important;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:337 */
+.calendar td {
+    width: 100px;
+    height: 90px;
+    border: 1px solid #bbb;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:342 */
+.icon-registration {
+    background-image: url("images/registration_user.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:347 */
+.icon-prev,
+.icon-next,
+.icon-32 {
+    width: 32px;
+    height: 32px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:354 */
+.icon-next {
+    background-image: url("images/next.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:360 */
+.icon-prev {
+    background-image: url("images/prev.svg");
+    background-repeat: no-repeat;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:366 */
+.label-calendar {
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:378 */
+.containerProgress {
+    width: 100%;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:383 */
+.progress {
+    overflow: hidden;
+    height: 18px;
+    width: 100%;
+    position: relative;
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: -ms-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-image: linear-gradient(top, #f5f5f5, #f9f9f9);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#f9f9f9', GradientType=0);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:408 */
+.progress .bar {
+    height: 18px;
+    background-color: #8290af;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:418 */
+.x-btn {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+    height: 30px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:423 */
+.btn-medium-size {
+    width: 100px;
+}
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:428 */
+.x-form-text {
+    height: 26px !important;
+}
