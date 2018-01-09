@@ -36,7 +36,7 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
 						type: 'anagraficaCorso'
 					},
 					reference: 'Grid',
-					flex: 1,
+					width: 320,
 					columns: [
 						{
 							xtype: 'datecolumn',
@@ -96,13 +96,13 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
 						align: 'stretch'
 					},
 					flex: 1,
+					scrollable: true,
+					border: false,
 					items: [
 						{
     						xtype: 'panel',
     						bodyPadding: 5,
-    						border: 1,
     						margin: '0 0 0 4',
-    						flex: 1,
     						items: [
     							{
     					    		xtype: 'container',
@@ -183,7 +183,50 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     	    								maxWidth: 220,
     	    								format: 'd/m/Y',
     	    								name: 'data',
-    	    								fieldLabel: 'Data'
+    	    								fieldLabel: 'Data iscrizione'
+    	    							},
+    	    							{
+    	    								xtype: 'fieldset',
+    	    								reference: 'CntPeridoCorso',
+    	    								title: 'Data richiesta corso',
+    	    								layout: {
+    	    									type: 'hbox'
+    	    								},
+    	    								height: 75,
+    	    								items: [
+    	    									{
+    	    	    								xtype: 'datefield',
+    	    	    								labelAlign: 'left',
+    	    	    								maxWidth: 220,
+    	    	    								format: 'd/m/Y',
+    	    	    								name: 'dataInizio',
+    	    	    								fieldLabel: 'Data inizio',
+    	    	    								validator: function(value) {
+    	    	    									let valid = true,
+    	    	    										tipologia = this.lookupController().lookupReference('CboxTipologia');
+    	    	    									if (tipologia.getValue() === 2 && Ext.isEmpty(value)) {
+    	    	    										valid = false;
+    	    	    									}
+    	    	    									return valid || 'Campo obbligatorio'
+    	    	    								}
+    	    	    							},
+    	    	    							{
+    	    	    								xtype: 'datefield',
+    	    	    								margin: '3 0 0 2',
+    	    	    								maxWidth: 220,
+    	    	    								format: 'd/m/Y',
+    	    	    								name: 'dataFine',
+    	    	    								fieldLabel: 'Data fine',
+    	    	    								validator: function(value) {
+    	    	    									let valid = true,
+    	    	    										tipologia = this.lookupController().lookupReference('CboxTipologia');
+    	    	    									if (tipologia.getValue() === 2 && Ext.isEmpty(value)) {
+    	    	    										valid = false;
+    	    	    									}
+    	    	    									return valid || 'Campo obbligatorio'
+    	    	    								}
+    	    	    							}
+    	    								]
     	    							}
     	    						]
     							},
@@ -227,25 +270,42 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     										fieldLabel: 'Scadenza certificato',
     										format: 'd/m/Y',
     										name: 'scadenzaCertificato'
+    									},
+    									{
+    										xtype: 'container',
+    										layout: {
+    											type: 'vbox',
+    											align: 'stretch'
+    										},
+    										flex: 1,
+    										items: [
+    											{
+    	    										xtype: 'textarea',
+    	    										fieldLabel: 'Note',
+    	    										labelAlign: 'top',
+    	    										name: 'note',
+    	    										height: 250
+    	    									}
+    										]
     									}
     								]
     							},
     						],
-    						dockedItems: [
-    			    			{
-    			    				xtype: 'toolbar',
-    			    				dock: 'top',
-    			    				items: [
-    			    					{
-    							    		xtype: 'container',
-    							    		flex: 1,
-    							    		reference: 'CntBoxBottoni'
-    							    	}
-    			    				]
-    			    			}
-    			    		]
 						}
 					],
+					dockedItems: [
+		    			{
+		    				xtype: 'toolbar',
+		    				dock: 'top',
+		    				items: [
+		    					{
+						    		xtype: 'container',
+						    		flex: 1,
+						    		reference: 'CntBoxBottoni'
+						    	}
+		    				]
+		    			}
+		    		]
 					
 				}
 			]

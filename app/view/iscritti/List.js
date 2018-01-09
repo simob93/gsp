@@ -167,7 +167,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						xtype: 'button',
     						hidden: true,
     						reference: 'BtnInserisci',
-    						margin: '5 5 5 5',
+    						margin: '0 5 0 5',
     						text: 'Inserisci',
     						//hidden: true,
     						handler: 'onInserisci'
