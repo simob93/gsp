@@ -187,6 +187,7 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     	    							},
     	    							{
     	    								xtype: 'fieldset',
+    	    								margin: '12 0 0 0',
     	    								reference: 'CntPeridoCorso',
     	    								title: 'Data richiesta corso',
     	    								layout: {
@@ -266,6 +267,8 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     	    							},
     	    							{
     										xtype: 'datefield',
+    										labelWidth: 150,
+    										width: 270,
     										reference: 'DataScadenzaCertificato',
     										fieldLabel: 'Scadenza certificato',
     										format: 'd/m/Y',

@@ -7,7 +7,7 @@ Ext.define('Gestionale.view.iscritti.ListController', {
         'Gestionale.store.MinutiLezioni',
     ],
    
-    aggiornaStore: function(params = {}, callBackFn) { debugger;
+    aggiornaStore: function(params = {}, callBackFn) { 
     	
     	let dal, al,
     		slider = this.lookupReference('SliderPeriodo'),

@@ -14085,3 +14085,7 @@
 .x-form-text {
     height: 26px !important;
 }
+/* D:/tomcat/tomcat9.0.0/webapps/gsp/sass/src/view/main/Main.scss:432 */
+.x-form-text-default.x-form-textarea {
+    height: 100% !important;
+}
