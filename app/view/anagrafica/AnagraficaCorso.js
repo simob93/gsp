@@ -187,6 +187,7 @@ Ext.define('Gestionale.view.anagrafica.AnagraficaCorso',{
     	    							},
     	    							{
     	    								xtype: 'fieldset',
+    	    								hidden: true,
     	    								margin: '12 0 0 0',
     	    								reference: 'CntPeridoCorso',
     	    								title: 'Data richiesta corso',
