@@ -18,13 +18,6 @@ Ext.define('Gestionale.view.iscritti.ListController', {
 			txtNominativo = this.lookupReference('TxtNominativo'),
 			grid = this.lookupReference('Grid'),
 			btnFiltro = this.lookupReference('BtnFiltro');
-    		
-    	if (slider.getValue() === 0) {
-    		    		
-    		record.dal = new Date(anno, mese, 1);
-    		record.al = new Date(anno, mese + 1, 0);
-    		
-    	} 
     	
     	if (!Ext.isEmpty(txtNominativo.getValue())) {
     		Ext.apply(record, {
@@ -159,25 +152,29 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     
     launch: function() { 
 
-    	this.lookupReference('Mese').setValue(new Date().getMonth())
-    	this.lookupReference('Anno').setValue(new Date().getFullYear())
+    	
     	StdGenerali.createBaseFilter(this, this.lookupReference('CntFilter'), this.getPersonFiltri());
     	
     	let cboxTipologia = this.lookupReference('CboxTipologia'),
     		grid = this.lookupReference('Grid'),
     		btnInserisci = this.lookupReference('BtnInserisci'),
-    		btnCreaCorsoRiservato = this.lookupReference('BtnCreaCorsoRiservato');
+    		btnCreaCorsoRiservato = this.lookupReference('BtnCreaCorsoRiservato'),
+    		cntPeriodo = this.lookup('CntPeriodo');
     	
     	cboxTipologia.setValue(this.extraParams.tipologiaCorso || 2);
     	
     	if (this.extraParams.controllerCorso) {
     		
     		/* CORSO di gruppo  */
+    		this.lookup('ColDataReg').hide();
+    		this.lookup('ColDataDal').show();
+    		this.lookup('ColDataAl').show();
     		cboxTipologia.getStore().filterBy(rec => rec.data.codice === 2);
     		grid.getSelectionModel().setSelectionMode('MULTI');
     		btnInserisci.show();
     		
     	} else if (this.extraParams.tipologiaCorso === 1) {
+    		cntPeriodo.hide();
     		grid.getSelectionModel().setSelectionMode('SINGLE');
     		/* menu short solo per tipologia di corso indivduale  */
     		grid.extraParams.menuShort = Ext.create('Ext.menu.Menu', {
@@ -192,6 +189,7 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     		grid.on('afterrender', th => th.getSelectionModel().column.setHidden(true));
     		
     	} else if (this.extraParams.tipologiaCorso === 5) {
+    		cntPeriodo.hide();
     		grid.getSelectionModel().setSelectionMode('MULTI');
     		/* nuova tipologia di corso RISERVATA  */
     		cboxTipologia.getStore().filterBy(rec => rec.data.codice === 5);

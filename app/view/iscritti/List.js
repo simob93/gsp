@@ -47,6 +47,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						items: [
     							{
     			    				xtype: 'periodo',
+    			    				reference: 'CntPeriodo',
     			    				margin: '0 0 0 4',
     			    				width: 300,
     			    				layout: {
@@ -241,12 +242,35 @@ Ext.define('Gestionale.view.iscritti.List',{
     					},
     					{
     						xtype: 'datecolumn',
+    						reference: 'ColDataReg',
     						sortable: false,
     						align: 'center',
     						width: 113,
     						format: 'd/m/Y',
     						text: 'Data iscrizione',
     						dataIndex: 'dataIscrizione'
+    					},
+    					{
+    						xtype: 'datecolumn',
+    						reference: 'ColDataDal',
+    						hidden: true,
+    						sortable: false,
+    						align: 'center',
+    						width: 93,
+    						format: 'd/m/Y',
+    						text: 'Dal',
+    						dataIndex: 'dataInizio'
+    					},
+    					{
+    						xtype: 'datecolumn',
+    						reference: 'ColDataAl',
+    						hidden: true,
+    						sortable: false,
+    						align: 'center',
+    						width: 93,
+    						format: 'd/m/Y',
+    						text: 'Al',
+    						dataIndex: 'dataFine'
     					},
     					{
     						text: 'Lun',
@@ -322,7 +346,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 75,
     						renderer: function(value, metaData, rec) {
     							let str = '';
-    							if (value) {
+    							if (value && value.includes('T')) {
     								metaData.tdAttr = `data-qtip="${value ? 'Acconto versato' : ''}"`;
     								str = '<center><div style="width: 20px; height: 20px;" class="icon-acconto"></div></center>';
     							}
@@ -337,7 +361,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 97,
     						renderer: function(value, metaData, rec) {
     							let str = '';
-    							if (value) {
+    							if (value && value.includes('T')) {
     								str = "<img src='resources/images/check.svg' alt='check' width='20' height = '20' />";
     							}
     							return str;
@@ -351,7 +375,7 @@ Ext.define('Gestionale.view.iscritti.List',{
     						width: 72,
     						renderer: function(value, metaData, rec) {
     							let str = '';
-    							if (value) {
+    							if (value && value.includes('T')) {
     								str = "<img src='resources/images/check.svg' alt='check' width='20' height = '20' />";
     							}
     							return str;
