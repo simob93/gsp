@@ -225,7 +225,7 @@ class StdGenerali {
 					}
 				},
 				{
-					xtype: 'slider',
+					xtype: 'sliderfield',
 					itemId: 'Slider', reference: 'Slider',
 					minValue: 0,
 					width: 50,

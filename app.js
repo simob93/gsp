@@ -26,6 +26,7 @@ Ext.application({
         'Ext.plugin.Viewport',
         'Ext.form.TimeField',
         'Ext.window.Toast',
+        'Ext.slider.Single'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class

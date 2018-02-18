@@ -10,7 +10,6 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     aggiornaStore: function(params = {}, callBackFn) { 
     	
     	let dal, al,
-    		slider = this.lookupReference('SliderPeriodo'),
     		form = this.lookupReference('MyForm'),
     		record = form.getForm().getFieldValues(),
 			mese = record.mese,
@@ -104,7 +103,7 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     			idAnagrafica: rec.get('idAnagrafica'),
     			idAnagraficaCorso: rec.get('idAnagraficaCorso'),
     			nominativo: rec.get('nominativo'),
-    			acconto: rec.get('acconto') ? 'T' : 'F'
+    			acconto: rec.get('acconto')
     		});
     	});
     	return data;
@@ -178,7 +177,16 @@ Ext.define('Gestionale.view.iscritti.ListController', {
     		grid.getSelectionModel().setSelectionMode('SINGLE');
     		/* menu short solo per tipologia di corso indivduale  */
     		grid.extraParams.menuShort = Ext.create('Ext.menu.Menu', {
+    			width: 160,
         		items: [
+        			{
+        				text: 'Gestione corso',
+        				disabled: true,
+        				//readOnly: true
+        			},
+        			{
+        		        xtype: 'menuseparator'
+        		    },
         			{
         				text: 'Crea corso',
         				handler: th => this.creaCorso(true)

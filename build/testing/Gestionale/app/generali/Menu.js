@@ -5,18 +5,18 @@ class Menu {
 				ordine: 1,
 				titolo: 'Anagrafica',
 				subMenu: [
-					['Registrazione', 'Gestionale.view.anagrafica.Main'],
-					['Cerca iscritto', 'Gestionale.view.anagrafica.List'],
+					['Registrazione', 'Gestionale.view.anagrafica.Main', false, 'icon-add'],
+					['Cerca iscritto', 'Gestionale.view.anagrafica.List', false, 'icon-search'],
 				]
 			},
 			{
 				ordine: 2,
 				titolo: 'Gestione corsi',
 				subMenu: [
-					['Bacheca corsi', 'Gestionale.view.corso.ListaCorsi'],
-					['Nuovo corso di gruppo', 'Gestionale.view.corso.Inserimento'],
-					['Corso individuale', 'Gestionale.view.iscritti.List', {tipologiaCorso: 1}],
-					['Corso riservato', 'Gestionale.view.iscritti.List', {tipologiaCorso: 5}],
+					['Bacheca corsi', 'Gestionale.view.corso.ListaCorsi', false,  'icon-search'],
+					['Corso di gruppo', 'Gestionale.view.corso.Inserimento', false, 'icon-add'],
+					['Corso individuale', 'Gestionale.view.iscritti.List', {tipologiaCorso: 1}, 'icon-add'],
+					['Corso riservato', 'Gestionale.view.iscritti.List', {tipologiaCorso: 5}, 'icon-add'],
 				]
 			},
 			{

@@ -34,7 +34,7 @@ Ext.define('Gestionale.view.corso.ListaCorsiController', {
     	let win = StdGenerali.creaWin('Gestionale.view.corso.Inserimento',params ,"Gestione corso", 1024, 650, 'win-corso', true, true)
     	win.show();
     	
-    	win.on('close' , () => this.aggiornaStore());
+    	win.on('close' , () => this.onCerca());
     },
     
     launch: function() {

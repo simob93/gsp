@@ -59,16 +59,6 @@ Ext.define('Gestionale.view.anagrafica.List',{
     							}
     						]
     					},
-    					{
-    						xtype: 'container',
-    						hidden: true,
-    						reference: 'CntFilter',
-    						flex: 1,
-    						layout: {
-    							type: 'vbox',
-    							align: 'bottom',
-    						}
-    					}
     					
     				]
     			}

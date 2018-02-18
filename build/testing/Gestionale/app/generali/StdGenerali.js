@@ -185,7 +185,7 @@ class StdGenerali {
 		return store.findRecord(key, value);
 	}
 	
-	static creaWin(path = null, params = {}, title = 'Ricerca avanzata', width = 500, height = 400, ui = 'default', closable = true) {
+	static creaWin(path = null, params = {}, title = 'Ricerca avanzata', width = 500, height = 400, ui = 'default', closable = true, showIconEdit) {
 		let win = Ext.create('Gestionale.componenti.stdWin', {
 			name: path,
 			id: Ext.id(),
@@ -195,7 +195,8 @@ class StdGenerali {
 			width: width,
 			height: height,
 			ui: ui,
-			extraParams: params
+			showIconEdit: showIconEdit,
+			extraParams: params,
 		});
 		return win;
 	}

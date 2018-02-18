@@ -82,7 +82,7 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	}
     	
     	
-    	if(this.maggiorenne) {
+    	if (this.maggiorenne) {
     		if (Ext.isEmpty(valForm.codiceFiscale)) {
     			StdGenerali.msgAddError(messaggi, 'codice fiscale obbligatorio');
     		} else {
@@ -91,11 +91,6 @@ Ext.define('Gestionale.view.anagrafica.InserimentoController', {
     	} else {
     		if (Ext.isEmpty(valForm.nomeGenitore))
     			StdGenerali.msgAddError(messaggi, 'nome genitore obbligatorio');
-    		if (Ext.isEmpty(valForm.codiceFiscaleGenitore)) {
-    			StdGenerali.msgAddError(messaggi, 'codice fiscale genitore obbligatorio');
-    		} else {
-    			this.controllaCF(messaggi, valForm.codiceFiscaleGenitore)
-    		}
     	}
     	
     	

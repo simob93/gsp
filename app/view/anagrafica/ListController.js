@@ -42,7 +42,6 @@ Ext.define('Gestionale.view.anagrafica.ListController', {
     
     launch: function() {
     
-    	StdGenerali.createBaseFilter(this, this.lookupReference('CntFilter'));
     	this.lookupReference('Grid').getStore().getProxy().api.read = '/gspRiva/ws/anagrafica/list';
     	
     }

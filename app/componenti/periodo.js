@@ -10,7 +10,6 @@ Ext.define('Gestionale.componenti.periodo', {
 		this.items = [
 			{
 				xtype: 'container',
-				hidden: false,
 				itemId: 'CntDalAl', reference: 'CntDalAl',
 				layout: this.layout,
 				items: [

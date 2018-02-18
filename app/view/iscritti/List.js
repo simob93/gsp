@@ -10,7 +10,7 @@ Ext.define('Gestionale.view.iscritti.List',{
         'Gestionale.componenti.checkboxgroupGiorni',
         'Gestionale.store.NumLezioni',
         'Gestionale.store.MinutiLezioni',
-        'Gestionale.view.ricercaAvanzata.RicercaAvanzata'
+        'Gestionale.view.ricercaAvanzata.RicercaAvanzata',
     ],
     controller: 'iscrittiController',
     layout: {
